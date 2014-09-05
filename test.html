@@ -1,0 +1,5830 @@
+
+<!DOCTYPE html>
+<html class="projects_show  fontface no-js" lang="en">
+<head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# kickstarter: http://ogp.me/ns/fb/kickstarter#"><script>
+  //<![CDATA[
+    docElement = this.document.documentElement;
+    docElement.className=docElement.className.replace(/\bno-js\b/,'') + 'js';
+  //]]>
+</script>
+<title>Moon Hunters, a Myth-Weaving RPG by Kitfox Games &mdash; Kickstarter</title><script>
+  //<![CDATA[
+    window.report_errors = true;
+    window.honeybadger_configuration = {
+      api_key : "02ab109335c0dd1a93506d92f22217a7",
+      environment : "production",
+      component : "projects",
+      action : "show",
+      onerror : false
+    };
+  //]]>
+</script>
+
+
+<!--[if lt IE 9]>
+  <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+
+
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"beacon-5.newrelic.com","errorBeacon":"bam.nr-data.net","licenseKey":"b04b883ad2","applicationID":"11086","transactionName":"cFteRUULX1wHFhtIEFxeVVJDFxxDCgtD","queueTime":2,"applicationTime":1040,"ttGuid":"","agentToken":null,"agent":"js-agent.newrelic.com/nr-412.min.js","userAttributes":"SBZTREUWVl4WO0FLB0EWCgAOUQYHVFBJ"}</script>
+<script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={xpid:"Vw4BVEVSCQMIUg=="};window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var o=e[n]={exports:{}};t[n][0].call(o.exports,function(e){var o=t[n][1][e];return r(o?o:e)},o,o.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({1:[function(t,e){function n(t,e,n){n||(n={});for(var r=o[t],a=r&&r.length||0,s=n[i]||(n[i]={}),u=0;a>u;u++)r[u].apply(s,e);return s}function r(t,e){var n=o[t]||(o[t]=[]);n.push(e)}var o={},i="nr@context";e.exports={on:r,emit:n}},{}],2:[function(t){function e(t,e,n,i,s){try{u?u-=1:r("err",[s||new UncaughtException(t,e,n)])}catch(c){try{r("ierr",[c,(new Date).getTime(),!0])}catch(d){}}return"function"==typeof a?a.apply(this,o(arguments)):!1}function UncaughtException(t,e,n){this.message=t||"Uncaught error with no additional information",this.sourceURL=e,this.line=n}function n(t){r("err",[t,(new Date).getTime()])}var r=t("handle"),o=t(6),i=t(5),a=window.onerror,s=!1,u=0;t("loader").features.push("err"),window.onerror=e,NREUM.noticeError=n;try{throw new Error}catch(c){"stack"in c&&(t(1),t(2),"addEventListener"in window&&t(3),window.XMLHttpRequest&&XMLHttpRequest.prototype&&XMLHttpRequest.prototype.addEventListener&&t(4),s=!0)}i.on("fn-start",function(){s&&(u+=1)}),i.on("fn-err",function(t,e,r){s&&(this.thrown=!0,n(r))}),i.on("fn-end",function(){s&&!this.thrown&&u>0&&(u-=1)}),i.on("internal-error",function(t){r("ierr",[t,(new Date).getTime(),!0])})},{1:5,2:4,3:3,4:6,5:1,6:14,handle:"D5DuLP",loader:"G9z0Bl"}],3:[function(t){function e(t){r.inPlace(t,["addEventListener","removeEventListener"],"-",n)}function n(t){return t[1]}var r=t(1),o=(t(3),t(2));if(e(window),"getPrototypeOf"in Object){for(var i=document;i&&!i.hasOwnProperty("addEventListener");)i=Object.getPrototypeOf(i);i&&e(i);for(var a=XMLHttpRequest.prototype;a&&!a.hasOwnProperty("addEventListener");)a=Object.getPrototypeOf(a);a&&e(a)}else XMLHttpRequest.prototype.hasOwnProperty("addEventListener")&&e(XMLHttpRequest.prototype);o.on("addEventListener-start",function(t){if(t[1]){var e=t[1];"function"==typeof e?this.wrapped=e["nr@wrapped"]?t[1]=e["nr@wrapped"]:e["nr@wrapped"]=t[1]=r(e,"fn-"):"function"==typeof e.handleEvent&&r.inPlace(e,["handleEvent"],"fn-")}}),o.on("removeEventListener-start",function(t){var e=this.wrapped;e&&(t[1]=e)})},{1:15,2:1,3:14}],4:[function(t){var e=(t(3),t(1)),n=t(2);e.inPlace(window,["requestAnimationFrame","mozRequestAnimationFrame","webkitRequestAnimationFrame","msRequestAnimationFrame"],"raf-"),n.on("raf-start",function(t){t[0]=e(t[0],"fn-")})},{1:15,2:1,3:14}],5:[function(t){function e(t){var e=t[0];"string"==typeof e&&(e=new Function(e)),t[0]=n(e,"fn-")}var n=(t(3),t(1)),r=t(2);n.inPlace(window,["setTimeout","setInterval","setImmediate"],"setTimer-"),r.on("setTimer-start",e)},{1:15,2:1,3:14}],6:[function(t){function e(){o.inPlace(this,s,"fn-")}function n(t,e){o.inPlace(e,["onreadystatechange"],"fn-")}function r(t,e){return e}var o=t(1),i=t(2),a=window.XMLHttpRequest,s=["onload","onerror","onabort","onloadstart","onloadend","onprogress","ontimeout"];window.XMLHttpRequest=function(t){var n=new a(t);try{i.emit("new-xhr",[],n),o.inPlace(n,["addEventListener","removeEventListener"],"-",function(t,e){return e}),n.addEventListener("readystatechange",e,!1)}catch(r){try{i.emit("internal-error",r)}catch(s){}}return n},window.XMLHttpRequest.prototype=a.prototype,o.inPlace(XMLHttpRequest.prototype,["open","send"],"-xhr-",r),i.on("send-xhr-start",n),i.on("open-xhr-start",n)},{1:15,2:1}],7:[function(t){function e(){function e(t){if("string"==typeof t&&t.length)return t.length;if("object"!=typeof t)return void 0;if("undefined"!=typeof ArrayBuffer&&t instanceof ArrayBuffer&&t.byteLength)return t.byteLength;if("undefined"!=typeof Blob&&t instanceof Blob&&t.size)return t.size;if("undefined"!=typeof FormData&&t instanceof FormData)return void 0;try{return JSON.stringify(t).length}catch(e){return void 0}}function n(t){var n=this.params,r=this.metrics;if(!this.ended){this.ended=!0;for(var i=0;u>i;i++)t.removeEventListener(s[i],this.listener,!1);if(!n.aborted){if(r.duration=(new Date).getTime()-this.startTime,4===t.readyState){n.status=t.status;var a=t.responseType,c="arraybuffer"===a||"blob"===a||"json"===a?t.response:t.responseText,d=e(c);if(d&&(r.rxSize=d),this.sameOrigin){var f=t.getResponseHeader("X-NewRelic-App-Data");f&&(n.cat=f.split(", ").pop())}}else n.status=0;r.cbTime=this.cbTime,o("xhr",[n,r])}}}function r(t,e){var n=i(e),r=t.params;r.host=n.hostname+":"+n.port,r.pathname=n.pathname,t.sameOrigin=n.sameOrigin}t("loader").features.push("xhr");var o=t("handle"),i=t(1),a=t(5),s=["load","error","abort","timeout"],u=s.length,c=t(2);t(3),t(4),a.on("new-xhr",function(){this.totalCbs=0,this.called=0,this.cbTime=0,this.end=n,this.ended=!1,this.xhrGuids={}}),a.on("open-xhr-start",function(t){this.params={method:t[0]},r(this,t[1]),this.metrics={}}),a.on("open-xhr-end",function(t,e){"loader_config"in NREUM&&"xpid"in NREUM.loader_config&&this.sameOrigin&&e.setRequestHeader("X-NewRelic-ID",NREUM.loader_config.xpid)}),a.on("send-xhr-start",function(t,n){var r=this.metrics,o=t[0],i=this;if(r&&o){var c=e(o);c&&(r.txSize=c)}this.startTime=(new Date).getTime(),this.listener=function(t){try{"abort"===t.type&&(i.params.aborted=!0),("load"!==t.type||i.called===i.totalCbs&&(i.onloadCalled||"function"!=typeof n.onload))&&i.end(n)}catch(e){try{a.emit("internal-error",e)}catch(r){}}};for(var d=0;u>d;d++)n.addEventListener(s[d],this.listener,!1)}),a.on("xhr-cb-time",function(t,e,n){this.cbTime+=t,e?this.onloadCalled=!0:this.called+=1,this.called!==this.totalCbs||!this.onloadCalled&&"function"==typeof n.onload||this.end(n)}),a.on("xhr-load-added",function(t,e){var n=""+c(t)+!!e;this.xhrGuids&&!this.xhrGuids[n]&&(this.xhrGuids[n]=!0,this.totalCbs+=1)}),a.on("xhr-load-removed",function(t,e){var n=""+c(t)+!!e;this.xhrGuids&&this.xhrGuids[n]&&(delete this.xhrGuids[n],this.totalCbs-=1)}),a.on("addEventListener-end",function(t,e){e instanceof XMLHttpRequest&&"load"===t[0]&&a.emit("xhr-load-added",[t[1],t[2]],e)}),a.on("removeEventListener-end",function(t,e){e instanceof XMLHttpRequest&&"load"===t[0]&&a.emit("xhr-load-removed",[t[1],t[2]],e)}),a.on("fn-start",function(t,e,n){e instanceof XMLHttpRequest&&("onload"===n&&(this.onload=!0),("load"===(t[0]&&t[0].type)||this.onload)&&(this.xhrCbStart=(new Date).getTime()))}),a.on("fn-end",function(t,e){this.xhrCbStart&&a.emit("xhr-cb-time",[(new Date).getTime()-this.xhrCbStart,this.onload,e],e)})}window.XMLHttpRequest&&XMLHttpRequest.prototype&&XMLHttpRequest.prototype.addEventListener&&!/CriOS/.test(navigator.userAgent)&&e()},{1:8,2:11,3:3,4:6,5:1,handle:"D5DuLP",loader:"G9z0Bl"}],8:[function(t,e){e.exports=function(t){var e=document.createElement("a"),n=window.location,r={};e.href=t,r.port=e.port;var o=e.href.split("://");return!r.port&&o[1]&&(r.port=o[1].split("/")[0].split(":")[1]),r.port&&"0"!==r.port||(r.port="https"===o[0]?"443":"80"),r.hostname=e.hostname||n.hostname,r.pathname=e.pathname,"/"!==r.pathname.charAt(0)&&(r.pathname="/"+r.pathname),r.sameOrigin=!e.hostname||e.hostname===document.domain&&e.port===n.port&&e.protocol===n.protocol,r}},{}],handle:[function(t,e){e.exports=t("D5DuLP")},{}],D5DuLP:[function(t,e){function n(t,e){var n=r[t];return n?n.apply(this,e):(o[t]||(o[t]=[]),void o[t].push(e))}var r={},o={};e.exports=n,n.queues=o,n.handlers=r},{}],11:[function(t,e){function n(t){if(!t||"object"!=typeof t&&"function"!=typeof t)return-1;if(t===window)return 0;if(o.call(t,"__nr"))return t.__nr;try{return Object.defineProperty(t,"__nr",{value:r,writable:!0,enumerable:!1}),r}catch(e){return t.__nr=r,r}finally{r+=1}}var r=1,o=Object.prototype.hasOwnProperty;e.exports=n},{}],loader:[function(t,e){e.exports=t("G9z0Bl")},{}],G9z0Bl:[function(t,e){function n(){var t=p.info=NREUM.info;if(t&&t.agent&&t.licenseKey&&t.applicationID&&u&&u.body){p.proto="https"===f.split(":")[0]||t.sslForHttp?"https://":"http://",a("mark",["onload",i()]);var e=u.createElement("script");e.src=p.proto+t.agent,u.body.appendChild(e)}}function r(){"complete"===u.readyState&&o()}function o(){a("mark",["domContent",i()])}function i(){return(new Date).getTime()}var a=t("handle"),s=window,u=s.document,c="addEventListener",d="attachEvent",f=(""+location).split("?")[0],p=e.exports={offset:i(),origin:f,features:[]};u[c]?(u[c]("DOMContentLoaded",o,!1),s[c]("load",n,!1)):(u[d]("onreadystatechange",r),s[d]("onload",n)),a("mark",["firstbyte",i()])},{handle:"D5DuLP"}],14:[function(t,e){function n(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,o=n-e||0,i=Array(0>o?0:o);++r<o;)i[r]=t[e+r];return i}e.exports=n},{}],15:[function(t,e){function n(t,e,r,s){function nrWrapper(){try{var n,a=u(arguments),c=this,d=r&&r(a,c)||{}}catch(f){i([f,"",[a,c,s],d])}o(e+"start",[a,c,s],d);try{return n=t.apply(c,a)}catch(p){throw o(e+"err",[a,c,p],d),p}finally{o(e+"end",[a,c,n],d)}}return a(t)?t:(e||(e=""),nrWrapper[n.flag]=!0,nrWrapper)}function r(t,e,r,o){r||(r="");var i,s,u,c="-"===r.charAt(0);for(u=0;u<e.length;u++)s=e[u],i=t[s],a(i)||(t[s]=n(i,c?s+r:r,o,s,t))}function o(t,e,n){try{s.emit(t,e,n)}catch(r){i([r,t,e,n])}}function i(t){try{s.emit("internal-error",t)}catch(e){}}function a(t){return!(t&&"function"==typeof t&&t.apply&&!t[n.flag])}var s=t(1),u=t(2);e.exports=n,n.inPlace=r,n.flag="nr@wrapper"},{1:1,2:14}]},{},["G9z0Bl",2,7]);</script>
+<meta content="telephone=no" name="format-detection">
+
+<!--[if !IE]> -->
+  <link href="https://d297h9he240fqh.cloudfront.net/assets/packages/base-6c6d9b265349ae666c9dac6b18582d10.css" media="screen,print" rel="stylesheet" />
+<!-- <![endif]-->
+<!--[if IE]>
+  <link href="https://d297h9he240fqh.cloudfront.net/assets/packages/base_blessed-a1d530babe7eea8c11bed2d5d8518e96.css" media="screen" rel="stylesheet" />
+<![endif]-->
+
+
+<!--[if lte IE 9]>
+  <link href="https://d297h9he240fqh.cloudfront.net/assets/packages/ie_nine-35e66660ff52ef9358362a02d536b382.css" media="screen" rel="stylesheet" />
+<![endif]-->
+<!--[if lte IE 8]>
+  <link href="https://d297h9he240fqh.cloudfront.net/assets/packages/ie_eight-2077265988ac83c0955d16f5fe920132.css" media="screen" rel="stylesheet" />
+<![endif]-->
+<!--[if lte IE 7]>
+  <link href="https://d297h9he240fqh.cloudfront.net/assets/packages/ie-cd8d70f31eb4c58a0f4d1e1967047636.css" media="screen" rel="stylesheet" />
+  <link href="https://d297h9he240fqh.cloudfront.net/assets/packages/ie_seven-acf78cef7d86c8e9ffd356ae7ce35315.css" media="screen,print" rel="stylesheet" />
+<![endif]-->
+<!--[if IE 6]>
+  <link href="https://d297h9he240fqh.cloudfront.net/assets/packages/ie_six-8492cf8e5a5ea8143c43cda460b4aed7.css" media="screen,print" rel="stylesheet" />
+<![endif]-->
+
+
+<link href="https://d297h9he240fqh.cloudfront.net/favicon.ico" rel="icon" type="image/x-icon">
+<link href="https://d297h9he240fqh.cloudfront.net/assets/apple-touch-icon-precomposed-4df6b6e9e0f6f73b508208d4640f4cc4.png" rel="apple-touch-icon-precomposed" type="image/png">
+<link href="https://d297h9he240fqh.cloudfront.net/assets/apple-touch-icon-ipad-precomposed-318fa037ae41f3cfaa9a2b5f961eff51.png" rel="apple-touch-icon-precomposed" sizes="72x72" type="image/png">
+<link href="https://d297h9he240fqh.cloudfront.net/assets/apple-touch-icon-iphone4-precomposed-8f1dd9de021029e56bf4f617ab2a45da.png" rel="apple-touch-icon-precomposed" sizes="114x114" type="image/png">
+<link href="https://www.kickstarter.com/services/oembed?url=https%3A%2F%2Fwww.kickstarter.com%2Fprojects%2Fkitfoxgames%2Fmoon-hunters-a-myth-weaving-rpg" rel="alternate" title="Moon Hunters, a Myth-Weaving RPG Script Tag oEmbed" type="application/json+oembed">
+<link rel="alternate" type="application/atom+xml" title="Moon Hunters, a Myth-Weaving RPG : Kickstarter" href="https://www.kickstarter.com/projects/kitfoxgames/moon-hunters-a-myth-weaving-rpg/posts.atom" />
+<meta property="twitter:app:id:iphone" content="596961532"/>
+<meta property="twitter:app:name:iphone" content="Kickstarter"/>
+<meta property="twitter:app:url:iphone" content="ksr://www.kickstarter.com/projects/kitfoxgames/moon-hunters-a-myth-weaving-rpg"/>
+<meta name="video_height" content="360"/>
+<meta name="video_width" content="640"/>
+<meta name="video_type" content="application/x-shockwave-flash"/>
+<meta name="title" content="Kickstarter &gt;&gt; Moon Hunters, a Myth-Weaving RPG by Kitfox Games"/>
+<meta name="description" content="Kitfox Games is raising funds for Moon Hunters, a Myth-Weaving RPG on Kickstarter! 
+
+ Build your mythology! An action RPG for 1-4 players about earning a legendary reputation in an ancient, occult world."/>
+<meta property="og:title" content="Moon Hunters, a Myth-Weaving RPG"/>
+<meta property="og:type" content="kickstarter:project"/>
+<meta property="og:image" content="https://s3.amazonaws.com/ksr/projects/1122152/photo-main.jpg?1409773705"/>
+<meta property="og:url" content="https://www.kickstarter.com/projects/kitfoxgames/moon-hunters-a-myth-weaving-rpg"/>
+<meta property="og:site_name" content="Kickstarter"/>
+<meta property="fb:app_id" content="69103156693"/>
+<meta property="og:description" content="Build your mythology! An action RPG for 1-4 players about earning a legendary reputation in an ancient, occult world."/>
+<meta property="kickstarter:creator" content="https://www.kickstarter.com/profile/kitfoxgames"/>
+<meta property="twitter:url:landing_url" content="https://www.kickstarter.com/projects/kitfoxgames/moon-hunters-a-myth-weaving-rpg"/>
+<meta property="twitter:card" content="2427656750:kickstarter_project"/>
+<meta property="twitter:site" content="@kickstarter"/>
+<meta property="twitter:site:id" content="16186995"/>
+<meta property="twitter:text:title" content="Moon Hunters, a Myth-Weaving RPG"/>
+<meta property="twitter:text:artist" content="Kitfox Games"/>
+<meta property="twitter:text:backers" content="3,250"/>
+<meta property="twitter:text:pledged" content="$96,361 CAD"/>
+<meta property="twitter:text:time" content="20 days"/>
+<meta property="twitter:text:location" content="Montreal, Canada"/>
+<meta property="twitter:image:location_image" content="https://d3mlfyygrfdi2i.cloudfront.net/b40e/pin.png"/>
+<meta property="twitter:text:description" content="Build your mythology! An action RPG for 1-4 players about earning a legendary reputation in an ancient, occult world."/>
+<meta property="twitter:image:media" content="https://s3.amazonaws.com/ksr/projects/1122152/photo-main.jpg?1409773705"/>
+<meta property="twitter:image:width" content="640"/>
+<meta property="twitter:image:height" content="480"/>
+<meta property="twitter:player:stream:url" content="https://d2pq0u4uni88oo.cloudfront.net/projects/1122152/video-432405-h264_base.mp4"/>
+<meta property="twitter:player:stream:content" content="video/mp4"/>
+<meta property="twitter:player:url" content="https://www.kickstarter.com/projects/kitfoxgames/moon-hunters-a-myth-weaving-rpg/widget/video.html"/>
+<meta property="twitter:player:height" content="360"/>
+<meta property="twitter:player:width" content="640"/>
+<meta property="twitter:maxage" content="60"/>
+<meta property="og:video" content="https://d3mlfyygrfdi2i.cloudfront.net/321f/kickplayer.swf?allowfullscreen=true&amp;autostart=true&amp;backcolor=000000&amp;controlbar=over&amp;file=https%3A%2F%2Fd2pq0u4uni88oo.cloudfront.net%2Fprojects%2F1122152%2Fvideo-432405-h264_high.mp4&amp;image=https%3A%2F%2Fs3.amazonaws.com%2Fksr%2Fprojects%2F1122152%2Fphoto-full.jpg&amp;project_creators=A+Video+Games+project+by+Kitfox+Games&amp;project_title=Moon+Hunters%2C+a+Myth-Weaving+RPG&amp;project_url=https%3A%2F%2Fwww.kickstarter.com%2Fprojects%2Fkitfoxgames%2Fmoon-hunters-a-myth-weaving-rpg&amp;screencolor=000000&amp;skin=https%3A%2F%2Fd3mlfyygrfdi2i.cloudfront.net%2Fcc3a%2Fkickskin.swf&amp;wmode=opaque"/>
+<meta property="og:video:secure_url" content="https://d3mlfyygrfdi2i.cloudfront.net/321f/kickplayer.swf?allowfullscreen=true&amp;autostart=true&amp;backcolor=000000&amp;controlbar=over&amp;file=https%3A%2F%2Fd2pq0u4uni88oo.cloudfront.net%2Fprojects%2F1122152%2Fvideo-432405-h264_high.mp4&amp;image=https%3A%2F%2Fs3.amazonaws.com%2Fksr%2Fprojects%2F1122152%2Fphoto-full.jpg&amp;project_creators=A+Video+Games+project+by+Kitfox+Games&amp;project_title=Moon+Hunters%2C+a+Myth-Weaving+RPG&amp;project_url=https%3A%2F%2Fwww.kickstarter.com%2Fprojects%2Fkitfoxgames%2Fmoon-hunters-a-myth-weaving-rpg&amp;screencolor=000000&amp;skin=https%3A%2F%2Fd3mlfyygrfdi2i.cloudfront.net%2Fcc3a%2Fkickskin.swf&amp;wmode=opaque"/>
+<meta property="og:video:height" content="360"/>
+<meta property="og:video:width" content="640"/>
+<meta property="og:video:type" content="application/x-shockwave-flash"/>
+<meta content="authenticity_token" name="csrf-param" />
+<meta content="AEwb2OElUWBT+hCuY9lAV1/gNfGMvAfv6ENyA3IFr2k=" name="csrf-token" />
+<script type="text/javascript">
+  var _sift = _sift || [];
+  _sift.push(['_setAccount', '637102']);
+  _sift.push(['_setUserId', '947738574']);
+  _sift.push(['_trackPageview']);
+
+  (function() {
+    function loadSift() {
+      var sift, s;
+      if (root.visitor_id) {
+        _sift.push(['_setSessionId', root.visitor_id]);
+      }
+      sift = document.createElement('script');
+      sift.type = 'text/javascript';
+      sift.async = true;
+      sift.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'dtlilztwypawv.cloudfront.net/s.js';
+      s = document.getElementsByTagName('script')[0];
+      s.parentNode.insertBefore(sift, s);
+    }
+    if (window.attachEvent) {
+      window.attachEvent('onload', loadSift);
+    } else {
+      window.addEventListener('load', loadSift, false);
+    }
+  })();
+</script>
+<link href="http://kck.st/1qnvAp3" rel="shorturl">
+<link href="https://www.kickstarter.com/projects/kitfoxgames/moon-hunters-a-myth-weaving-rpg" rel="canonical">
+<link href="https://s3.amazonaws.com/ksr/projects/1122152/photo-med.jpg?1409773705" rel="image_src">
+<link href="https://d3mlfyygrfdi2i.cloudfront.net/321f/kickplayer.swf?allowfullscreen=true&amp;autostart=true&amp;backcolor=000000&amp;controlbar=over&amp;file=https%3A%2F%2Fd2pq0u4uni88oo.cloudfront.net%2Fprojects%2F1122152%2Fvideo-432405-h264_high.mp4&amp;image=https%3A%2F%2Fs3.amazonaws.com%2Fksr%2Fprojects%2F1122152%2Fphoto-full.jpg&amp;project_creators=A+Video+Games+project+by+Kitfox+Games&amp;project_title=Moon+Hunters%2C+a+Myth-Weaving+RPG&amp;project_url=https%3A%2F%2Fwww.kickstarter.com%2Fprojects%2Fkitfoxgames%2Fmoon-hunters-a-myth-weaving-rpg&amp;screencolor=000000&amp;skin=https%3A%2F%2Fd3mlfyygrfdi2i.cloudfront.net%2Fcc3a%2Fkickskin.swf&amp;wmode=opaque" rel="video_src">
+<script>
+  //<![CDATA[
+    window.current_checkout = "{&quot;id&quot;:0,&quot;domestic&quot;:null,&quot;amount&quot;:0.0,&quot;updated_at&quot;:0,&quot;created_at&quot;:0}";
+  //]]>
+</script>
+
+
+<script>
+  //<![CDATA[
+    window.current_ip = '105.225.117.31';
+    window.current_ip_datacenter = 'false';
+    window.enabled_features = {"elasticsearch":true,"security_history_read":true,"security_history_write":true,"advanced_discovery_es":true,"ios_crashlytics":true,"ios_mixpanel":true,"handbook_hero":true,"password_reset_banner":true,"play_page":true,"watch_page":true};
+    window.I18n = {};
+    window.fb_app_id = '69103156693';
+    
+    var _sf_startpt=(new Date()).getTime();
+    
+    window.current_project = "{&quot;id&quot;:1632425182,&quot;name&quot;:&quot;Moon Hunters, a Myth-Weaving RPG&quot;,&quot;blurb&quot;:&quot;Build your mythology! An action RPG for 1-4 players about earning a legendary reputation in an ancient, occult world.&quot;,&quot;goal&quot;:45000.0,&quot;pledged&quot;:96361.02,&quot;state&quot;:&quot;live&quot;,&quot;slug&quot;:&quot;moon-hunters-a-myth-weaving-rpg&quot;,&quot;disable_communication&quot;:false,&quot;country&quot;:&quot;CA&quot;,&quot;currency&quot;:&quot;CAD&quot;,&quot;currency_symbol&quot;:&quot;$&quot;,&quot;currency_trailing_code&quot;:true,&quot;deadline&quot;:1411729431,&quot;state_changed_at&quot;:1409051031,&quot;created_at&quot;:1404942165,&quot;launched_at&quot;:1409051031,&quot;backers_count&quot;:3250,&quot;photo&quot;:{&quot;full&quot;:&quot;https://s3.amazonaws.com/ksr/projects/1122152/photo-full.jpg?1409773705&quot;,&quot;ed&quot;:&quot;https://s3.amazonaws.com/ksr/projects/1122152/photo-ed.jpg?1409773705&quot;,&quot;med&quot;:&quot;https://s3.amazonaws.com/ksr/projects/1122152/photo-med.jpg?1409773705&quot;,&quot;little&quot;:&quot;https://s3.amazonaws.com/ksr/projects/1122152/photo-little.jpg?1409773705&quot;,&quot;small&quot;:&quot;https://s3.amazonaws.com/ksr/projects/1122152/photo-small.jpg?1409773705&quot;,&quot;thumb&quot;:&quot;https://s3.amazonaws.com/ksr/projects/1122152/photo-thumb.jpg?1409773705&quot;,&quot;1024x768&quot;:&quot;https://s3.amazonaws.com/ksr/projects/1122152/photo-1024x768.jpg?1409773705&quot;,&quot;1536x1152&quot;:&quot;https://s3.amazonaws.com/ksr/projects/1122152/photo-1536x1152.jpg?1409773705&quot;},&quot;creator&quot;:{&quot;id&quot;:1183812133,&quot;name&quot;:&quot;Kitfox Games&quot;,&quot;slug&quot;:&quot;kitfoxgames&quot;,&quot;avatar&quot;:{&quot;thumb&quot;:&quot;https://s3.amazonaws.com/ksr/avatars/11337334/kf_logo_orangecircle_whitesquare.thumb.jpg?1404942110&quot;,&quot;small&quot;:&quot;https://s3.amazonaws.com/ksr/avatars/11337334/kf_logo_orangecircle_whitesquare.small.jpg?1404942110&quot;,&quot;medium&quot;:&quot;https://s3.amazonaws.com/ksr/avatars/11337334/kf_logo_orangecircle_whitesquare.medium.jpg?1404942110&quot;},&quot;urls&quot;:{&quot;web&quot;:{&quot;user&quot;:&quot;https://www.kickstarter.com/profile/kitfoxgames&quot;},&quot;api&quot;:{&quot;user&quot;:&quot;https://api.kickstarter.com/v1/users/1183812133?signature=1410019543.36d029a0ecb97eb24d58dd5316ec91ec63a95d80&quot;}}},&quot;location&quot;:{&quot;id&quot;:3534,&quot;name&quot;:&quot;Montreal&quot;,&quot;slug&quot;:&quot;montreal-ca&quot;,&quot;short_name&quot;:&quot;Montreal, Canada&quot;,&quot;displayable_name&quot;:&quot;Montreal, Canada&quot;,&quot;country&quot;:&quot;CA&quot;,&quot;state&quot;:&quot;QC&quot;,&quot;urls&quot;:{&quot;web&quot;:{&quot;discover&quot;:&quot;https://www.kickstarter.com/discover/places/montreal-ca&quot;,&quot;location&quot;:&quot;https://www.kickstarter.com/locations/montreal-ca&quot;},&quot;api&quot;:{&quot;nearby_projects&quot;:&quot;https://api.kickstarter.com/v1/discover?signature=1409999408.5b7e3a7fba2f22f3a06e93ad6689a6ca1051be2f&amp;woe_id=3534&quot;}}},&quot;category&quot;:{&quot;id&quot;:35,&quot;name&quot;:&quot;Video Games&quot;,&quot;slug&quot;:&quot;games/video games&quot;,&quot;position&quot;:7,&quot;parent_id&quot;:12,&quot;urls&quot;:{&quot;web&quot;:{&quot;discover&quot;:&quot;http://www.kickstarter.com/discover/categories/games/video%20games&quot;}}},&quot;urls&quot;:{&quot;web&quot;:{&quot;project&quot;:&quot;https://www.kickstarter.com/projects/kitfoxgames/moon-hunters-a-myth-weaving-rpg&quot;,&quot;rewards&quot;:&quot;https://www.kickstarter.com/projects/kitfoxgames/moon-hunters-a-myth-weaving-rpg/rewards&quot;,&quot;message_creator&quot;:&quot;https://www.kickstarter.com/projects/kitfoxgames/moon-hunters-a-myth-weaving-rpg/messages/new?message%5Bto%5D=kitfoxgames&quot;,&quot;project_short&quot;:&quot;http://kck.st/1qnvAp3&quot;,&quot;updates&quot;:&quot;https://www.kickstarter.com/projects/kitfoxgames/moon-hunters-a-myth-weaving-rpg/posts&quot;},&quot;api&quot;:{&quot;star&quot;:&quot;https://api.kickstarter.com/v1/projects/1632425182/star?signature=1410019543.18ef2a72ef4b525e7b83734774c982838d067730&quot;,&quot;message_creator&quot;:&quot;https://api.kickstarter.com/v1/projects/1632425182/messages?signature=1410019543.1e189e3d196f7aecc97dd7d451d867f7d12b3a76&quot;,&quot;project&quot;:&quot;https://api.kickstarter.com/v1/projects/1632425182?signature=1410019543.f3fda175dc66e60a3abf56d80905a0fc24fca29f&quot;,&quot;comments&quot;:&quot;https://api.kickstarter.com/v1/projects/1632425182/comments?signature=1410019543.3c6e92a9a8bf6d7f3fb58d03eeb194b1f22c7b6a&quot;,&quot;updates&quot;:&quot;https://api.kickstarter.com/v1/projects/1632425182/updates?signature=1410019544.ce10041a1702c2b8f6262533630f54724fa7b79f&quot;}},&quot;friends&quot;:[],&quot;is_starred&quot;:false,&quot;is_backing&quot;:false,&quot;updated_at&quot;:1409931324,&quot;potd_at&quot;:1409184000,&quot;video&quot;:{&quot;id&quot;:432405,&quot;status&quot;:&quot;successful&quot;,&quot;high&quot;:&quot;https://d2pq0u4uni88oo.cloudfront.net/projects/1122152/video-432405-h264_high.mp4?2014&quot;,&quot;base&quot;:&quot;https://d2pq0u4uni88oo.cloudfront.net/projects/1122152/video-432405-h264_base.mp4?2014&quot;,&quot;webm&quot;:&quot;https://d2pq0u4uni88oo.cloudfront.net/projects/1122152/video-432405-webm.webm?2014&quot;,&quot;width&quot;:640,&quot;height&quot;:360,&quot;frame&quot;:&quot;https://d2pq0u4uni88oo.cloudfront.net/projects/1122152/video-432405-h264_base.jpg?2014&quot;},&quot;comments_count&quot;:169,&quot;updates_count&quot;:4,&quot;rewards&quot;:[{&quot;id&quot;:0,&quot;minimum&quot;:1,&quot;reward&quot;:&quot;No Reward&quot;},{&quot;id&quot;:2935870,&quot;minimum&quot;:10.0,&quot;reward&quot;:&quot;EARLY BIRD EXPLORER                  \\r\\n==============================\\r\\nDigital copy of the game for PC and Mac, at a lower price available only through this Kickstarter.&quot;,&quot;limit&quot;:300,&quot;shipping_applicable&quot;:false,&quot;estimated_delivery_on&quot;:1435708800,&quot;project_id&quot;:1632425182,&quot;remaining&quot;:0,&quot;backers_count&quot;:300,&quot;updated_at&quot;:1409558030},{&quot;id&quot;:2935871,&quot;minimum&quot;:15.0,&quot;reward&quot;:&quot;EXPLORER                  \\r\\n==============================\\r\\nA digital copy of the game for PC and Mac.&quot;,&quot;shipping_applicable&quot;:false,&quot;estimated_delivery_on&quot;:1435708800,&quot;project_id&quot;:1632425182,&quot;backers_count&quot;:1059,&quot;updated_at&quot;:1409932526},{&quot;id&quot;:3075543,&quot;minimum&quot;:20.0,&quot;reward&quot;:&quot;SONGSMITH ============================== \\r\\nReceive a digital copy of the all-original Moon Hunters OST by Ryan Roth, guest-starring Halina Heron, normally a $10 value.\\r\\n============================== Also includes a digital copy of the game for PC and Mac.&quot;,&quot;shipping_applicable&quot;:false,&quot;estimated_delivery_on&quot;:1435708800,&quot;project_id&quot;:1632425182,&quot;backers_count&quot;:325,&quot;updated_at&quot;:1409903456},{&quot;id&quot;:2935873,&quot;minimum&quot;:22.0,&quot;reward&quot;:&quot;EARLY BIRD DYNAMIC DUO\\r\\n==============================\\r\\nWhy play alone when you can share your experience with a friend? Two digital copies of the game, at a lower price available only through this kickstarter. PLUS an invitation to our beta tests!\\r\\n==============================\\r\\nAlso includes the all-original soundtrack by Ryan Roth.&quot;,&quot;limit&quot;:200,&quot;shipping_applicable&quot;:false,&quot;estimated_delivery_on&quot;:1435708800,&quot;project_id&quot;:1632425182,&quot;remaining&quot;:0,&quot;backers_count&quot;:200,&quot;updated_at&quot;:1409573797},{&quot;id&quot;:2935874,&quot;minimum&quot;:25.0,&quot;reward&quot;:&quot;DYNAMIC DUO\\r\\n==============================\\r\\nWhy play alone when you can share your experience with a friend? Two digital copies of the game.  PLUS an invitation to our beta tests!\\r\\n==============================\\r\\nAlso includes: All-original soundtrack by Ryan Roth.&quot;,&quot;shipping_applicable&quot;:false,&quot;estimated_delivery_on&quot;:1435708800,&quot;project_id&quot;:1632425182,&quot;backers_count&quot;:659,&quot;updated_at&quot;:1409930037},{&quot;id&quot;:2979889,&quot;minimum&quot;:35.0,&quot;reward&quot;:&quot;PEN PAL ============================== We&#39;ll send you a physical postcard signed by the core dev team, in the real world. This is also the first tier in which we will list your name in the game&#39;s Special Thanks. NOTE: This is the ONLY TIER that offers the postcard, other than the Super Collector tier.\\r\\n============================== Also includes: Soundtrack, beta invite, and a digital copy of the game.&quot;,&quot;limit&quot;:500,&quot;shipping_applicable&quot;:false,&quot;estimated_delivery_on&quot;:1435708800,&quot;project_id&quot;:1632425182,&quot;remaining&quot;:304,&quot;backers_count&quot;:196,&quot;updated_at&quot;:1409882324},{&quot;id&quot;:2935876,&quot;minimum&quot;:45.0,&quot;reward&quot;:&quot;BAND OF HEROES\\r\\n==============================\\r\\nEverything&#39;s more fun when you&#39;re adventuring together! Buy a 4-pack! Four digital copies of the game, for the price of three!\\r\\n==============================\\r\\nAlso includes: Soundtrack, an invitation to our early beta tests.&quot;,&quot;shipping_applicable&quot;:false,&quot;estimated_delivery_on&quot;:1435708800,&quot;project_id&quot;:1632425182,&quot;backers_count&quot;:189,&quot;updated_at&quot;:1409924547},{&quot;id&quot;:3071423,&quot;minimum&quot;:60.0,&quot;reward&quot;:&quot;FASHION LEGEND ==============================\\r\\nGet a limited edition charcoal-grey cotton \\&quot;Moonblade\\&quot; T-Shirt to impress your tribe, available only in this Kickstarter. NOTE: This is THE ONLY TIER that offers the T-Shirt, other than the Super Collector tier.\\r\\n============================== Also includes: Soundtrack, inclusion in Special Thanks, an invitation to our early beta tests, and a digital copy of the game for PC and Mac.&quot;,&quot;limit&quot;:250,&quot;shipping_applicable&quot;:false,&quot;estimated_delivery_on&quot;:1435708800,&quot;project_id&quot;:1632425182,&quot;remaining&quot;:123,&quot;backers_count&quot;:127,&quot;updated_at&quot;:1409884228},{&quot;id&quot;:2935877,&quot;minimum&quot;:70.0,&quot;reward&quot;:&quot;ART COLLECTOR\\r\\n==============================\\r\\nThis tier includes a limited-edition 12x18\\&quot; poster print of your choice from four designs, signed by the core team. NOTE: This is THE ONLY TIER that offers the signed poster print, other than the Super Collector tier.\\r\\n==============================\\r\\nAlso includes: soundtrack, an invitation to our early beta, inclusion in Special Thanks, and a digital copy of the game.&quot;,&quot;limit&quot;:100,&quot;shipping_applicable&quot;:false,&quot;estimated_delivery_on&quot;:1435708800,&quot;project_id&quot;:1632425182,&quot;remaining&quot;:46,&quot;backers_count&quot;:54,&quot;updated_at&quot;:1409894322},{&quot;id&quot;:2935878,&quot;minimum&quot;:115.0,&quot;reward&quot;:&quot;WEAVER\\r\\n==============================\\r\\nFor those who see the strands that bind our patterns together. This tier includes a limited-edition fabric print on Belgian linen, from your choice of five designs: a world map or one of the four base characters (Witch, Spellblade, Occultist, Druid). NOTE: This is THE ONLY TIER that offers the fabric print, other than the Super Collector tier.\\r\\n==============================\\r\\nAlso includes: soundtrack, an invitation to our early beta, inclusion in Special Thanks, and a digital copy of the game.&quot;,&quot;limit&quot;:50,&quot;shipping_applicable&quot;:false,&quot;estimated_delivery_on&quot;:1435708800,&quot;project_id&quot;:1632425182,&quot;remaining&quot;:23,&quot;backers_count&quot;:27,&quot;updated_at&quot;:1409723802},{&quot;id&quot;:2935879,&quot;minimum&quot;:140.0,&quot;reward&quot;:&quot;NAME A VILLAGER\\r\\n==============================\\r\\nThis tier gives you the right to name a human character (within reason), to be included in the final game. Character gender (male, female, other), species (human/Silkhood) and home-tribe are your choice. We will accommodate basic customization requests, within the limits of the Moon Hunters world.\\r\\n==============================\\r\\nAlso includes: soundtrack, an invitation to our early beta, inclusion in Special Thanks, and TWO digital copies of the game.&quot;,&quot;limit&quot;:25,&quot;shipping_applicable&quot;:false,&quot;estimated_delivery_on&quot;:1435708800,&quot;project_id&quot;:1632425182,&quot;remaining&quot;:0,&quot;backers_count&quot;:25,&quot;updated_at&quot;:1409428934},{&quot;id&quot;:2935880,&quot;minimum&quot;:175.0,&quot;reward&quot;:&quot;NAME AN ANIMAL\\r\\n==============================\\r\\nThis tier gives you the right to name an animal (within reason), to be included in the final game. Species included will be at least, but not limited to: dogs, cats, birds, moths, camels, turkeys, alpacas. We can probably accommodate special customisation/species requests.\\r\\n==============================\\r\\nAlso includes: soundtrack, an invitation to our early beta, inclusion in Special Thanks, and TWO digital copies of the game.&quot;,&quot;limit&quot;:25,&quot;shipping_applicable&quot;:false,&quot;estimated_delivery_on&quot;:1435708800,&quot;project_id&quot;:1632425182,&quot;remaining&quot;:21,&quot;backers_count&quot;:4,&quot;updated_at&quot;:1409793907},{&quot;id&quot;:2935881,&quot;minimum&quot;:200.0,&quot;reward&quot;:&quot;LEGEND\\r\\n==============================\\r\\nYou will be remembered. An ancient stone memorial will hold your message of choice (within reason), to be randomly generated in the world of the final game.\\r\\n==============================\\r\\nAlso includes: soundtrack, an invitation to our early beta, inclusion in Special Thanks, and FOUR digital copies of the game.&quot;,&quot;limit&quot;:25,&quot;shipping_applicable&quot;:false,&quot;estimated_delivery_on&quot;:1435708800,&quot;project_id&quot;:1632425182,&quot;remaining&quot;:18,&quot;backers_count&quot;:7,&quot;updated_at&quot;:1409821382},{&quot;id&quot;:2935883,&quot;minimum&quot;:235.0,&quot;reward&quot;:&quot;SUPER COLLECTOR: ALL PHYSICALS\\r\\n==============================\\r\\nIncludes all physical rewards. This means: a signed poster print, a T-shirt, a fabric print, and Thank You postcard signed by the core team.\\r\\n==============================\\r\\nAlso includes: soundtrack, an invitation to our early beta, inclusion in Special Thanks, and FOUR digital copies of the game.&quot;,&quot;limit&quot;:25,&quot;shipping_applicable&quot;:false,&quot;estimated_delivery_on&quot;:1435708800,&quot;project_id&quot;:1632425182,&quot;remaining&quot;:0,&quot;backers_count&quot;:25,&quot;updated_at&quot;:1409701881},{&quot;id&quot;:3121317,&quot;minimum&quot;:245.0,&quot;reward&quot;:&quot;SUPER COLLECTOR (SECOND RUN)\\r\\n============================== Includes all physical rewards. This means: a signed poster print, a T-shirt, a fabric print, and Thank You postcard signed by the core team.\\r\\n==============================\\r\\nAlso includes: soundtrack, an invitation to our early beta, inclusion in Special Thanks and FOUR digital copies of the game.&quot;,&quot;limit&quot;:25,&quot;shipping_applicable&quot;:false,&quot;estimated_delivery_on&quot;:1435708800,&quot;project_id&quot;:1632425182,&quot;remaining&quot;:23,&quot;backers_count&quot;:2,&quot;updated_at&quot;:1409901496},{&quot;id&quot;:2935882,&quot;minimum&quot;:400.0,&quot;reward&quot;:&quot;PIXEL MOON HUNTER\\r\\n==============================\\r\\nWe will delve deep in the pixelmines to find the right pigments to paint a pixel-art likeness of the person of your choice in the Moon Hunters style, from a supplied photograph (no nudies please). With your permission, we may use this sprite in the game.\\r\\n==============================\\r\\nAlso includes: soundtrack, an invitation to our early beta, inclusion in Special Thanks, an in-game memorial with your customised message, and FOUR digital copies of the game.&quot;,&quot;limit&quot;:10,&quot;shipping_applicable&quot;:false,&quot;estimated_delivery_on&quot;:1435708800,&quot;project_id&quot;:1632425182,&quot;remaining&quot;:9,&quot;backers_count&quot;:1,&quot;updated_at&quot;:1409821381},{&quot;id&quot;:2935884,&quot;minimum&quot;:550.0,&quot;reward&quot;:&quot;PAINTED MOON HUNTER\\r\\n==============================\\r\\nXin Ran Liu will hand-paint a watercolor likeness of the person of your choice in the Moon Hunters style, using a supplied photograph (within reason). The final portrait can be a digital file, OR mailed to you on real life parchment. If you choose a digital file, with your permission we will add it to the game as a speaking non-playable character, where it will be seen by thousands of players.\\r\\n==============================\\r\\nAlso includes: soundtrack, an invitation to our early beta, inclusion in Special Thanks, an in-game memorial with your customised message, and FOUR digital copies of the game.&quot;,&quot;limit&quot;:10,&quot;shipping_applicable&quot;:false,&quot;estimated_delivery_on&quot;:1435708800,&quot;project_id&quot;:1632425182,&quot;remaining&quot;:7,&quot;backers_count&quot;:3,&quot;updated_at&quot;:1409688076},{&quot;id&quot;:2935886,&quot;minimum&quot;:750.0,&quot;reward&quot;:&quot;MYTHOLOGIST\\r\\n==============================\\r\\nReady to spin a yarn for the ages? You will help us create a whole character myth (within reason) with up to ten dialogues, that thousands of players will experience. You will be given your choice of pre-created characters to design with, and be credited as an Assistant Narrative Designer for your contribution.\\r\\n==============================\\r\\nAlso includes: soundtrack, an invitation to our early beta, inclusion in Special Thanks, an in-game memorial with your customised message, and FOUR digital copies of the game.&quot;,&quot;limit&quot;:10,&quot;shipping_applicable&quot;:false,&quot;estimated_delivery_on&quot;:1435708800,&quot;project_id&quot;:1632425182,&quot;remaining&quot;:10,&quot;backers_count&quot;:0,&quot;updated_at&quot;:1409251926},{&quot;id&quot;:2935887,&quot;minimum&quot;:1000.0,&quot;reward&quot;:&quot;VISIONARY\\r\\n==============================\\r\\nSo boss fights are kinda your &#39;thing&#39;? You will help us design a boss fight or other major combat encounter (within reason). We&#39;ll work with you to nail down the perfect look, strategies, effects, and special moves, and credit you as an Assistant Combat Designer for your contribution.\\r\\n==============================\\r\\nAlso includes: soundtrack, an invitation to our early beta, inclusion in Special Thanks, an in-game memorial with your customised message, and TEN digital copies of the game.&quot;,&quot;limit&quot;:3,&quot;shipping_applicable&quot;:false,&quot;estimated_delivery_on&quot;:1435708800,&quot;project_id&quot;:1632425182,&quot;remaining&quot;:1,&quot;backers_count&quot;:2,&quot;updated_at&quot;:1409721490},{&quot;id&quot;:2935888,&quot;minimum&quot;:1500.0,&quot;reward&quot;:&quot;DIRECTOR\\r\\n==============================\\r\\nJoin the team for a day! You get to help with ALL of the above design (name a villager, name an animal, design a myth, design a boss fight). For your contribution, you&#39;ll be credited in the game as a Designer.\\r\\n==============================\\r\\nAlso includes: soundtrack, an invitation to our early beta, inclusion in Special Thanks, an in-game memorial with your customised message, and TEN digital copies of the game.&quot;,&quot;limit&quot;:2,&quot;shipping_applicable&quot;:false,&quot;estimated_delivery_on&quot;:1435708800,&quot;project_id&quot;:1632425182,&quot;remaining&quot;:0,&quot;backers_count&quot;:2,&quot;updated_at&quot;:1409200193}]}";
+    
+       window.current_user = "{&quot;id&quot;:947738574,&quot;name&quot;:&quot;Peter Cardwell-Gardner&quot;,&quot;avatar&quot;:{&quot;thumb&quot;:&quot;https://s3.amazonaws.com/ksr/avatars/1955764/fb_profile_picture.thumb.jpg?1328787876&quot;,&quot;small&quot;:&quot;https://s3.amazonaws.com/ksr/avatars/1955764/fb_profile_picture.small.jpg?1328787876&quot;,&quot;medium&quot;:&quot;https://s3.amazonaws.com/ksr/avatars/1955764/fb_profile_picture.medium.jpg?1328787876&quot;},&quot;urls&quot;:{&quot;web&quot;:{&quot;user&quot;:&quot;https://www.kickstarter.com/profile/947738574&quot;},&quot;api&quot;:{&quot;user&quot;:&quot;https://api.kickstarter.com/v1/users/947738574?signature=1410019544.0cda11e2ea63f15ab2c9b0e4697672646d9e5dc6&quot;}}}";
+    
+    window.current_location = "{&quot;id&quot;:1591691,&quot;name&quot;:&quot;Cape Town&quot;,&quot;slug&quot;:&quot;cape-town-cape-town-za&quot;,&quot;short_name&quot;:&quot;Cape Town, South Africa&quot;,&quot;displayable_name&quot;:&quot;Cape Town, South Africa&quot;,&quot;country&quot;:&quot;ZA&quot;,&quot;state&quot;:&quot;Western Cape&quot;,&quot;urls&quot;:{&quot;web&quot;:{&quot;discover&quot;:&quot;https://www.kickstarter.com/discover/places/cape-town-cape-town-za&quot;,&quot;location&quot;:&quot;https://www.kickstarter.com/locations/cape-town-cape-town-za&quot;},&quot;api&quot;:{&quot;nearby_projects&quot;:&quot;https://api.kickstarter.com/v1/discover?signature=1410019544.f63f799848cd0973332d2dc62c4fab7c52a2cf98&amp;woe_id=1591691&quot;}}}";
+    
+    
+    
+    
+    window.timeRemaining = function timeRemaining(epochTime){
+    
+      var diff = epochTime - ((new Date()).getTime() / 1000);
+      var num_unit = (diff < 60 && [Math.max(diff, 0), 'seconds']) ||
+        ((diff/=60) < 60 && [diff, 'minutes']) ||
+        ((diff/=60) < 72 && [diff, 'hours']) ||
+        [diff/=24, 'days'];
+    
+      // Round down
+      num_unit[0] = Math.floor(num_unit[0]);
+      // Singularize unit
+      if (num_unit[0] == 1) { num_unit[1] = num_unit[1].replace(/s$/,""); }
+    
+      return num_unit;
+    };
+  //]]>
+</script>
+
+<script>
+  //<![CDATA[
+    window.current_variants = ["discover_newest_vs_recently_launched[newest]"];
+  //]]>
+</script>
+
+
+</head>
+
+<body class="project projects not-mobile not-phone not-forces-video-controls not-tablet not-ipad not-iphone not-ios not-touchable not-native-app-request fixed-width skip_autologin video_mode" id="projects_show">
+<div class="jGrowl center" id="growl_section"></div>
+<div class="NS_layouts__navigation" id="header">
+<div class="main-nav relative bg-white">
+<h1 class="h3 no-margin pl1 col mobile-block mobile-center">
+<a class="block p2" href="/?ref=nav"><span class="ss-icon green-dark">KICK</span><span class="ss-icon green">STARTER</span>
+</a></h1>
+<div class="mobile-show border-bottom"></div>
+<ul class="primary-links list no-margin col">
+<li class="left discover-link">
+<a class="block px1 py2 grey-dark h5 bold" href="/discover?ref=nav">Discover</a>
+</li>
+<li class="left mr1 mobile-hide">&nbsp;</li>
+<li class="left mr2">
+<a class="block px1 py2 grey-dark h5 bold" href="/learn?ref=nav">Start</a>
+</li>
+</ul>
+<ul class="list no-margin right" id="menu-sub">
+<li class="dropdown right relative border-left" id="menu-sub-me">
+<a class="p2 block grey-dark h5 z_top" href="/profile/947738574"><span class="inline-block circle bg-green indicator"></span>
+<img alt="Avatar" class="circle align-middle avatar-thumb" height="40" src="https://s3.amazonaws.com/ksr/avatars/1955764/fb_profile_picture.thumb.jpg?1328787876" width="40" /><span class="ss-icon ss-dropdown h6 icon-nudge-down"></span></a><div class="NS_layouts__user_dropdown column-span-2" data-user_dropdown_backer_creator_columns_path="/users/dropdown_backer_creator_columns">
+<div class="dropdown-child h5 bg-white border absolute z_overlay">
+<div class="clearfix p3" id="menu-me-children">
+<ul class="list-simple" id="menu-me-account">
+<li>
+<h5 class="mb2">My stuff</h5>
+</li>
+<li>
+<a class="bold" href="/messages?mailbox=inbox" title="Inbox">Messages
+<span class="inline-block circle bg-green indicator"></span>
+</a></li>
+<li>
+<a class="bold" href="/activity?ref=nav" title="Activity">Activity
+<span class="inline-block circle bg-green indicator"></span>
+</a></li>
+<li><a href="/profile/947738574">Profile</a></li>
+<li><a href="/profile/backings?ref=nav">Backer history</a></li>
+<li>
+<a href="/profile/starred">Starred projects
+</a></li>
+<li>&nbsp;</li>
+<li>
+<h5 class="mb2">Settings</h5>
+</li>
+<li><a href="/settings/account">Account</a></li>
+<li><a href="/settings">Edit profile</a></li>
+<li><a href="/settings/notifications">Notifications</a></li>
+<li>
+<a href="/friends/find">Find friends
+</a></li>
+</ul>
+</div>
+<div class="py2 pl3 pr3 h6 bg-grey-light">
+<div class="row">
+<div class="col grey-dark">
+You're logged in as
+<b>Peter Cardwell-Gardner</b>
+&nbsp;
+<br class="mobile-show">
+<a href="/logout">Log out</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</li>
+</ul>
+<div class="search-link pl2 full-height border-left border-box clip mobile-hide">
+<form accept-charset="UTF-8" action="/projects/search" class="search pt1 pb1 block relative form-simple" method="get"><div style="margin:0;padding:0;display:inline"><input class="hidden" name="utf8" type="hidden" value="&#x2713;" /></div>
+<div class="field relative pl3">
+<span class="ss-icon ss-search grey-dark ml1 mt1 absolute"></span>
+<input class="input-search header full-width text" data-tracker-name="Header Live Search" id="term" name="term" placeholder="Search projects" type="text" />
+</div>
+</form>
+
+</div>
+<div class="clear"></div>
+</div>
+</div>
+<div class="hide pt4 pb4 bg-grey-light" id="search_results-wrap">
+<div class="relative container" id="search_results">
+<a class="close right grey-dark mr1"><span class="ss-icon ss-delete"></span></a>
+<h3 class="header ml1 clearfix"></h3>
+<div class="clip clearfix" id="search_results_panel"></div>
+<a class="prev arrow grey-dark absolute h3">
+<span class="ss-icon ss-navigateleft"></span>
+</a>
+<a class="next arrow grey-dark absolute h3">
+<span class="ss-icon ss-navigateright"></span>
+</a>
+</div>
+</div>
+
+
+
+
+<div class="Project-ended-false Project-is_starred-false Project-state-live Project1632425182_cxt border-top" id="main_content">
+<div id="running-board-wrap">
+<div class="container" id="running-board">
+<div id="project-header">
+<div class="NS_projects__running_board ml1 mr1 clearfix">
+<div class="title center py4">
+<h2 class="mb1">
+<a class="green-dark" href="/projects/kitfoxgames/moon-hunters-a-myth-weaving-rpg">Moon Hunters, a Myth-Weaving RPG</a>
+</h2>
+<p class="no-margin">
+<span class="creator">
+by
+<a class="green-dark remote_modal_dialog" data-modal-class="modal_project_by" data-modal-title="Biography" href="/projects/kitfoxgames/moon-hunters-a-myth-weaving-rpg/creator_bio" id="name">Kitfox Games</a>
+</span>
+</p>
+</div>
+<ul class="project-nav list-inline left h5 bold mb1">
+<li class="mr2">
+<a class="grey-dark py1 current" href="/projects/kitfoxgames/moon-hunters-a-myth-weaving-rpg" id="home_nav">Home</a>
+</li>
+<li class="mr2">
+<span data-updates-count="4" id="updates_count">
+<a class="grey-dark py1" href="/projects/kitfoxgames/moon-hunters-a-myth-weaving-rpg/posts" id="updates_nav">Updates
+<span class="count h6 bg-grey-dark white">4</span>
+</a></span>
+</li>
+<li class="mr2">
+<a class="grey-dark py1" href="/projects/kitfoxgames/moon-hunters-a-myth-weaving-rpg/backers" id="backers_nav">Backers
+<span class="count h6 bg-grey-dark white"><data class="Project1632425182" data-format="number" data-value="3250" itemprop="Project[backers_count]">3,250</data></span>
+</a></li>
+<li>
+<span data-comments-count="169" id="comments_count">
+<a class="grey-dark py1" href="/projects/kitfoxgames/moon-hunters-a-myth-weaving-rpg/comments" id="comments_nav">Comments
+<span class="count h6 bg-grey-dark white"><data class="Project1632425182" data-format="number" data-value="169" itemprop="Project[comments_count]">169</data></span>
+</a></span>
+</li>
+</ul>
+<ul class="list-inline right h5 bold mb1">
+<li class="location mr2">
+<a class="grey-dark" href="/discover/places/montreal-ca?ref=city"><span class="ss-icon ss-location margin-right"></span>
+Montreal, Canada
+</a></li>
+<li class="category" data-project-parent-category="Games">
+<a class="grey-dark" href="/discover/categories/games/video%20games?ref=category"><span class="ss-icon ss-tag margin-right"></span>
+Video Games
+</a></li>
+</ul>
+</div>
+
+</div>
+</div>
+</div>
+<div class="bg-grey-light pb4" id="content-wrap">
+<div class="Project1632425182" data-conditions="[{&quot;!state&quot;:&quot;live&quot;}]" data-evaluation="false" data-render="&quot;&lt;div class=\&quot;NS_projects__funding_bar Project-ended-false Project-is_starred-false Project-state-live Project1632425182_cxt bg-grey container pb1 pt1\&quot;&gt;\n&lt;div class=\&quot;Project1632425182\&quot; data-conditions=\&quot;[{&amp;quot;state&amp;quot;:&amp;quot;successful&amp;quot;}]\&quot; data-evaluation=\&quot;false\&quot; data-render=\&quot;&amp;quot;&amp;lt;p class=\\&amp;quot;no-margin\\&amp;quot;&amp;gt;\\n&amp;lt;b&amp;gt;Funded!&amp;lt;/b&amp;gt;\\nThis project was successfully funded &amp;lt;data class=\\&amp;quot;Project1632425182\\&amp;quot; data-format=\\&amp;quot;distance_date\\&amp;quot; data-value=\\&amp;quot;&amp;amp;quot;2014-09-26T07:03:51-04:00&amp;amp;quot;\\&amp;quot; itemprop=\\&amp;quot;Project[deadline]\\&amp;quot;&amp;gt;just now&amp;lt;/data&amp;gt;.\\n&amp;lt;/p&amp;gt;\\n&amp;quot;\&quot;&gt;&lt;/div&gt;&lt;div class=\&quot;Project1632425182\&quot; data-conditions=\&quot;[{&amp;quot;state&amp;quot;:[&amp;quot;started&amp;quot;,&amp;quot;submitted&amp;quot;]}]\&quot; data-evaluation=\&quot;false\&quot; data-render=\&quot;&amp;quot;&amp;lt;p class=\\&amp;quot;no-margin\\&amp;quot;&amp;gt;\\n&amp;lt;b&amp;gt;THIS PROJECT IS NOT LIVE&amp;lt;/b&amp;gt;\\nThis is only a draft that the creator has chosen to share.\\n&amp;lt;/p&amp;gt;\\n&amp;quot;\&quot;&gt;&lt;/div&gt;&lt;div class=\&quot;Project1632425182\&quot; data-conditions=\&quot;[{&amp;quot;state&amp;quot;:&amp;quot;suspended&amp;quot;}]\&quot; data-evaluation=\&quot;false\&quot; data-render=\&quot;&amp;quot;&amp;lt;p class=\\&amp;quot;no-margin\\&amp;quot;&amp;gt;&amp;lt;/p&amp;gt;\\n&amp;lt;b&amp;gt;Funding Suspended&amp;lt;/b&amp;gt;\\nFunding for this project was suspended &amp;lt;data class=\\&amp;quot;Project1632425182\\&amp;quot; data-format=\\&amp;quot;distance_date\\&amp;quot; data-value=\\&amp;quot;&amp;amp;quot;2014-08-26T07:03:51-04:00&amp;amp;quot;\\&amp;quot; itemprop=\\&amp;quot;Project[state_changed_at]\\&amp;quot;&amp;gt;on August 26&amp;lt;/data&amp;gt;.\\n&amp;quot;\&quot;&gt;&lt;/div&gt;&lt;div class=\&quot;Project1632425182\&quot; data-conditions=\&quot;[{&amp;quot;state&amp;quot;:&amp;quot;canceled&amp;quot;}]\&quot; data-evaluation=\&quot;false\&quot; data-render=\&quot;&amp;quot;&amp;lt;p class=\\&amp;quot;no-margin\\&amp;quot;&amp;gt;&amp;lt;/p&amp;gt;\\n&amp;lt;b&amp;gt;Funding Canceled&amp;lt;/b&amp;gt;\\nFunding for this project was canceled by the project creator &amp;lt;data class=\\&amp;quot;Project1632425182\\&amp;quot; data-format=\\&amp;quot;distance_date\\&amp;quot; data-value=\\&amp;quot;&amp;amp;quot;2014-08-26T07:03:51-04:00&amp;amp;quot;\\&amp;quot; itemprop=\\&amp;quot;Project[state_changed_at]\\&amp;quot;&amp;gt;on August 26&amp;lt;/data&amp;gt;.\\n&amp;quot;\&quot;&gt;&lt;/div&gt;&lt;div class=\&quot;Project1632425182\&quot; data-conditions=\&quot;[{&amp;quot;state&amp;quot;:&amp;quot;failed&amp;quot;}]\&quot; data-evaluation=\&quot;false\&quot; data-render=\&quot;&amp;quot;&amp;lt;p class=\\&amp;quot;no-margin\\&amp;quot;&amp;gt;&amp;lt;/p&amp;gt;\\n&amp;lt;b&amp;gt;Funding Unsuccessful&amp;lt;/b&amp;gt;\\nThis project’s funding goal was not reached on &amp;lt;time class=\\&amp;quot;js-adjust\\&amp;quot; data-format=\\&amp;quot;LL\\&amp;quot; datetime=\\&amp;quot;2014-09-26T07:03:51-04:00\\&amp;quot;&amp;gt;September 26, 2014&amp;lt;/time&amp;gt;.\\n&amp;quot;\&quot;&gt;&lt;/div&gt;&lt;div class=\&quot;Project1632425182\&quot; data-conditions=\&quot;[{&amp;quot;state&amp;quot;:&amp;quot;purged&amp;quot;}]\&quot; data-evaluation=\&quot;false\&quot; data-render=\&quot;&amp;quot;&amp;lt;p class=\\&amp;quot;no-margin\\&amp;quot;&amp;gt;&amp;lt;/p&amp;gt;\\n&amp;lt;b&amp;gt;This project is purged and only visible to staff.&amp;lt;/b&amp;gt;\\n&amp;quot;\&quot;&gt;&lt;/div&gt;&lt;/div&gt;\n&quot;"></div>
+<div class="bg-white border container pl2 pr2 py3 rounded" id="content">
+<div class="NS-projects-content">
+<div class="grid_11">
+<div data-has-video="true" id="video-section">
+<div class="video-player" data-dimensions="{&quot;width&quot;:640,&quot;height&quot;:480}" data-image="https://s3.amazonaws.com/ksr/projects/1122152/photo-main.jpg?1409773705" data-video-tracker-url="https://www.kickstarter.com/projects/kitfoxgames/moon-hunters-a-myth-weaving-rpg/video/plays" data-video-url="https://d2pq0u4uni88oo.cloudfront.net/projects/1122152/video-432405-h264_high.mp4" data-video="{&quot;id&quot;:432405,&quot;status&quot;:&quot;successful&quot;,&quot;high&quot;:&quot;https://d2pq0u4uni88oo.cloudfront.net/projects/1122152/video-432405-h264_high.mp4?2014&quot;,&quot;base&quot;:&quot;https://d2pq0u4uni88oo.cloudfront.net/projects/1122152/video-432405-h264_base.mp4?2014&quot;,&quot;webm&quot;:&quot;https://d2pq0u4uni88oo.cloudfront.net/projects/1122152/video-432405-webm.webm?2014&quot;,&quot;width&quot;:640,&quot;height&quot;:360,&quot;frame&quot;:&quot;https://d2pq0u4uni88oo.cloudfront.net/projects/1122152/video-432405-h264_base.jpg?2014&quot;}" id="video_pitch"><video class="has_webm landscape" preload="none">
+<source src="https://d2pq0u4uni88oo.cloudfront.net/projects/1122152/video-432405-h264_high.mp4" type='video/mp4; codecs="avc1.64001E, mp4a.40.2"'></source>
+<source src="https://d2pq0u4uni88oo.cloudfront.net/projects/1122152/video-432405-h264_base.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'></source>
+<source src="https://d2pq0u4uni88oo.cloudfront.net/projects/1122152/video-432405-webm.webm" type="video/webm"></source>
+You'll need an HTML5 capable browser to see this content.
+</video>
+<img alt="Video image." class="has_played_hide poster landscape" src="https://s3.amazonaws.com/ksr/projects/1122152/photo-main.jpg?1409773705" />
+<div class="play_button_big play_button_dark absolute-center rounded has_played_hide">
+<span class="ss-icon ss-play"></span>
+Play
+</div>
+<div class="player_controls clearfix absolute-bottom mb2 rounded white bg-green-dark forces-video-controls_hide">
+<div class="left">
+<a class="button button_icon button_dark playpause play mr1">
+<span class="play ss-icon ss-play"></span>
+<span class="pause ss-icon ss-pause"></span>
+</a>
+<span class="time current_time h12 left">00:00</span>
+</div>
+<div class="right">
+<span class="time total_time h12 left mr1">00:00</span>
+<a class="left button button_icon button_icon_white volume">
+<span class="ss-icon ss-volume icon_volume_nudge"></span>
+<span class="ss-icon ss-highvolume"></span>
+</a>
+<div class="volume_container left">
+<div class="progress_bar progress_bar_dark progress_bg">
+<div class="progress_bar_bg"></div>
+<div class="progress progress_bar_progress"></div>
+<div class="progress_handle progress_bar_handle"></div>
+</div>
+</div>
+<a class="left button button_icon button_icon_white fullscreen">
+<span class="ss-icon ss-expand"></span>
+<span class="ss-icon ss-contract"></span>
+</a>
+</div>
+<div class="clip">
+<div class="progress_container pr1 pl1">
+<div class="progress_bar progress_bar_dark progress_bg">
+<div class="progress_bar_bg"></div>
+<div class="buffer progress_bar_buffer"></div>
+<div class="progress progress_bar_progress"></div>
+<div class="progress_handle progress_bar_handle"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div data-project-state="live" id="about">
+<div class="NS_projects__project_share clearfix py2 pl1 pr1">
+<ul class="left list-inline no-margin h5 bold">
+<li class="facebook mr2">
+<a href="https://www.kickstarter.com/projects/kitfoxgames/moon-hunters-a-myth-weaving-rpg"><span class="ss-icon ss-social ss-facebook color-facebook"></span>
+<span class="color-facebook">Share</span>
+<span class="share_bubble"><div class="triangle grey"></div>
+<div class="triangle white"></div>
+<span class="count"></span></span>
+</a></li>
+<li class="twitter mr2">
+<a href="https://twitter.com/intent/tweet?text=Moon%20Hunters%2C%20a%20Myth-Weaving%20RPG%20by%20Kitfox%20Games&amp;via=kickstarter&amp;url=http://kck.st/1qnvAp3" rel="nofollow"><span class="ss-icon ss-social ss-twitter color-twitter"></span>
+<span class="color-twitter">Tweet</span>
+</a></li>
+<li class="embed">
+<a class="remote_modal_dialog grey-dark" data-modal-title="Embed a widget on your site" data-tracker-name="Embed" href="/projects/kitfoxgames/moon-hunters-a-myth-weaving-rpg/widget"><span class="ss-icon ss-navigateleft"></span>
+<span class="ss-icon ss-navigateright"></span>
+Embed
+</a></li>
+</ul>
+<ul class="right list-inline no-margin h5 bold">
+<li class="curate mr2">
+</li>
+<li class="remind">
+<div class="ajax-container" id="watching-widget">
+<div class="Project1632425182" data-conditions="[{&quot;is_starred&quot;:true}]" data-evaluation="false" data-render="&quot;&lt;div id=\&quot;unwatch\&quot;&gt;\n&lt;a class=\&quot;on\&quot; href=\&quot;/projects/kitfoxgames/moon-hunters-a-myth-weaving-rpg/unwatch\&quot;&gt;&lt;span class=\&quot;ss-icon ss-star\&quot;&gt;&lt;/span&gt;\n&lt;span class=\&quot;text\&quot;&gt;Reminder on&lt;/span&gt;\n&lt;/a&gt;&lt;/div&gt;\n\n&quot;"></div><div class="Project1632425182" data-conditions="[{&quot;!is_starred&quot;:true}]" data-evaluation="true" data-render="&quot;&lt;div id=\&quot;watch\&quot;&gt;\n&lt;a href=\&quot;/projects/kitfoxgames/moon-hunters-a-myth-weaving-rpg/watch\&quot;&gt;&lt;span class=\&quot;ss-icon ss-star\&quot;&gt;&lt;/span&gt;\n&lt;span class=\&quot;text\&quot;&gt;\nRemind me\n&lt;/span&gt;\n&lt;/a&gt;&lt;/div&gt;\n\n&quot;"><div id="watch">
+<a href="/projects/kitfoxgames/moon-hunters-a-myth-weaving-rpg/watch"><span class="ss-icon ss-star"></span>
+<span class="text">
+Remind me
+</span>
+</a></div>
+
+</div></div>
+</li>
+</ul>
+</div>
+
+<div class="short_blurb py2 pl1 pr1">
+<p class="h3">Build your mythology! An action RPG for 1-4 players about earning a legendary reputation in an ancient, occult world.</p>
+</div>
+<div class="full-description">
+<p><b>Update #4: <a href="https://www.kickstarter.com/projects/kitfoxgames/moon-hunters-a-myth-weaving-rpg/posts/969170" target="_blank">Changes to the PS4 Stretch Goal + Songweaver Art</a> </b><br>Update #3: <a href="https://www.kickstarter.com/projects/kitfoxgames/moon-hunters-a-myth-weaving-rpg/posts/967923" target="_blank">Celestin, Songweaver and Art Stream</a><br>Update #2: <a href="https://www.kickstarter.com/projects/kitfoxgames/moon-hunters-a-myth-weaving-rpg/posts/967680" target="_blank">FUNDED! PS4 Stretch Goal </a><br>
+</p><h1>Important note for PS4 owners:</h1><p><b>Digital downloads of the game (i.e. ALL TIERS) will be your choice of Steam, Humble, <i>or</i> PS4 keys, or mix-and-match. We will send a survey closer to the game's release. It will probably release for PC first, with PS4 ASAP after. </b></p><p>On your search for the missing moon, you will travel the world with your fellow Hunters, build up your tribe, and become a living legend for your deeds. Your choices each become part of the myth, joining your tribe's pantheon of heroes. <b>How will you be remembered</b> by your tribe in generations to come?</p><a href="http://www.gamasutra.com/view/pressreleases/223711/SQUARE_ENIX_COLLECTIVE_MOON_HUNTERS_KICKSTARTER_CROWDFUNDINGTO_START_NEXT_WEEK.php" target="_blank"><div class="template asset" contenteditable="false" data-edit_url="/projects/kitfoxgames/moon-hunters-a-myth-weaving-rpg/assets/2503709/edit" data-id="2503709">
+<figure>
+<img alt="" class="fit" src="https://s3.amazonaws.com/ksr/assets/002/503/709/1c609d1aca6ea082902f8b632c499ca5_large.png?1409278898">
+</figure>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</a><a href="http://www.rockpapershotgun.com/2014/08/28/moon-hunters-kickstarter-rpg-square-enix/" target="_blank"><div class="template asset" contenteditable="false" data-edit_url="/projects/kitfoxgames/moon-hunters-a-myth-weaving-rpg/assets/2503710/edit" data-id="2503710">
+<figure>
+<img alt="" class="fit" src="https://s3.amazonaws.com/ksr/assets/002/503/710/3e7bb1c16d52cb0060ea0ea3b9d38a46_large.png?1409278911">
+</figure>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</a><a href="https://www.kickstarter.com/projects/1798022489/aegis-defenders" target="_blank"><div class="template asset" contenteditable="false" data-edit_url="/projects/kitfoxgames/moon-hunters-a-myth-weaving-rpg/assets/2503711/edit" data-id="2503711">
+<figure>
+<img alt="" class="fit" src="https://s3.amazonaws.com/ksr/assets/002/503/711/c212348c5304fac7802dda8ad081de86_large.png?1409278926">
+</figure>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</a><a href="http://www.destructoid.com/back-moon-hunters-for-an-interesting-take-on-the-action-rpg-280284.phtml" target="_blank"><div class="template asset" contenteditable="false" data-edit_url="/projects/kitfoxgames/moon-hunters-a-myth-weaving-rpg/assets/2503712/edit" data-id="2503712">
+<figure>
+<img alt="" class="fit" src="https://s3.amazonaws.com/ksr/assets/002/503/712/40cfacade625d5a24f74351ea086555c_large.png?1409278941">
+</figure>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</a><a href="http://killscreendaily.com/articles/are-videogames-bringing-ritual-back-modern-society/" target="_blank"><div class="template asset" contenteditable="false" data-edit_url="/projects/kitfoxgames/moon-hunters-a-myth-weaving-rpg/assets/2503713/edit" data-id="2503713">
+<figure>
+<img alt="" class="fit" src="https://s3.amazonaws.com/ksr/assets/002/503/713/4c7d1240697b66aac5c93b670eb0e58d_large.png?1409278955">
+</figure>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</a><a href="http://www.cnet.com/news/moon-hunters-where-legend-of-zelda-meets-gauntlet/" target="_blank"><div class="template asset" contenteditable="false" data-edit_url="/projects/kitfoxgames/moon-hunters-a-myth-weaving-rpg/assets/2503714/edit" data-id="2503714">
+<figure>
+<img alt="" class="fit" src="https://s3.amazonaws.com/ksr/assets/002/503/714/5136c85d3140e1fde46bb18b1aceaca5_large.png?1409278976">
+</figure>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</a><a href="http://www.gamefront.com/ruffians-new-project-isnt-crackdown-3-its-game-of-glens/" target="_blank"><div class="template asset" contenteditable="false" data-edit_url="/projects/kitfoxgames/moon-hunters-a-myth-weaving-rpg/assets/2503715/edit" data-id="2503715">
+<figure>
+<img alt="" class="fit" src="https://s3.amazonaws.com/ksr/assets/002/503/715/512e925699288d9e7d9bf08ba0a1843d_large.png?1409278988">
+</figure>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</a><p>If you can't back us right now, that's OK! We still love you! Consider <a href="http://kitfoxgames.us7.list-manage1.com/subscribe?u=a6dfd75019652ee09b7db1ead&amp;id=1046366195" target="_blank">signing up for our newsletter</a> and keep track of the game as it's developed.</p><div class="template asset" contenteditable="false" data-edit_url="/projects/kitfoxgames/moon-hunters-a-myth-weaving-rpg/assets/2456969/edit" data-id="2456969">
+<figure>
+<img alt="" class="fit" src="https://s3.amazonaws.com/ksr/assets/002/456/969/2b228a2e3fc94e74c91f58c3f84f33da_large.gif?1408461119">
+</figure>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<p>Moon Hunters is a 1-4 player action RPG with a rich, ancient world that's different every time you play. Build your mythology as you play, solo or with friends, every action and choice contributing to your legend.  </p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div> </div><div class="template asset" contenteditable="false" data-edit_url="/projects/kitfoxgames/moon-hunters-a-myth-weaving-rpg/assets/2486485/edit" data-id="2486485">
+<figure>
+<img alt="" class="fit" src="https://s3.amazonaws.com/ksr/assets/002/486/485/3b59d06350ab5305800dc0f2b4ee701d_large.gif?1409000918">
+</figure>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<ul>
+<li>
+<b>An ancient, occult world:</b> the gods and their creations yet walk among us, and our prayers do not always go unanswered, for better or for worse. </li>
+</ul><ul>
+<li>
+<b>Local co-op like never before</b>: playing alone is fully supported. But if you invite your friends, you won't just be bashing enemies, you'll be creating legends together. </li>
+</ul><ul>
+<li>
+<b>Build your mythology:</b> Your actions show if you are more of a Trickster or a Saviour or something else entirely. At the end of your journey worthy heroes become a constellation in the night sky, your deeds recounted for the ages. </li>
+</ul><ul>
+<li>
+<b>Different worlds, persistent myths: </b>Seeing one aspect of the mystery in its entirety only takes a couple of hours, but to truly understand what's happened, you'll need to play a few times. Meanwhile, each time you play, the constellation of your character's legend carries over, as part of your tribe's developing pantheon.</li>
+</ul>
+
+
+
+
+
+
+
+
+<div class="template asset" contenteditable="false" data-edit_url="/projects/kitfoxgames/moon-hunters-a-myth-weaving-rpg/assets/2485017/edit" data-id="2485017">
+<figure>
+<img alt="" class="fit" src="https://s3.amazonaws.com/ksr/assets/002/485/017/1394f0e2706528f3af222f8a67cf988e_large.gif?1408983371">
+</figure>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<p>You could describe the game as “<i>Legend of Zelda</i> meets <i>Castle Crashers</i>”, or maybe “<i>King of Dragon Pass</i> meets <i>Gauntlet</i>”. We empower players to experiment with their personality through the reputation and tribe-management, while combat challenges punctuate the journey as chances to prove their skill.</p>
+
+
+
+
+
+<div class="template asset" contenteditable="false" data-edit_url="/projects/kitfoxgames/moon-hunters-a-myth-weaving-rpg/assets/2474200/edit" data-id="2474200">
+<figure>
+<img alt="" class="fit" src="https://s3.amazonaws.com/ksr/assets/002/474/200/651f288140217146cf8a4c2ad6783d72_large.jpg?1408735943">
+</figure>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<p>We already have permission to create the game on Steam for PC and Mac, due to our previous success with <i>Shattered Planet.</i> A DRM-free version will be available on the Humble Store. We're planning on <b>releasing <i>Moon Hunters</i> in Summer 2015</b>. If you want to be notified of Moon Hunters updates and development progress, <a href="http://eepurl.com/RL5cP" target="_blank">sign up here!</a></p><p><b>If you're a little confused</b>, you can also try out <a href="http://sandbox.yoyogames.com/games/110259-dungeons-of-fayte" target="_blank"><i>Dungeons of Fayte</i></a>, by Brent Ellison and our designer Tanya Short, available for free download. It has the local-co-op action RPG and town-management component. We're taking the <i>Dungeons of Fayte</i> design as a base, adding mythology/reputation and a randomised world as icing on top, like a delicious RPG cake!</p><div class="template asset" contenteditable="false" data-edit_url="/projects/kitfoxgames/moon-hunters-a-myth-weaving-rpg/assets/2530024/edit" data-id="2530024">
+<figure>
+<img alt="" class="fit" src="https://s3.amazonaws.com/ksr/assets/002/530/024/4c9cd6f65d0bd4fcdebde3ec958f567b_large.png?1409767126">
+</figure>
+
+</div>
+
+
+<p>More stretch goals will be revealed as the campaign progresses!</p><div class="template asset" contenteditable="false" data-edit_url="/projects/kitfoxgames/moon-hunters-a-myth-weaving-rpg/assets/2451619/edit" data-id="2451619">
+<figure>
+<img alt="" class="fit" src="https://s3.amazonaws.com/ksr/assets/002/451/619/dd04dc27440bb7c29afb9bbdb56634ea_large.gif?1408379274">
+</figure>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<p>Each "journey" takes only a couple of hours, allowing you to explore one small aspect of the story. Upon completing each journey, if you're worth remembering, your hero will be remembered as a constellation in the night sky, symbolising their contribution to the world's history.</p><div class="template asset" contenteditable="false" data-edit_url="/projects/kitfoxgames/moon-hunters-a-myth-weaving-rpg/assets/2484921/edit" data-id="2484921">
+<figure>
+<img alt="" class="fit" src="https://s3.amazonaws.com/ksr/assets/002/484/921/5010a812411f3f0d2c1b22fecba74786_large.gif?1408982148">
+</figure>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<p>Along your journey, your decisions show your personality and create your reputation. Donating blood to a dying stranger shows you are Selfless. Flirting shamelessly with everyone demonstrates you are Flirtatious. And so on -- we will support <b>over 50 different personality traits</b> in the final game, each of which has its own effect on the world around you.</p><div class="template asset" contenteditable="false" data-edit_url="/projects/kitfoxgames/moon-hunters-a-myth-weaving-rpg/assets/2453914/edit" data-id="2453914">
+<figure>
+<img alt="" class="fit" src="https://s3.amazonaws.com/ksr/assets/002/453/914/0a9e0da7b563c4272283eb678eb6faa5_large.gif?1408404136">
+</figure>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<p>In the real world, as in <i>Moon Hunters</i>,<b> legends are rarely about merely defeating villains</b>. More often, folktales are the story of the Clever hero that tricked the gods into giving humans fire. Of the Loyal hero that ventured into the underworld to save a loved one's soul. Of the Brave hero that declined a god's advances, and suffered for impertinence.  </p><div>
+<div>
+
+<div class="template asset" contenteditable="false" data-edit_url="/projects/kitfoxgames/moon-hunters-a-myth-weaving-rpg/assets/2452793/edit" data-id="2452793">
+<figure>
+<img alt="" class="fit" src="https://s3.amazonaws.com/ksr/assets/002/452/793/0a68fbbe0fae44076eeecdaa311d5599_large.png?1408390549">
+</figure>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<p><b>Your choices determine how you are remembered</b>, and what you embody to those who hear your story in ages hence. The reason<b> why you do something can be as important as the act itself.   </b></p>
+
+
+<div class="template asset" contenteditable="false" data-edit_url="/projects/kitfoxgames/moon-hunters-a-myth-weaving-rpg/assets/2469559/edit" data-id="2469559">
+<figure>
+<img alt="" class="fit" src="https://s3.amazonaws.com/ksr/assets/002/469/559/2a0b8d8e98a8d074caf7b1d470f80b33_large.png?1408651642">
+</figure>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<p>In the world of Moon Hunters, the holy Moon is the source of all life and good, worshipped by every tribe as the central goddess of the pantheon. When the Moon does not rise one evening, heroes across the land take up the search, hoping to uncover the truth before the evil Sun's power grows too strong. </p>
+<p>The world of Moon Hunters is randomly generated every time you play, but there are certain key elements of the setting and lore that are constant.</p>
+<p>For example, while the individual members and conflicts of the Dustfolk village will be different depending on your generated world, the Dustfolk will always be the tribe of the sands. Learning their general beliefs and customs will give you an advantage in negotiations.</p>
+<p>There are three major biomes (desert, mountains, and forests), and one minor (cave systems), each with their own local tribes:</p>
+
+<div class="template asset" contenteditable="false" data-edit_url="/projects/kitfoxgames/moon-hunters-a-myth-weaving-rpg/assets/2441405/edit" data-id="2441405">
+<figure>
+<img alt="The Dustfolk tribe keeps turkeys and camels when prosperous. The deserts are unforgiving, but the Seeker's Blood magic mastery helps the tribe find life-giving water." class="fit" src="https://s3.amazonaws.com/ksr/assets/002/441/405/9f9cf674fee141bb81d3594de7cbb99b_large.gif?1408139197">
+<figcaption>The Dustfolk tribe keeps turkeys and camels when prosperous. The deserts are unforgiving, but the Seeker's Blood magic mastery helps the tribe find life-giving water.</figcaption>
+</figure>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="template asset" contenteditable="false" data-edit_url="/projects/kitfoxgames/moon-hunters-a-myth-weaving-rpg/assets/2441413/edit" data-id="2441413">
+<figure>
+<img alt="The High Tribes live in wind-blown canyon country, looking down on the rest of creation from their high vantage point. The mountains are desolate but rich in minerals." class="fit" src="https://s3.amazonaws.com/ksr/assets/002/441/413/0f075e464fff57d9780ab373c4946a15_large.gif?1408139250">
+<figcaption>The High Tribes live in wind-blown canyon country, looking down on the rest of creation from their high vantage point. The mountains are desolate but rich in minerals.</figcaption>
+</figure>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="template asset" contenteditable="false" data-edit_url="/projects/kitfoxgames/moon-hunters-a-myth-weaving-rpg/assets/2452875/edit" data-id="2452875">
+<figure>
+<img alt="The Wolf Clan is the most secretive of all tribes, closely guarding their knowledge of Wild magic, so as not to lose the trust of the creatures they ally with." class="fit" src="https://s3.amazonaws.com/ksr/assets/002/452/875/44083b34dcee81355d611ff184533bee_large.png?1408391535">
+<figcaption>The Wolf Clan is the most secretive of all tribes, closely guarding their knowledge of Wild magic, so as not to lose the trust of the creatures they ally with.</figcaption>
+</figure>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="template asset" contenteditable="false" data-edit_url="/projects/kitfoxgames/moon-hunters-a-myth-weaving-rpg/assets/2452916/edit" data-id="2452916">
+<figure>
+<img alt="Called the First People by some, the Silkhood are the only non-humans in the world of Moon Hunters. Although they welcome visitors, their customs and hierarchies are nearly incomprehensible at first." class="fit" src="https://s3.amazonaws.com/ksr/assets/002/452/916/90e350053ab15e5472a557a8c3474aff_large.png?1408392130">
+<figcaption>Called the First People by some, the Silkhood are the only non-humans in the world of Moon Hunters. Although they welcome visitors, their customs and hierarchies are nearly incomprehensible at first.</figcaption>
+</figure>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="template asset" contenteditable="false" data-edit_url="/projects/kitfoxgames/moon-hunters-a-myth-weaving-rpg/assets/2462986/edit" data-id="2462986">
+<figure>
+<img alt="" class="fit" src="https://s3.amazonaws.com/ksr/assets/002/462/986/36783e6543798166f8aeb353b65d77d2_large.png?1408553674">
+</figure>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<p> All player character classes wield all of the elements, but start with an affinity. You can customise your character's name and colour palette from the start. As you play you'll discover new special attacks to choose between.</p>
+
+
+<div class="template asset" contenteditable="false" data-edit_url="/projects/kitfoxgames/moon-hunters-a-myth-weaving-rpg/assets/2441095/edit" data-id="2441095">
+<figure>
+<img alt="" class="fit" src="https://s3.amazonaws.com/ksr/assets/002/441/095/dc24d0f8c46494087123f22e9b132fc0_large.jpg?1408135587">
+</figure>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<p>The <b>Witch</b> trains under the Dustfolk Seeker in the ways of Blood magic. Blood is the element of life and death. When the world was created, the blood of the Goddess flowed to form the rivers and oceans.</p>
+<p>The Witch has a basic melee attack and a high-damage ranged attack, making her useful in just about any situation.</p>
+<div class="template asset" contenteditable="false" data-edit_url="/projects/kitfoxgames/moon-hunters-a-myth-weaving-rpg/assets/2441149/edit" data-id="2441149">
+<figure>
+<img alt="" class="fit" src="https://s3.amazonaws.com/ksr/assets/002/441/149/3311930554b84927547d091d5d6a93a3_large.jpg?1408136204">
+</figure>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<p>The <b>Spellblade</b> learns the art of Bronze magic from a High Tribes expert smith. Bronze magic allows the shaping of metals, following the rhythm and grace of war as technologies develop. When the world was created, the bones of the Goddess broke to form the mountains and metals.</p>
+<p>In combat, the Spellblade is a fierce melee fighter and has the highest endurance.</p>
+<div class="template asset" contenteditable="false" data-edit_url="/projects/kitfoxgames/moon-hunters-a-myth-weaving-rpg/assets/2441226/edit" data-id="2441226">
+<figure>
+<img alt="" class="fit" src="https://s3.amazonaws.com/ksr/assets/002/441/226/09dcbd27eccf182990496c3b4c5aa6b5_large.jpg?1408137048">
+</figure>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<p>The <b>Occultist</b>'s connection to Shadow magic allows her to bend the fabric of space and time to suit her whim. Somewhere between math and poetry lies the truth of the human condition. When the world was created, the Goddess's hair draped over the world, darkening the night sky.</p>
+<p>The Occultist is a long-range, quick fighter with the most control over enemy positioning and movement.</p>
+<div class="template asset" contenteditable="false" data-edit_url="/projects/kitfoxgames/moon-hunters-a-myth-weaving-rpg/assets/2441252/edit" data-id="2441252">
+<figure>
+<img alt="" class="fit" src="https://s3.amazonaws.com/ksr/assets/002/441/252/505b49b34fbcbbd8af84ab0ee66e6058_large.jpg?1408137353">
+</figure>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<p>The <b>Druid</b> is the prodigal child of the Wolf Clan, who closely guard all secrets of Wild magic. Wild magic is the primal knowledge from before fairness and language, back to the laws of instinct. When the world was created, the Goddess told stories and from her words, all of its wild creatures sprang forth.</p>
+<p>Druids are the most flexible fighters, sometimes even shape-shifting to meet the unique demands of each encounter.</p>
+<div class="template asset" contenteditable="false" data-edit_url="/projects/kitfoxgames/moon-hunters-a-myth-weaving-rpg/assets/2517769/edit" data-id="2517769">
+<figure>
+<img alt="" class="fit" src="https://s3.amazonaws.com/ksr/assets/002/517/769/c11300f63b39f4bb9978b852efd996be_large.jpg?1409573714">
+</figure>
+
+</div>
+
+
+
+
+
+
+
+<p>As an initiated priestess of the Moon, the <b>Songweaver
+ </b>understands each of the elements, bringing together Wild harmonies, 
+Blood rhythms, Dark dissonance, and Bronze strength. When the world was 
+created, we invented music to remember and mourn.</p>
+<p>The Songweaver is a complex 
+support class. It is not technically impossible to play as her alone, 
+but without a friend, you're in for a challenge.
+</p>
+<div class="template asset" contenteditable="false" data-edit_url="/projects/kitfoxgames/moon-hunters-a-myth-weaving-rpg/assets/2452859/edit" data-id="2452859">
+<figure>
+<img alt="" class="fit" src="https://s3.amazonaws.com/ksr/assets/002/452/859/bde4a0b6be5854b8511149fac811f8c8_large.jpg?1408391401">
+</figure>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<p>As for non-player-characters, <b>Teller Roa</b> is the most widely-respected priestess of the Moon. It is she who decides whether your journey's tale is worth keeping for future generations, and what role you play in the legends of our time. Moon worship is a largely oral tradition, depending on the telling of stories to keep its ancient knowledge alive.</p>
+
+
+
+
+
+
+
+<p>Meanwhile, self-appointed <b>"King" Mardokh</b> believes he has seen a greater Truth than the Moon has to offer, and his fine writings have caused chaos in nearby territories. </p>
+<div class="template asset" contenteditable="false" data-edit_url="/projects/kitfoxgames/moon-hunters-a-myth-weaving-rpg/assets/2485804/edit" data-id="2485804">
+<figure>
+<img alt="" class="fit" src="https://s3.amazonaws.com/ksr/assets/002/485/804/899e352b11984d55e66efd53c754fadd_large.png?1408992975">
+</figure>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<p>The music is nearly as important to us as the art style, and luckily, we have some unique talent lined up. The soundtrack will be an all-original collaboration by Ryan Roth and Halina Heron, combining orchestral compositions with delicate vocals and a wide variety of percussion.</p>
+<p>The trailer offers a sneak preview of the main theme song, "G U I L T Y M O O N": </p>
+<div class="template asset" contenteditable="false" data-id="2484747">
+<figure>
+<embed allowscriptaccess="always" height="30" src="https://d3mlfyygrfdi2i.cloudfront.net/321f/kickplayer.swf?audioonly=true&amp;controlbar.idlehide=false&amp;controlbar=bottom&amp;file=https%3A%2F%2Fs3.amazonaws.com%2Fksr%2Fassets%2F002%2F484%2F747%2F2c8ebd44d436b4cdc3f57412a18b5c01_original.mp3%3F1408980064&amp;skin=https%3A%2F%2Fd3mlfyygrfdi2i.cloudfront.net%2Fcc3a%2Fkickskin.swf" type="application/x-shockwave-flash" width="560" wmode="transparent"></embed>
+</figure>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<p> If the embedded track above doesn't work, or you want a more permanent bookmark for continuous repetition, <a href="https://soundcloud.com/hlnhrn/g-u-i-l-t-y-m-o-o-n" target="_blank">here's a Soundcloud link</a>!</p>
+<p>Keep an eye on our updates for more reveals of songs and snippets!</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="template asset" contenteditable="false" data-edit_url="/projects/kitfoxgames/moon-hunters-a-myth-weaving-rpg/assets/2457912/edit" data-id="2457912">
+<figure>
+<img alt="" class="fit" src="https://s3.amazonaws.com/ksr/assets/002/457/912/9374ee1782aac54e36794539da198c91_large.gif?1408471218">
+</figure>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<p>
+If there's one thing that creators fight, it's obscurity.
+
+ </p>
+<p>Moon Hunters was one of the very first games on the Square Enix Collective. Both we and Square Enix were happy that it went on to earn over 1,000 Yes votes, with an 83% approval rating.</p>
+<p>Further, following a thorough Team Assessment conducted by Square Enix, they concluded: <b>"Kitfox Games is a small and vibrant team with passion and drive, matched by a high level of ambition. </b>They seem to be hard-working, diligent and professional and Moon Hunters looks engaging, unique and accessible. Square Enix Collective is very happy to support the team’s crowdfunding campaign, and <b>we believe that Kitfox have the skills and capabilities to make the game they’re describing in this pitch.” </b>You can <a href="http://www.moonhuntersgame.com/Assessment_SquareEnix.docx" target="_blank">download and read</a> the full Team Assessment at your leisure.</p>
+<div class="template asset" contenteditable="false" data-edit_url="/projects/kitfoxgames/moon-hunters-a-myth-weaving-rpg/assets/2457919/edit" data-id="2457919">
+<figure>
+<img alt="" class="fit" src="https://s3.amazonaws.com/ksr/assets/002/457/919/35844245bf0fb4722ffe31e85296262e_large.jpg?1408471258">
+</figure>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<p><b>We're not getting money from Square Enix.</b> Square Enix is just helping us find our players -- you! We're just four devs trying to scrape by and make a game. Without a big marketing budget, we need all the help we can get! </p>
+<p>You can read a deeper discussion of why we think partnering with the S.E. Collective is worthwhile at <a href="http://www.cinemablend.com/games/Square-Enix-Collective-Free-Publicity-Says-Moon-Hunter-Dev-62260.html" target="_blank">CinemaBlend</a>. Essentially, we want to make a game, and we want to make sure that the people who would love it get a chance to hear that it exists.</p>
+<div class="template asset" contenteditable="false" data-edit_url="/projects/kitfoxgames/moon-hunters-a-myth-weaving-rpg/assets/2398057/edit" data-id="2398057">
+<figure>
+<img alt="" class="fit" src="https://s3.amazonaws.com/ksr/assets/002/398/057/1c30bb6c505844f5963f6fa2084810d6_large.gif?1407371297">
+</figure>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<p>If you are into RPGs and/or mythology and/or old-fashioned co-op fun, <i>Moon Hunters</i> is the game for you. </p>
+<p>We are four upstarts that, despite our modest successes in the game industry, don't have savings to fall back on in times of need. To put it bluntly, we're poor, and <i>Moon Hunters</i> is our dream game to make. We can't do it alone. </p>
+<div class="template asset" contenteditable="false" data-edit_url="/projects/kitfoxgames/moon-hunters-a-myth-weaving-rpg/assets/2469367/edit" data-id="2469367">
+<figure>
+<img alt="Photo credit: Belziir Photography" class="fit" src="https://s3.amazonaws.com/ksr/assets/002/469/367/fd4b1e6de1245a57ddac263f16ddbca9_large.jpg?1408649425">
+<figcaption>Photo credit: Belziir Photography</figcaption>
+</figure>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<p> <b>We need your help to make <i>Moon Hunters</i> the best game it can be.</b> We'll use your money to develop the game's programming, art, music, and design for longer and with more help than we could normally dream of affording. Besides, if nobody likes it and we don't get funded, we might be heartbroken, but at least it saves us from spending a year eating cans of beans making a game that people don't want! Win/win! </p>
+<p>This is also a great opportunity <b>to get feedback and input</b> from players that would normally be impossible. We look forward to working with enthusiastic fans to make the game of our dreams together. </p>
+<div class="template asset" contenteditable="false" data-edit_url="/projects/kitfoxgames/moon-hunters-a-myth-weaving-rpg/assets/2440126/edit" data-id="2440126">
+<figure>
+<img alt="We try not to let the Canadian winter keep us down..." class="fit" src="https://s3.amazonaws.com/ksr/assets/002/440/126/94ce30e6536028b4f3225cf756b3033a_large.JPG?1408121284">
+<figcaption>We try not to let the Canadian winter keep us down...</figcaption>
+</figure>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<p>So, if <i>Moon Hunters</i> seems like the kind of game you might want to play, please consider chipping in and spreading the word! </p>
+<div class="template asset" contenteditable="false" data-edit_url="/projects/kitfoxgames/moon-hunters-a-myth-weaving-rpg/assets/2398052/edit" data-id="2398052">
+<figure>
+<img alt="" class="fit" src="https://s3.amazonaws.com/ksr/assets/002/398/052/89e81c799a578250cc17faa65ee99f81_large.gif?1407371271">
+</figure>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<p>We're still in the prototyping phase of production, so there's a lot of game left to make. But we're covering most of it! We decided to take the sales money from <i>Shattered Planet </i>and our company savings to help cover licenses, software, traveling to conferences, and most of the core team salaries, if this Kickstarter succeeds. </p>
+<p>The money will be spent as follows:
+
+ </p>
+<ul>
+<li>First, 5% goes to Kickstarter, 3% goes to Visa/Mastercard/Amazon, and 19% goes to Quebec/Canadian taxes.</li>
+<li>Then, 5% goes to Square Enix. </li>
+<li>We estimate it will take between $5000 and $7000 to handle production and shipping of all of the backer rewards (depending on which tiers are more popular), or about 12%</li>
+<li>That leaves us the remaining $22,000 or so to spend on audio, more art, a content designer, and additional programmer time.</li>
+</ul>
+<div class="template asset" contenteditable="false" data-edit_url="/projects/kitfoxgames/moon-hunters-a-myth-weaving-rpg/assets/2440244/edit" data-id="2440244">
+<figure>
+<img alt="" class="fit" src="https://s3.amazonaws.com/ksr/assets/002/440/244/f93c3fa5a00a3c3f446e18afdc0c5d59_large.jpg?1408122869">
+</figure>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="template asset" contenteditable="false" data-edit_url="/projects/kitfoxgames/moon-hunters-a-myth-weaving-rpg/assets/2451622/edit" data-id="2451622">
+<figure>
+<img alt="" class="fit" src="https://s3.amazonaws.com/ksr/assets/002/451/622/a47ce066e7a211875ba661f1f12ce70c_large.gif?1408379291">
+</figure>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<p>The core team members of Kitfox are the same core team from developing Shattered Planet, which was <b>developed from idea to release on four platforms in 13 months</b> (Windows, Mac, iOS, Android). It received praise from <a href="http://www.newyorker.com/culture/culture-desk/video-games-that-embrace-irony-and-death" target="_blank">The New Yorker</a>, <a href="http://www.cnet.com/news/shattered-planet-towards-the-perfect-procedural-death-labyrinth/" target="_blank">CNET</a>, and others, and remains highly praised on <a href="http://store.steampowered.com/app/305640/" target="_blank">Steam</a>. It was also chosen to be at the Indie Megabooth at PAX Prime 2014!</p>
+<a href="http://store.steampowered.com/app/305640/" target="_blank"><div class="template asset" contenteditable="false" data-edit_url="/projects/kitfoxgames/moon-hunters-a-myth-weaving-rpg/assets/2469568/edit" data-id="2469568">
+<figure>
+<img alt="" class="fit" src="https://s3.amazonaws.com/ksr/assets/002/469/568/bd158cbee4da4c962110901361c3f9c2_large.png?1408651810">
+</figure>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</a><p> And who are we? We're Kitfox Games!</p>
+<div class="template asset" contenteditable="false" data-edit_url="/projects/kitfoxgames/moon-hunters-a-myth-weaving-rpg/assets/2500808/edit" data-id="2500808">
+<figure>
+<img alt="" class="fit" src="https://s3.amazonaws.com/ksr/assets/002/500/808/a7fa1bd1b6a5e34326b020bdf07a300f_large.jpg?1409239328">
+</figure>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="template asset" contenteditable="false" data-edit_url="/projects/kitfoxgames/moon-hunters-a-myth-weaving-rpg/assets/2398072/edit" data-id="2398072">
+<figure>
+<img alt="" class="fit" src="https://s3.amazonaws.com/ksr/assets/002/398/072/c7ba323b0c9d7c45f94e0999e1013b6f_large.gif?1407371475">
+</figure>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="template asset" contenteditable="false" data-edit_url="/projects/kitfoxgames/moon-hunters-a-myth-weaving-rpg/assets/2484861/edit" data-id="2484861">
+<figure>
+<img alt="" class="fit" src="https://s3.amazonaws.com/ksr/assets/002/484/861/42fea8f2539ad159782a5dce58be2524_large.jpg?1408981403">
+</figure>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<p>The limited edition T-shirt design is on charcoal grey cotton and features a Spellblade design.</p>
+<a href="http://www.moonhuntersgame.com/img/KSPosterDisplay.jpg" target="_blank"><div class="template asset" contenteditable="false" data-edit_url="/projects/kitfoxgames/moon-hunters-a-myth-weaving-rpg/assets/2462969/edit" data-id="2462969">
+<figure>
+<img alt="Click to view a higher-res version!" class="fit" src="https://s3.amazonaws.com/ksr/assets/002/462/969/1b7feff7d9df8a88c705f3801a58043d_large.jpg?1408553500">
+<figcaption>Click to view a higher-res version!</figcaption>
+</figure>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</a>
+
+
+
+
+
+
+<p> We're offering 4 different 12x18" poster designs, signed by the core team for a limited run, unique to this Kickstarter.</p>
+<a href="http://www.moonhuntersgame.com/img/KSLinenDisplay.jpg" target="_blank"><div class="template asset" contenteditable="false" data-edit_url="/projects/kitfoxgames/moon-hunters-a-myth-weaving-rpg/assets/2485701/edit" data-id="2485701">
+<figure>
+<img alt="Click to view a high-res version!" class="fit" src="https://s3.amazonaws.com/ksr/assets/002/485/701/bbc87a67eb67b98c3912b54dc69f0af7_large.jpg?1408991614">
+<figcaption>Click to view a high-res version!</figcaption>
+</figure>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</a>
+
+
+
+
+
+
+
+<p>If you purchase a fabric print, you can choose from one of five different 10x13" designs (one for each character class and a cloth map representing one possible world configuration), printed directly onto Belgian linen. They are safe to wash, though we don't recommend using them as a BBQ bib, okay?</p>
+<div class="template asset" contenteditable="false" data-edit_url="/projects/kitfoxgames/moon-hunters-a-myth-weaving-rpg/assets/2502153/edit" data-id="2502153">
+<figure>
+<img alt="" class="fit" src="https://s3.amazonaws.com/ksr/assets/002/502/153/88363572b18799781fed6c5e77261432_large.jpg?1409257183">
+</figure>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<p>The Digital Art Book will include the concept art of Moon Hunters. You will get a hand-picked collection of beautiful watercolour artworks in a neatly designed PDF file. It includes some exclusive early concepts that we haven't shown to anyone!</p>
+<div class="template asset" contenteditable="false" data-edit_url="/projects/kitfoxgames/moon-hunters-a-myth-weaving-rpg/assets/2505659/edit" data-id="2505659">
+<figure>
+<img alt="" class="fit" src="https://s3.amazonaws.com/ksr/assets/002/505/659/a4c61c568347e378635f2ca56d02d499_large.png?1409320681">
+</figure>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<p>Here's a visual guide to all the tiers and rewards in their pixel glory:</p>
+<div class="template asset" contenteditable="false" data-edit_url="/projects/kitfoxgames/moon-hunters-a-myth-weaving-rpg/assets/2505662/edit" data-id="2505662">
+<figure>
+<img alt="" class="fit" src="https://s3.amazonaws.com/ksr/assets/002/505/662/a68aeacbad7b0c2047040f26504b5a9b_large.png?1409320695">
+</figure>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="template asset" contenteditable="false" data-edit_url="/projects/kitfoxgames/moon-hunters-a-myth-weaving-rpg/assets/2484843/edit" data-id="2484843">
+<figure>
+<img alt="" class="fit" src="https://s3.amazonaws.com/ksr/assets/002/484/843/4c50cf12022af8c44666685547183a88_large.gif?1408981205">
+</figure>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<p>If you can't find the perfect tier, why not build your own?</p>
+During checkout, add the following amounts manually to your total pledge. If you've already backed us, go to "Manage Pledge" and add the appropriate amount (or more) to your total. Keep your original pledge tier the same. After the Kickstarter is over, we will contact you and you can specify your desired add-ons.
+</div>
+<div></div>
+<ul>
+<li>Additional digital copy of the game: <b>add $13</b>
+</li>
+<li>Copy of the original OST by Ryan Roth and Halina Heron: <b>add $8</b>
+</li>
+<li>Limited edition "Moonblade" T-shirt:<b> add $45</b> (shipping included)</li>
+<li>Poster print, design of your choice: <b>add $30</b> (shipping included)</li>
+<li>The Digital Art Book of Moon Hunters: <b>add $20</b><br>
+</li>
+<li>Digital copy of Shattered Planet: <b>add $10</b>
+</li>
+</ul>
+<div>
+If there's something you're desperate to ask or tell us, please do let us know! You can <a href="http://mailto:xin@kitfoxgames.com" target="_blank">email us</a>, <a href="http://www.facebook.com/kitfoxgames" target="_blank">Facebook</a> us, or <a href="http://www.twitter.com/kitfoxgames" target="_blank">tweet</a> at us! We'd love to hear from you.
+</div>
+</div>
+</div>
+<div id="risks">
+<h2 class="title grey-dark mt6 mb4">
+<span>Risks and challenges</span>
+<a class="right normal h5" href="/help/faq/kickstarter%20basics#Acco" target="_blank">Learn about accountability on Kickstarter</a>
+<div class="divider clear"></div>
+</h2>
+<p><p>The game systems are mostly planned, and the base game is mostly funded. Given that we want to add a lot of extra polish and content, our biggest risk is that we will need to change systems mid-stream, and that the game will not be released on time.</p>
+
+<p>However, Kitfox has experience making RPGs -- Shattered Planet, released on its first platform after only 8 months(!), only two weeks later than scheduled(!) -- plus our team members have worked on The Secret World, Age of Conan, Dungeons of Fayte, Kaia&#39;s Quest, and others. We understand what we&#39;re getting into, and we have lots of experience with the technology we&#39;re using (Unity 3d).</p></p>
+</div>
+</div>
+<div class="NS-projects-faqs" id="project-faqs">
+<h2 class="title grey-dark mt6 mb4">
+FAQ
+<div class="divider clear"></div>
+</h2>
+<ul class="faqs">
+<li class="faq" id="project_faq_103524">
+<div class="faq-question">
+<a href="#project_faq_103524" name="project_faq_103524">
+<span class="ss-icon ss-navigateright"></span>
+<span class="question">Is there online co-op or only local?</span>
+</a>
+</div>
+<div class="faq-answer">
+<p>Only local for now -- online co-op is a stretch goal we&#39;d dearly love to reach. Network code adds a whole new layer of complexity, which we can only afford to do if we get enough support!</p>
+<div class="timestamp">
+Last updated:
+<time class="js-adjust" data-format="llll z" datetime="2014-08-26T09:01:48-04:00">Tue, Aug 26 2014 9:01 am EDT</time>
+</div>
+</div>
+</li>
+<li class="faq" id="project_faq_103556">
+<div class="faq-question">
+<a href="#project_faq_103556" name="project_faq_103556">
+<span class="ss-icon ss-navigateright"></span>
+<span class="question">What other platforms will you launch on?</span>
+</a>
+</div>
+<div class="faq-answer">
+<p>We&#39;re only promising a PC/Mac/maybeLinux release. We don&#39;t want to get too far ahead of ourselves and promise things we can&#39;t deliver or afford! Baby steps. </p>
+
+<p>Now that we&#39;ve also achieved the PS4 stretch goal, we&#39;ll be coming on those platforms as well!</p>
+
+<p>If our support keeps growing, we&#39;re looking at the Vita, and Wii-U, in that order. So... if you&#39;re a console gamer, tell all of your friends and rally their support!</p>
+<div class="timestamp">
+Last updated:
+<time class="js-adjust" data-format="llll z" datetime="2014-09-01T07:30:18-04:00">Mon, Sep 1 2014 7:30 am EDT</time>
+</div>
+</div>
+</li>
+<li class="faq" id="project_faq_103648">
+<div class="faq-question">
+<a href="#project_faq_103648" name="project_faq_103648">
+<span class="ss-icon ss-navigateright"></span>
+<span class="question">Will I get beta invites for all copies of 2/4/10-packs?</span>
+</a>
+</div>
+<div class="faq-answer">
+<p>Yes! You will be able to play the beta with all your friends.</p>
+<div class="timestamp">
+Last updated:
+<time class="js-adjust" data-format="llll z" datetime="2014-08-27T00:46:52-04:00">Wed, Aug 27 2014 12:46 am EDT</time>
+</div>
+</div>
+</li>
+<li class="faq" id="project_faq_104144">
+<div class="faq-question">
+<a href="#project_faq_104144" name="project_faq_104144">
+<span class="ss-icon ss-navigateright"></span>
+<span class="question">Will there be a DRM-free version?</span>
+</a>
+</div>
+<div class="faq-answer">
+<p>Yes! Moon Hunters will be on the Humble Store and possibly GOG.</p>
+<div class="timestamp">
+Last updated:
+<time class="js-adjust" data-format="llll z" datetime="2014-08-31T14:25:09-04:00">Sun, Aug 31 2014 2:25 pm EDT</time>
+</div>
+</div>
+</li>
+<li class="faq" id="project_faq_104656">
+<div class="faq-question">
+<a href="#project_faq_104656" name="project_faq_104656">
+<span class="ss-icon ss-navigateright"></span>
+<span class="question">Are PS4 keys included in the normal digital download tiers? How do I get a PS4 key?</span>
+</a>
+</div>
+<div class="faq-answer">
+<p>Yes! When the game is close to completion, we will send a survey to find out whether you would prefer a Steam, Humble, or PS4 key -- it&#39;s your choice which key you&#39;d like!</p>
+
+<p>Unfortunately, since the campaign has started, we can&#39;t edit the tiers to reflect that fact. Sigh.</p>
+<div class="timestamp">
+Last updated:
+<time class="js-adjust" data-format="llll z" datetime="2014-09-04T10:38:51-04:00">Thu, Sep 4 2014 10:38 am EDT</time>
+</div>
+</div>
+</li>
+
+</ul>
+<div class="faq-ask-box">
+<a class="button button_blue remote_modal_dialog message_creator_modal_link" data-modal-class="modal_send_message" data-modal-title="Ask a question about Moon Hunters, a Myth-Weaving RPG" href="/projects/kitfoxgames/moon-hunters-a-myth-weaving-rpg/messages/new?message%5Bto%5D=kitfoxgames&amp;mode=FAQ">Ask a question</a>
+
+</div>
+</div>
+
+<div class="mt4 ml1 mr1 mb2" id="report-issue-wrap">
+<a class="button button_grey" href="#" id="report-issue-link">Report this project to Kickstarter
+</a><div class="ajax-container" id="project-issues">
+<h4>Why are you reporting this project?</h4>
+<form accept-charset="UTF-8" action="/projects/kitfoxgames/moon-hunters-a-myth-weaving-rpg/report" class="overlabels" data-ksrjson="true" id="new_flagging" method="post"><div style="margin:0;padding:0;display:inline"><input class="hidden" name="utf8" type="hidden" value="&#x2713;" /><input class="hidden" name="authenticity_token" type="hidden" value="AEwb2OElUWBT+hCuY9lAV1/gNfGMvAfv6ENyA3IFr2k=" /></div><ol class="tabs grouped outline fastclick">
+<li data-pane="details-spam">
+<div class="choice"><input class="radio" id="flagging_kind_spam" name="flagging[kind]" type="radio" value="spam" /></div>
+<div class="label">
+<label for="flagging_kind_spam"><strong>This project creator is spamming me.</strong>
+Project creators are not permitted to spam. This includes sending
+unsolicited mass emails and unsolicited @messages on Twitter.
+</label></div>
+</li>
+<li data-pane="details-charity">
+<div class="choice"><input class="radio" id="flagging_kind_charity" name="flagging[kind]" type="radio" value="charity" /></div>
+<div class="label">
+<label for="flagging_kind_charity"><strong>This is a charity project.</strong>
+Projects cannot promise to donate funds raised on Kickstarter to a charity or cause.
+</label></div>
+</li>
+<li data-pane="details-not_project">
+<div class="choice"><input class="radio" id="flagging_kind_not_project" name="flagging[kind]" type="radio" value="not_project" /></div>
+<div class="label">
+<label for="flagging_kind_not_project"><strong>This is not a project.</strong>
+Projects must have a plan for creating something and sharing it with the world.
+</label></div>
+</li>
+<li data-pane="details-rewards">
+<div class="choice"><input class="radio" id="flagging_kind_rewards" name="flagging[kind]" type="radio" value="rewards" /></div>
+<div class="label">
+<label for="flagging_kind_rewards"><strong>Prohibited rewards.</strong>
+Raffles, discounts, coupons, contests, and investment offers are
+prohibited. For more, please review
+<a class="has-icon popup" href="/rules/prohibited?modal=true" id="prohibited_link" target="_blank">what&#39;s not allowed</a>.
+</label></div>
+</li>
+<li data-pane="details-abuse">
+<div class="choice"><input class="radio" id="flagging_kind_abuse" name="flagging[kind]" type="radio" value="abuse" /></div>
+<div class="label">
+<label for="flagging_kind_abuse"><strong>I see abusive behavior on this project.</strong>
+If you see inappropriate comments or other activity, let us know.
+</label></div>
+</li>
+<li data-pane="details-ip_infringement">
+<div class="choice"><input class="radio" id="flagging_kind_ip_infringement" name="flagging[kind]" type="radio" value="ip_infringement" /></div>
+<div class="label">
+<label for="flagging_kind_ip_infringement"><strong>Intellectual property violation.</strong>
+A project is infringing on your copyright or trademark.
+</label></div>
+</li>
+</ol>
+<div class="panes" style="display: none;">
+<div class="pane" id="details-spam">
+<div class="field">
+<label class="overlabel z1" for="flagging_details">Please include any relevant links and other specifics that will help us look into this.</label>
+<textarea class="textarea" id="flagging_details" name="flagging[details]">
+</textarea>
+</div>
+</div>
+<div class="pane" id="details-charity">
+<div class="field">
+<label class="overlabel z1" for="flagging_details">Please let us know how this project violates Kickstarter&#39;s no charity rule.</label>
+<textarea class="textarea" id="flagging_details" name="flagging[details]">
+</textarea>
+</div>
+</div>
+<div class="pane" id="details-not_project">
+<div class="field">
+<label class="overlabel z1" for="flagging_details">Please let us know how this project violates Kickstarter&#39;s project rule.</label>
+<textarea class="textarea" id="flagging_details" name="flagging[details]">
+</textarea>
+</div>
+</div>
+<div class="pane" id="details-rewards">
+<div class="field">
+<label class="overlabel z1" for="flagging_details">Please let us know which rewards are prohibited.</label>
+<textarea class="textarea" id="flagging_details" name="flagging[details]">
+</textarea>
+</div>
+</div>
+<div class="pane" id="details-abuse">
+<div class="field">
+<label class="overlabel z1" for="flagging_details">Please include any relevant links and other specifics that will help us look into this.</label>
+<textarea class="textarea" id="flagging_details" name="flagging[details]">
+</textarea>
+</div>
+</div>
+<div class="pane" id="details-ip_infringement">
+<p>
+Kickstarter takes claims of intellectual property infringement seriously. For more information and instructions on how to report infringement, please visit our
+<a class="popup" href="https://www.kickstarter.com/help/copyright" target="_blank">Copyright Policy</a>
+and our
+<a class="popup" href="https://www.kickstarter.com/help/trademark" target="_blank">Trademark Policy</a>.
+Only claims filed by the copyright or trademark holder can be processed.
+</p>
+</div>
+</div>
+<div class="footer" style="display: none;"><input class="button button_blue submit" name="commit" type="submit" value="Report project" /></div>
+</form>
+
+</div>
+
+</div>
+</div>
+<div class="grid_5">
+<div class="NS-projects-rightcol" id="rightcol">
+<div class="NS_projects__ecom">
+<div class="digits_5 pb2 pl2 pt2" id="stats">
+<h5>
+<div class="num h48 no-margin" data-backers-count="3250" id="backers_count"><data class="Project1632425182" data-format="number" data-value="3250" itemprop="Project[backers_count]">3,250</data></div>
+<span><data class="Project1632425182" data-attr="backers_count" data-format="pluralize" data-value="3250" data-word="Backer">Backers</data></span>
+</h5>
+<h5>
+<div class="num h48 no-margin" data-goal="45000.0" data-percent-raised="2.141356" data-pledged="96361.02" data-ref-tag="www.kickspy.com" id="pledged">
+<data class="Project1632425182" data-currency="CAD" data-format="shorter_money" data-precision="0" data-value="96361" data-without_code="true" itemprop="Project[pledged]">$96,361</data>
+<span class="money cad project_currency_code"></span>
+</div>
+pledged of
+<span class="money cad no-code">$45,000</span>
+goal
+</h5>
+<span data-duration="31.0" data-end_time="2014-09-26T07:03:51-04:00" data-hours-remaining="498.9686468190617" id="project_duration_data"></span>
+<div class="Project1632425182" data-conditions="[{&quot;!state&quot;:[&quot;canceled&quot;,&quot;suspended&quot;]}]" data-evaluation="true" data-render="&quot;&lt;h5 class=\&quot;poll ksr_page_timer\&quot; data-dynamic=\&quot;5\&quot; data-end_time=\&quot;2014-09-26T07:03:51-04:00\&quot; data-poll_url=\&quot;https://d2oher2uhvl0ur.cloudfront.net/projects/kitfoxgames/moon-hunters-a-myth-weaving-rpg/stats.json?v=1\&quot;&gt;\n&lt;div class=\&quot;num h48 no-margin\&quot;&gt;&amp;nbsp;&lt;/div&gt;\n&lt;span class=\&quot;text\&quot;&gt;&amp;nbsp;&lt;/span&gt;\n&lt;/h5&gt;\n&quot;"><h5 class="poll ksr_page_timer" data-dynamic="5" data-end_time="2014-09-26T07:03:51-04:00" data-poll_url="https://d2oher2uhvl0ur.cloudfront.net/projects/kitfoxgames/moon-hunters-a-myth-weaving-rpg/stats.json?v=1">
+<div class="num h48 no-margin">&nbsp;</div>
+<span class="text">&nbsp;</span>
+</h5>
+</div></div>
+<div class="Project1632425182" data-conditions="[{&quot;state&quot;:&quot;live&quot;},{&quot;!ended?&quot;:true}]" data-evaluation="true" data-render="&quot;&lt;div class=\&quot;pr2 pl2\&quot; id=\&quot;pledge-wrap\&quot;&gt;\n&lt;a class=\&quot;button button_green button_box button_block\&quot; href=\&quot;/projects/kitfoxgames/moon-hunters-a-myth-weaving-rpg/pledge/new?clicked_reward=false&amp;amp;ref=kickspy\&quot; id=\&quot;button-back-this-proj\&quot; title=\&quot;Back this project\&quot;&gt;Back This Project &lt;small class=&#39;h6 normal block green-dark&#39;&gt;&lt;span class=\&quot;quot;money cad \&quot;&gt;$1&lt;/span&gt; minimum pledge&lt;/small&gt;&lt;/a&gt;\n&lt;/div&gt;\n&quot;"><div class="pr2 pl2" id="pledge-wrap">
+<a class="button button_green button_box button_block" href="/projects/kitfoxgames/moon-hunters-a-myth-weaving-rpg/pledge/new?clicked_reward=false&amp;ref=kickspy" id="button-back-this-proj" title="Back this project">Back This Project <small class='h6 normal block green-dark'><span class="money cad ">$1</span> minimum pledge</small></a>
+</div>
+</div><div class="Project1632425182" data-conditions="[{&quot;state&quot;:&quot;live&quot;}]" data-evaluation="true" data-render="&quot;&lt;div class=\&quot;p2\&quot; id=\&quot;banner\&quot;&gt;\n&lt;p class=\&quot;tiny_type no-margin\&quot;&gt;\nThis project will be funded on\n&lt;time class=\&quot;js-adjust\&quot; data-format=\&quot;llll z\&quot; datetime=\&quot;2014-09-26T07:03:51-04:00\&quot;&gt;Fri, Sep 26 2014 7:03 am EDT&lt;/time&gt;.\n&lt;/p&gt;\n&lt;/div&gt;\n&quot;"><div class="p2" id="banner">
+<p class="tiny_type no-margin">
+This project will be funded on
+<time class="js-adjust" data-format="llll z" datetime="2014-09-26T07:03:51-04:00">Fri, Sep 26 2014 7:03 am EDT</time>.
+</p>
+</div>
+</div></div>
+
+<div class="mb2">
+
+</div>
+<div class="NS_projects__rightcol_projectby bg-blue-light rounded">
+<div class="p2 clearfix">
+<div class="avatar inline-block align-middle">
+<a class="remote_modal_dialog" data-modal-class="modal_project_by" data-modal-title="Biography" href="/projects/kitfoxgames/moon-hunters-a-myth-weaving-rpg/creator_bio"><img alt="Avatar" class="avatar-small" height="80" src="https://s3.amazonaws.com/ksr/avatars/11337334/kf_logo_orangecircle_whitesquare.small.jpg?1404942110" width="80" />
+</a></div>
+<div class="creator-name inline-block align-middle ml1">
+<h6 class="mb1">Project by</h6>
+<h5 class="mb1">
+<a class="green-dark remote_modal_dialog" data-modal-class="modal_project_by" data-modal-title="Biography" href="/projects/kitfoxgames/moon-hunters-a-myth-weaving-rpg/creator_bio">Kitfox Games</a>
+</h5>
+<p class="location h6 bold mb1">
+<a href="/discover/places/montreal-ca">Montreal, Canada</a>
+</p>
+</div>
+</div>
+<div class="creator-details pl2 pr2 pb1">
+<ul class="list-simple h5 mb1">
+<li class="projects">
+<span class="ss-icon ss-kickstarter grey-dark margin-right"></span>
+<span class="text">
+First created
+<span class="divider">&middot;</span>
+0 backed
+</span>
+</li>
+<li class="facebook-connected">
+<span class="ss-icon ss-facebook facebook color-facebook margin-right"></span>
+<span class="text">
+<a class="popup" href="https://www.facebook.com/100000347025126" target="_blank">Tanya Short</a>
+<span class="number h6">
+495
+friends
+</span>
+</span>
+
+</li>
+<li class="links">
+<span class="ss-icon ss-globe margin-right grey-dark"></span>
+<span class="text">
+<a class="popup" href="http://www.kitfoxgames.com" rel="nofollow" target="_blank">kitfoxgames.com</a>
+</span>
+</li>
+</ul>
+</div>
+<div class="footer center h5 bold clearfix rounded-bottom clip">
+<a class="remote_modal_dialog full_bio" data-modal-class="modal_project_by" data-modal-title="Biography" href="/projects/kitfoxgames/moon-hunters-a-myth-weaving-rpg/creator_bio">See full bio</a>
+<a class="remote_modal_dialog message_creator_modal_link" data-modal-class="modal_send_message" data-modal-title="Send a message to Kitfox Games" href="/projects/kitfoxgames/moon-hunters-a-myth-weaving-rpg/messages/new?message%5Bto%5D=kitfoxgames">Contact me</a>
+
+</div>
+</div>
+
+<ul class="NS-projects-rightcol-rewards clip list mt2 pledgeable rounded" data-reward-count="20" id="what-you-get">
+<li class="NS-projects-reward bg-grey-light border-bottom relative">
+<div class="NS_backer_rewards__reward p2">
+<span class="indicator you-selected h6 bold bg-green white pl1 pr1 relative t0 hide">
+You selected
+</span>
+<h5 class="mb1">
+Pledge
+<span class="money cad ">$10</span>
+or more
+</h5>
+<p class="backers-limits">
+<span class="ss-icon ss-backer green h4 icon-nudge-down"></span>
+<span class="backers-wrap h6 bold">
+<span class="num-backers mr1">
+300 backers
+</span>
+<span class="bg-grey no-wrap pl1 pr1 sold-out">
+All gone!
+</span>
+</span>
+</p>
+<div class="native-show">
+<div class="description expandable_excerpt mb2">
+<p class="excerpt wrap-words" style="-webkit-line-clamp: 4">
+EARLY BIRD EXPLORER                  
+==============================
+Digital copy of the game for PC and Mac, at a lower price available only through this Kickstarter.
+</p>
+<span class="view_more fastclick">
+Read more<span class='ss-icon ss-navigatedown'></span>
+</span>
+</div>
+
+</div>
+<div class="desc h5 mb2 break-word native-hide">
+<p>EARLY BIRD EXPLORER                  
+==============================
+Digital copy of the game for PC and Mac, at a lower price available only through this Kickstarter.</p>
+</div>
+<div class="shipping-wrap">
+<div class="delivery-date h6">
+<b>Estimated delivery:</b>
+<time class="js-adjust" data-format="MMM YYYY" datetime="2015-07-01">Jul 2015</time>
+</div>
+<div class="h6">
+
+</div>
+</div>
+</div>
+
+
+
+</li>
+<li class="NS-projects-reward bg-grey-light border-bottom relative">
+<a class="pledge block remote_modal_dialog hover-group" data-modal-class="checkout_modal" href="/projects/kitfoxgames/moon-hunters-a-myth-weaving-rpg/pledge/new?backing%5Bbacker_reward_id%5D=2935871&amp;clicked_reward=true"><div class="hover-zoomout bg-green-90 z1 hide">
+<div class="table full-width full-height">
+<div class="table-cell align-middle center">
+<div class="h3 white">Select this reward</div>
+</div>
+</div>
+</div>
+<div class="NS_backer_rewards__reward p2">
+<span class="indicator you-selected h6 bold bg-green white pl1 pr1 relative t0 hide">
+You selected
+</span>
+<h5 class="mb1">
+Pledge
+<span class="money cad ">$15</span>
+or more
+</h5>
+<p class="backers-limits">
+<span class="ss-icon ss-backer green h4 icon-nudge-down"></span>
+<span class="backers-wrap h6 bold">
+<span class="num-backers mr1">
+1059 backers
+</span>
+</span>
+</p>
+<div class="native-show">
+<div class="description expandable_excerpt mb2">
+<p class="excerpt wrap-words" style="-webkit-line-clamp: 4">
+EXPLORER                  
+==============================
+A digital copy of the game for PC and Mac.
+</p>
+<span class="view_more fastclick">
+Read more<span class='ss-icon ss-navigatedown'></span>
+</span>
+</div>
+
+</div>
+<div class="desc h5 mb2 break-word native-hide">
+<p>EXPLORER                  
+==============================
+A digital copy of the game for PC and Mac.</p>
+</div>
+<div class="shipping-wrap">
+<div class="delivery-date h6">
+<b>Estimated delivery:</b>
+<time class="js-adjust" data-format="MMM YYYY" datetime="2015-07-01">Jul 2015</time>
+</div>
+<div class="h6">
+
+</div>
+</div>
+</div>
+
+</a>
+
+</li>
+<li class="NS-projects-reward bg-grey-light border-bottom relative">
+<a class="pledge block remote_modal_dialog hover-group" data-modal-class="checkout_modal" href="/projects/kitfoxgames/moon-hunters-a-myth-weaving-rpg/pledge/new?backing%5Bbacker_reward_id%5D=3075543&amp;clicked_reward=true&amp;ref=category"><div class="hover-zoomout bg-green-90 z1 hide">
+<div class="table full-width full-height">
+<div class="table-cell align-middle center">
+<div class="h3 white">Select this reward</div>
+</div>
+</div>
+</div>
+<div class="NS_backer_rewards__reward p2">
+<span class="indicator you-selected h6 bold bg-green white pl1 pr1 relative t0 hide">
+You selected
+</span>
+<h5 class="mb1">
+Pledge
+<span class="money cad ">$20</span>
+or more
+</h5>
+<p class="backers-limits">
+<span class="ss-icon ss-backer green h4 icon-nudge-down"></span>
+<span class="backers-wrap h6 bold">
+<span class="num-backers mr1">
+325 backers
+</span>
+</span>
+</p>
+<div class="native-show">
+<div class="description expandable_excerpt mb2">
+<p class="excerpt wrap-words" style="-webkit-line-clamp: 4">
+SONGSMITH ============================== 
+Receive a digital copy of the all-original Moon Hunters OST by Ryan Roth, guest-starring Halina Heron, normally a $10 value.
+============================== Also includes a digital copy of the game for PC and Mac.
+</p>
+<span class="view_more fastclick">
+Read more<span class='ss-icon ss-navigatedown'></span>
+</span>
+</div>
+
+</div>
+<div class="desc h5 mb2 break-word native-hide">
+<p>SONGSMITH ============================== 
+Receive a digital copy of the all-original Moon Hunters OST by Ryan Roth, guest-starring Halina Heron, normally a $10 value.
+============================== Also includes a digital copy of the game for PC and Mac.</p>
+</div>
+<div class="shipping-wrap">
+<div class="delivery-date h6">
+<b>Estimated delivery:</b>
+<time class="js-adjust" data-format="MMM YYYY" datetime="2015-07-01">Jul 2015</time>
+</div>
+<div class="h6">
+
+</div>
+</div>
+</div>
+
+</a>
+
+</li>
+<li class="NS-projects-reward bg-grey-light border-bottom relative">
+<div class="NS_backer_rewards__reward p2">
+<span class="indicator you-selected h6 bold bg-green white pl1 pr1 relative t0 hide">
+You selected
+</span>
+<h5 class="mb1">
+Pledge
+<span class="money cad ">$22</span>
+or more
+</h5>
+<p class="backers-limits">
+<span class="ss-icon ss-backer green h4 icon-nudge-down"></span>
+<span class="backers-wrap h6 bold">
+<span class="num-backers mr1">
+200 backers
+</span>
+<span class="bg-grey no-wrap pl1 pr1 sold-out">
+All gone!
+</span>
+</span>
+</p>
+<div class="native-show">
+<div class="description expandable_excerpt mb2">
+<p class="excerpt wrap-words" style="-webkit-line-clamp: 4">
+EARLY BIRD DYNAMIC DUO
+==============================
+Why play alone when you can share your experience with a friend? Two digital copies of the game, at a lower price available only through this kickstarter. PLUS an invitation to our beta tests!
+==============================
+Also includes the all-original soundtrack by Ryan Roth.
+</p>
+<span class="view_more fastclick">
+Read more<span class='ss-icon ss-navigatedown'></span>
+</span>
+</div>
+
+</div>
+<div class="desc h5 mb2 break-word native-hide">
+<p>EARLY BIRD DYNAMIC DUO
+==============================
+Why play alone when you can share your experience with a friend? Two digital copies of the game, at a lower price available only through this kickstarter. PLUS an invitation to our beta tests!
+==============================
+Also includes the all-original soundtrack by Ryan Roth.</p>
+</div>
+<div class="shipping-wrap">
+<div class="delivery-date h6">
+<b>Estimated delivery:</b>
+<time class="js-adjust" data-format="MMM YYYY" datetime="2015-07-01">Jul 2015</time>
+</div>
+<div class="h6">
+
+</div>
+</div>
+</div>
+
+
+
+</li>
+<li class="NS-projects-reward bg-grey-light border-bottom relative">
+<a class="pledge block remote_modal_dialog hover-group" data-modal-class="checkout_modal" href="/projects/kitfoxgames/moon-hunters-a-myth-weaving-rpg/pledge/new?backing%5Bbacker_reward_id%5D=2935874&amp;clicked_reward=true"><div class="hover-zoomout bg-green-90 z1 hide">
+<div class="table full-width full-height">
+<div class="table-cell align-middle center">
+<div class="h3 white">Select this reward</div>
+</div>
+</div>
+</div>
+<div class="NS_backer_rewards__reward p2">
+<span class="indicator you-selected h6 bold bg-green white pl1 pr1 relative t0 hide">
+You selected
+</span>
+<h5 class="mb1">
+Pledge
+<span class="money cad ">$25</span>
+or more
+</h5>
+<p class="backers-limits">
+<span class="ss-icon ss-backer green h4 icon-nudge-down"></span>
+<span class="backers-wrap h6 bold">
+<span class="num-backers mr1">
+659 backers
+</span>
+</span>
+</p>
+<div class="native-show">
+<div class="description expandable_excerpt mb2">
+<p class="excerpt wrap-words" style="-webkit-line-clamp: 4">
+DYNAMIC DUO
+==============================
+Why play alone when you can share your experience with a friend? Two digital copies of the game.  PLUS an invitation to our beta tests!
+==============================
+Also includes: All-original soundtrack by Ryan Roth.
+</p>
+<span class="view_more fastclick">
+Read more<span class='ss-icon ss-navigatedown'></span>
+</span>
+</div>
+
+</div>
+<div class="desc h5 mb2 break-word native-hide">
+<p>DYNAMIC DUO
+==============================
+Why play alone when you can share your experience with a friend? Two digital copies of the game.  PLUS an invitation to our beta tests!
+==============================
+Also includes: All-original soundtrack by Ryan Roth.</p>
+</div>
+<div class="shipping-wrap">
+<div class="delivery-date h6">
+<b>Estimated delivery:</b>
+<time class="js-adjust" data-format="MMM YYYY" datetime="2015-07-01">Jul 2015</time>
+</div>
+<div class="h6">
+
+</div>
+</div>
+</div>
+
+</a>
+
+</li>
+<li class="NS-projects-reward bg-grey-light border-bottom relative">
+<a class="pledge block remote_modal_dialog hover-group" data-modal-class="checkout_modal" href="/projects/kitfoxgames/moon-hunters-a-myth-weaving-rpg/pledge/new?backing%5Bbacker_reward_id%5D=2979889&amp;clicked_reward=true&amp;ref=category_popular"><div class="hover-zoomout bg-green-90 z1 hide">
+<div class="table full-width full-height">
+<div class="table-cell align-middle center">
+<div class="h3 white">Select this reward</div>
+</div>
+</div>
+</div>
+<div class="NS_backer_rewards__reward p2">
+<span class="indicator you-selected h6 bold bg-green white pl1 pr1 relative t0 hide">
+You selected
+</span>
+<h5 class="mb1">
+Pledge
+<span class="money cad ">$35</span>
+or more
+</h5>
+<p class="backers-limits">
+<span class="ss-icon ss-backer green h4 icon-nudge-down"></span>
+<span class="backers-wrap h6 bold">
+<span class="num-backers mr1">
+196 backers
+</span>
+<span class="bg-yellow limited no-wrap pl1 pr1">
+Limited
+<span class="limited-number">(304 left of 500)</span>
+</span>
+</span>
+</p>
+<div class="native-show">
+<div class="description expandable_excerpt mb2">
+<p class="excerpt wrap-words" style="-webkit-line-clamp: 4">
+PEN PAL ============================== We&#39;ll send you a physical postcard signed by the core dev team, in the real world. This is also the first tier in which we will list your name in the game&#39;s Special Thanks. NOTE: This is the ONLY TIER that offers the postcard, other than the Super Collector tier.
+============================== Also includes: Soundtrack, beta invite, and a digital copy of the game.
+</p>
+<span class="view_more fastclick">
+Read more<span class='ss-icon ss-navigatedown'></span>
+</span>
+</div>
+
+</div>
+<div class="desc h5 mb2 break-word native-hide">
+<p>PEN PAL ============================== We&#39;ll send you a physical postcard signed by the core dev team, in the real world. This is also the first tier in which we will list your name in the game&#39;s Special Thanks. NOTE: This is the ONLY TIER that offers the postcard, other than the Super Collector tier.
+============================== Also includes: Soundtrack, beta invite, and a digital copy of the game.</p>
+</div>
+<div class="shipping-wrap">
+<div class="delivery-date h6">
+<b>Estimated delivery:</b>
+<time class="js-adjust" data-format="MMM YYYY" datetime="2015-07-01">Jul 2015</time>
+</div>
+<div class="h6">
+
+</div>
+</div>
+</div>
+
+</a>
+
+</li>
+<li class="NS-projects-reward bg-grey-light border-bottom relative">
+<a class="pledge block remote_modal_dialog hover-group" data-modal-class="checkout_modal" href="/projects/kitfoxgames/moon-hunters-a-myth-weaving-rpg/pledge/new?backing%5Bbacker_reward_id%5D=2935876&amp;clicked_reward=true"><div class="hover-zoomout bg-green-90 z1 hide">
+<div class="table full-width full-height">
+<div class="table-cell align-middle center">
+<div class="h3 white">Select this reward</div>
+</div>
+</div>
+</div>
+<div class="NS_backer_rewards__reward p2">
+<span class="indicator you-selected h6 bold bg-green white pl1 pr1 relative t0 hide">
+You selected
+</span>
+<h5 class="mb1">
+Pledge
+<span class="money cad ">$45</span>
+or more
+</h5>
+<p class="backers-limits">
+<span class="ss-icon ss-backer green h4 icon-nudge-down"></span>
+<span class="backers-wrap h6 bold">
+<span class="num-backers mr1">
+189 backers
+</span>
+</span>
+</p>
+<div class="native-show">
+<div class="description expandable_excerpt mb2">
+<p class="excerpt wrap-words" style="-webkit-line-clamp: 4">
+BAND OF HEROES
+==============================
+Everything&#39;s more fun when you&#39;re adventuring together! Buy a 4-pack! Four digital copies of the game, for the price of three!
+==============================
+Also includes: Soundtrack, an invitation to our early beta tests.
+</p>
+<span class="view_more fastclick">
+Read more<span class='ss-icon ss-navigatedown'></span>
+</span>
+</div>
+
+</div>
+<div class="desc h5 mb2 break-word native-hide">
+<p>BAND OF HEROES
+==============================
+Everything&#39;s more fun when you&#39;re adventuring together! Buy a 4-pack! Four digital copies of the game, for the price of three!
+==============================
+Also includes: Soundtrack, an invitation to our early beta tests.</p>
+</div>
+<div class="shipping-wrap">
+<div class="delivery-date h6">
+<b>Estimated delivery:</b>
+<time class="js-adjust" data-format="MMM YYYY" datetime="2015-07-01">Jul 2015</time>
+</div>
+<div class="h6">
+
+</div>
+</div>
+</div>
+
+</a>
+
+</li>
+<li class="NS-projects-reward bg-grey-light border-bottom relative">
+<a class="pledge block remote_modal_dialog hover-group" data-modal-class="checkout_modal" href="/projects/kitfoxgames/moon-hunters-a-myth-weaving-rpg/pledge/new?backing%5Bbacker_reward_id%5D=3071423&amp;clicked_reward=true"><div class="hover-zoomout bg-green-90 z1 hide">
+<div class="table full-width full-height">
+<div class="table-cell align-middle center">
+<div class="h3 white">Select this reward</div>
+</div>
+</div>
+</div>
+<div class="NS_backer_rewards__reward p2">
+<span class="indicator you-selected h6 bold bg-green white pl1 pr1 relative t0 hide">
+You selected
+</span>
+<h5 class="mb1">
+Pledge
+<span class="money cad ">$60</span>
+or more
+</h5>
+<p class="backers-limits">
+<span class="ss-icon ss-backer green h4 icon-nudge-down"></span>
+<span class="backers-wrap h6 bold">
+<span class="num-backers mr1">
+127 backers
+</span>
+<span class="bg-yellow limited no-wrap pl1 pr1">
+Limited
+<span class="limited-number">(123 left of 250)</span>
+</span>
+</span>
+</p>
+<div class="native-show">
+<div class="description expandable_excerpt mb2">
+<p class="excerpt wrap-words" style="-webkit-line-clamp: 4">
+FASHION LEGEND ==============================
+Get a limited edition charcoal-grey cotton &quot;Moonblade&quot; T-Shirt to impress your tribe, available only in this Kickstarter. NOTE: This is THE ONLY TIER that offers the T-Shirt, other than the Super Collector tier.
+============================== Also includes: Soundtrack, inclusion in Special Thanks, an invitation to our early beta tests, and a digital copy of the game for PC and Mac.
+</p>
+<span class="view_more fastclick">
+Read more<span class='ss-icon ss-navigatedown'></span>
+</span>
+</div>
+
+</div>
+<div class="desc h5 mb2 break-word native-hide">
+<p>FASHION LEGEND ==============================
+Get a limited edition charcoal-grey cotton &quot;Moonblade&quot; T-Shirt to impress your tribe, available only in this Kickstarter. NOTE: This is THE ONLY TIER that offers the T-Shirt, other than the Super Collector tier.
+============================== Also includes: Soundtrack, inclusion in Special Thanks, an invitation to our early beta tests, and a digital copy of the game for PC and Mac.</p>
+</div>
+<div class="shipping-wrap">
+<div class="delivery-date h6">
+<b>Estimated delivery:</b>
+<time class="js-adjust" data-format="MMM YYYY" datetime="2015-07-01">Jul 2015</time>
+</div>
+<div class="h6">
+
+</div>
+</div>
+</div>
+
+</a>
+
+</li>
+<li class="NS-projects-reward bg-grey-light border-bottom relative">
+<a class="pledge block remote_modal_dialog hover-group" data-modal-class="checkout_modal" href="/projects/kitfoxgames/moon-hunters-a-myth-weaving-rpg/pledge/new?backing%5Bbacker_reward_id%5D=2935877&amp;clicked_reward=true"><div class="hover-zoomout bg-green-90 z1 hide">
+<div class="table full-width full-height">
+<div class="table-cell align-middle center">
+<div class="h3 white">Select this reward</div>
+</div>
+</div>
+</div>
+<div class="NS_backer_rewards__reward p2">
+<span class="indicator you-selected h6 bold bg-green white pl1 pr1 relative t0 hide">
+You selected
+</span>
+<h5 class="mb1">
+Pledge
+<span class="money cad ">$70</span>
+or more
+</h5>
+<p class="backers-limits">
+<span class="ss-icon ss-backer green h4 icon-nudge-down"></span>
+<span class="backers-wrap h6 bold">
+<span class="num-backers mr1">
+54 backers
+</span>
+<span class="bg-yellow limited no-wrap pl1 pr1">
+Limited
+<span class="limited-number">(46 left of 100)</span>
+</span>
+</span>
+</p>
+<div class="native-show">
+<div class="description expandable_excerpt mb2">
+<p class="excerpt wrap-words" style="-webkit-line-clamp: 4">
+ART COLLECTOR
+==============================
+This tier includes a limited-edition 12x18&quot; poster print of your choice from four designs, signed by the core team. NOTE: This is THE ONLY TIER that offers the signed poster print, other than the Super Collector tier.
+==============================
+Also includes: soundtrack, an invitation to our early beta, inclusion in Special Thanks, and a digital copy of the game.
+</p>
+<span class="view_more fastclick">
+Read more<span class='ss-icon ss-navigatedown'></span>
+</span>
+</div>
+
+</div>
+<div class="desc h5 mb2 break-word native-hide">
+<p>ART COLLECTOR
+==============================
+This tier includes a limited-edition 12x18&quot; poster print of your choice from four designs, signed by the core team. NOTE: This is THE ONLY TIER that offers the signed poster print, other than the Super Collector tier.
+==============================
+Also includes: soundtrack, an invitation to our early beta, inclusion in Special Thanks, and a digital copy of the game.</p>
+</div>
+<div class="shipping-wrap">
+<div class="delivery-date h6">
+<b>Estimated delivery:</b>
+<time class="js-adjust" data-format="MMM YYYY" datetime="2015-07-01">Jul 2015</time>
+</div>
+<div class="h6">
+
+</div>
+</div>
+</div>
+
+</a>
+
+</li>
+<li class="NS-projects-reward bg-grey-light border-bottom relative">
+<a class="pledge block remote_modal_dialog hover-group" data-modal-class="checkout_modal" href="/projects/kitfoxgames/moon-hunters-a-myth-weaving-rpg/pledge/new?backing%5Bbacker_reward_id%5D=2935878&amp;clicked_reward=true"><div class="hover-zoomout bg-green-90 z1 hide">
+<div class="table full-width full-height">
+<div class="table-cell align-middle center">
+<div class="h3 white">Select this reward</div>
+</div>
+</div>
+</div>
+<div class="NS_backer_rewards__reward p2">
+<span class="indicator you-selected h6 bold bg-green white pl1 pr1 relative t0 hide">
+You selected
+</span>
+<h5 class="mb1">
+Pledge
+<span class="money cad ">$115</span>
+or more
+</h5>
+<p class="backers-limits">
+<span class="ss-icon ss-backer green h4 icon-nudge-down"></span>
+<span class="backers-wrap h6 bold">
+<span class="num-backers mr1">
+27 backers
+</span>
+<span class="bg-yellow limited no-wrap pl1 pr1">
+Limited
+<span class="limited-number">(23 left of 50)</span>
+</span>
+</span>
+</p>
+<div class="native-show">
+<div class="description expandable_excerpt mb2">
+<p class="excerpt wrap-words" style="-webkit-line-clamp: 4">
+WEAVER
+==============================
+For those who see the strands that bind our patterns together. This tier includes a limited-edition fabric print on Belgian linen, from your choice of five designs: a world map or one of the four base characters (Witch, Spellblade, Occultist, Druid). NOTE: This is THE ONLY TIER that offers the fabric print, other than the Super Collector tier.
+==============================
+Also includes: soundtrack, an invitation to our early beta, inclusion in Special Thanks, and a digital copy of the game.
+</p>
+<span class="view_more fastclick">
+Read more<span class='ss-icon ss-navigatedown'></span>
+</span>
+</div>
+
+</div>
+<div class="desc h5 mb2 break-word native-hide">
+<p>WEAVER
+==============================
+For those who see the strands that bind our patterns together. This tier includes a limited-edition fabric print on Belgian linen, from your choice of five designs: a world map or one of the four base characters (Witch, Spellblade, Occultist, Druid). NOTE: This is THE ONLY TIER that offers the fabric print, other than the Super Collector tier.
+==============================
+Also includes: soundtrack, an invitation to our early beta, inclusion in Special Thanks, and a digital copy of the game.</p>
+</div>
+<div class="shipping-wrap">
+<div class="delivery-date h6">
+<b>Estimated delivery:</b>
+<time class="js-adjust" data-format="MMM YYYY" datetime="2015-07-01">Jul 2015</time>
+</div>
+<div class="h6">
+
+</div>
+</div>
+</div>
+
+</a>
+
+</li>
+<li class="NS-projects-reward bg-grey-light border-bottom relative">
+<div class="NS_backer_rewards__reward p2">
+<span class="indicator you-selected h6 bold bg-green white pl1 pr1 relative t0 hide">
+You selected
+</span>
+<h5 class="mb1">
+Pledge
+<span class="money cad ">$140</span>
+or more
+</h5>
+<p class="backers-limits">
+<span class="ss-icon ss-backer green h4 icon-nudge-down"></span>
+<span class="backers-wrap h6 bold">
+<span class="num-backers mr1">
+25 backers
+</span>
+<span class="bg-grey no-wrap pl1 pr1 sold-out">
+All gone!
+</span>
+</span>
+</p>
+<div class="native-show">
+<div class="description expandable_excerpt mb2">
+<p class="excerpt wrap-words" style="-webkit-line-clamp: 4">
+NAME A VILLAGER
+==============================
+This tier gives you the right to name a human character (within reason), to be included in the final game. Character gender (male, female, other), species (human/Silkhood) and home-tribe are your choice. We will accommodate basic customization requests, within the limits of the Moon Hunters world.
+==============================
+Also includes: soundtrack, an invitation to our early beta, inclusion in Special Thanks, and TWO digital copies of the game.
+</p>
+<span class="view_more fastclick">
+Read more<span class='ss-icon ss-navigatedown'></span>
+</span>
+</div>
+
+</div>
+<div class="desc h5 mb2 break-word native-hide">
+<p>NAME A VILLAGER
+==============================
+This tier gives you the right to name a human character (within reason), to be included in the final game. Character gender (male, female, other), species (human/Silkhood) and home-tribe are your choice. We will accommodate basic customization requests, within the limits of the Moon Hunters world.
+==============================
+Also includes: soundtrack, an invitation to our early beta, inclusion in Special Thanks, and TWO digital copies of the game.</p>
+</div>
+<div class="shipping-wrap">
+<div class="delivery-date h6">
+<b>Estimated delivery:</b>
+<time class="js-adjust" data-format="MMM YYYY" datetime="2015-07-01">Jul 2015</time>
+</div>
+<div class="h6">
+
+</div>
+</div>
+</div>
+
+
+
+</li>
+<li class="NS-projects-reward bg-grey-light border-bottom relative">
+<a class="pledge block remote_modal_dialog hover-group" data-modal-class="checkout_modal" href="/projects/kitfoxgames/moon-hunters-a-myth-weaving-rpg/pledge/new?backing%5Bbacker_reward_id%5D=2935880&amp;clicked_reward=true"><div class="hover-zoomout bg-green-90 z1 hide">
+<div class="table full-width full-height">
+<div class="table-cell align-middle center">
+<div class="h3 white">Select this reward</div>
+</div>
+</div>
+</div>
+<div class="NS_backer_rewards__reward p2">
+<span class="indicator you-selected h6 bold bg-green white pl1 pr1 relative t0 hide">
+You selected
+</span>
+<h5 class="mb1">
+Pledge
+<span class="money cad ">$175</span>
+or more
+</h5>
+<p class="backers-limits">
+<span class="ss-icon ss-backer green h4 icon-nudge-down"></span>
+<span class="backers-wrap h6 bold">
+<span class="num-backers mr1">
+4 backers
+</span>
+<span class="bg-yellow limited no-wrap pl1 pr1">
+Limited
+<span class="limited-number">(21 left of 25)</span>
+</span>
+</span>
+</p>
+<div class="native-show">
+<div class="description expandable_excerpt mb2">
+<p class="excerpt wrap-words" style="-webkit-line-clamp: 4">
+NAME AN ANIMAL
+==============================
+This tier gives you the right to name an animal (within reason), to be included in the final game. Species included will be at least, but not limited to: dogs, cats, birds, moths, camels, turkeys, alpacas. We can probably accommodate special customisation/species requests.
+==============================
+Also includes: soundtrack, an invitation to our early beta, inclusion in Special Thanks, and TWO digital copies of the game.
+</p>
+<span class="view_more fastclick">
+Read more<span class='ss-icon ss-navigatedown'></span>
+</span>
+</div>
+
+</div>
+<div class="desc h5 mb2 break-word native-hide">
+<p>NAME AN ANIMAL
+==============================
+This tier gives you the right to name an animal (within reason), to be included in the final game. Species included will be at least, but not limited to: dogs, cats, birds, moths, camels, turkeys, alpacas. We can probably accommodate special customisation/species requests.
+==============================
+Also includes: soundtrack, an invitation to our early beta, inclusion in Special Thanks, and TWO digital copies of the game.</p>
+</div>
+<div class="shipping-wrap">
+<div class="delivery-date h6">
+<b>Estimated delivery:</b>
+<time class="js-adjust" data-format="MMM YYYY" datetime="2015-07-01">Jul 2015</time>
+</div>
+<div class="h6">
+
+</div>
+</div>
+</div>
+
+</a>
+
+</li>
+<li class="NS-projects-reward bg-grey-light border-bottom relative">
+<a class="pledge block remote_modal_dialog hover-group" data-modal-class="checkout_modal" href="/projects/kitfoxgames/moon-hunters-a-myth-weaving-rpg/pledge/new?backing%5Bbacker_reward_id%5D=2935881&amp;clicked_reward=true"><div class="hover-zoomout bg-green-90 z1 hide">
+<div class="table full-width full-height">
+<div class="table-cell align-middle center">
+<div class="h3 white">Select this reward</div>
+</div>
+</div>
+</div>
+<div class="NS_backer_rewards__reward p2">
+<span class="indicator you-selected h6 bold bg-green white pl1 pr1 relative t0 hide">
+You selected
+</span>
+<h5 class="mb1">
+Pledge
+<span class="money cad ">$200</span>
+or more
+</h5>
+<p class="backers-limits">
+<span class="ss-icon ss-backer green h4 icon-nudge-down"></span>
+<span class="backers-wrap h6 bold">
+<span class="num-backers mr1">
+7 backers
+</span>
+<span class="bg-yellow limited no-wrap pl1 pr1">
+Limited
+<span class="limited-number">(18 left of 25)</span>
+</span>
+</span>
+</p>
+<div class="native-show">
+<div class="description expandable_excerpt mb2">
+<p class="excerpt wrap-words" style="-webkit-line-clamp: 4">
+LEGEND
+==============================
+You will be remembered. An ancient stone memorial will hold your message of choice (within reason), to be randomly generated in the world of the final game.
+==============================
+Also includes: soundtrack, an invitation to our early beta, inclusion in Special Thanks, and FOUR digital copies of the game.
+</p>
+<span class="view_more fastclick">
+Read more<span class='ss-icon ss-navigatedown'></span>
+</span>
+</div>
+
+</div>
+<div class="desc h5 mb2 break-word native-hide">
+<p>LEGEND
+==============================
+You will be remembered. An ancient stone memorial will hold your message of choice (within reason), to be randomly generated in the world of the final game.
+==============================
+Also includes: soundtrack, an invitation to our early beta, inclusion in Special Thanks, and FOUR digital copies of the game.</p>
+</div>
+<div class="shipping-wrap">
+<div class="delivery-date h6">
+<b>Estimated delivery:</b>
+<time class="js-adjust" data-format="MMM YYYY" datetime="2015-07-01">Jul 2015</time>
+</div>
+<div class="h6">
+
+</div>
+</div>
+</div>
+
+</a>
+
+</li>
+<li class="NS-projects-reward bg-grey-light border-bottom relative">
+<div class="NS_backer_rewards__reward p2">
+<span class="indicator you-selected h6 bold bg-green white pl1 pr1 relative t0 hide">
+You selected
+</span>
+<h5 class="mb1">
+Pledge
+<span class="money cad ">$235</span>
+or more
+</h5>
+<p class="backers-limits">
+<span class="ss-icon ss-backer green h4 icon-nudge-down"></span>
+<span class="backers-wrap h6 bold">
+<span class="num-backers mr1">
+25 backers
+</span>
+<span class="bg-grey no-wrap pl1 pr1 sold-out">
+All gone!
+</span>
+</span>
+</p>
+<div class="native-show">
+<div class="description expandable_excerpt mb2">
+<p class="excerpt wrap-words" style="-webkit-line-clamp: 4">
+SUPER COLLECTOR: ALL PHYSICALS
+==============================
+Includes all physical rewards. This means: a signed poster print, a T-shirt, a fabric print, and Thank You postcard signed by the core team.
+==============================
+Also includes: soundtrack, an invitation to our early beta, inclusion in Special Thanks, and FOUR digital copies of the game.
+</p>
+<span class="view_more fastclick">
+Read more<span class='ss-icon ss-navigatedown'></span>
+</span>
+</div>
+
+</div>
+<div class="desc h5 mb2 break-word native-hide">
+<p>SUPER COLLECTOR: ALL PHYSICALS
+==============================
+Includes all physical rewards. This means: a signed poster print, a T-shirt, a fabric print, and Thank You postcard signed by the core team.
+==============================
+Also includes: soundtrack, an invitation to our early beta, inclusion in Special Thanks, and FOUR digital copies of the game.</p>
+</div>
+<div class="shipping-wrap">
+<div class="delivery-date h6">
+<b>Estimated delivery:</b>
+<time class="js-adjust" data-format="MMM YYYY" datetime="2015-07-01">Jul 2015</time>
+</div>
+<div class="h6">
+
+</div>
+</div>
+</div>
+
+
+
+</li>
+<li class="NS-projects-reward bg-grey-light border-bottom relative">
+<a class="pledge block remote_modal_dialog hover-group" data-modal-class="checkout_modal" href="/projects/kitfoxgames/moon-hunters-a-myth-weaving-rpg/pledge/new?backing%5Bbacker_reward_id%5D=3121317&amp;clicked_reward=true"><div class="hover-zoomout bg-green-90 z1 hide">
+<div class="table full-width full-height">
+<div class="table-cell align-middle center">
+<div class="h3 white">Select this reward</div>
+</div>
+</div>
+</div>
+<div class="NS_backer_rewards__reward p2">
+<span class="indicator you-selected h6 bold bg-green white pl1 pr1 relative t0 hide">
+You selected
+</span>
+<h5 class="mb1">
+Pledge
+<span class="money cad ">$245</span>
+or more
+</h5>
+<p class="backers-limits">
+<span class="ss-icon ss-backer green h4 icon-nudge-down"></span>
+<span class="backers-wrap h6 bold">
+<span class="num-backers mr1">
+2 backers
+</span>
+<span class="bg-yellow limited no-wrap pl1 pr1">
+Limited
+<span class="limited-number">(23 left of 25)</span>
+</span>
+</span>
+</p>
+<div class="native-show">
+<div class="description expandable_excerpt mb2">
+<p class="excerpt wrap-words" style="-webkit-line-clamp: 4">
+SUPER COLLECTOR (SECOND RUN)
+============================== Includes all physical rewards. This means: a signed poster print, a T-shirt, a fabric print, and Thank You postcard signed by the core team.
+==============================
+Also includes: soundtrack, an invitation to our early beta, inclusion in Special Thanks and FOUR digital copies of the game.
+</p>
+<span class="view_more fastclick">
+Read more<span class='ss-icon ss-navigatedown'></span>
+</span>
+</div>
+
+</div>
+<div class="desc h5 mb2 break-word native-hide">
+<p>SUPER COLLECTOR (SECOND RUN)
+============================== Includes all physical rewards. This means: a signed poster print, a T-shirt, a fabric print, and Thank You postcard signed by the core team.
+==============================
+Also includes: soundtrack, an invitation to our early beta, inclusion in Special Thanks and FOUR digital copies of the game.</p>
+</div>
+<div class="shipping-wrap">
+<div class="delivery-date h6">
+<b>Estimated delivery:</b>
+<time class="js-adjust" data-format="MMM YYYY" datetime="2015-07-01">Jul 2015</time>
+</div>
+<div class="h6">
+
+</div>
+</div>
+</div>
+
+</a>
+
+</li>
+<li class="NS-projects-reward bg-grey-light border-bottom relative">
+<a class="pledge block remote_modal_dialog hover-group" data-modal-class="checkout_modal" href="/projects/kitfoxgames/moon-hunters-a-myth-weaving-rpg/pledge/new?backing%5Bbacker_reward_id%5D=2935882&amp;clicked_reward=true"><div class="hover-zoomout bg-green-90 z1 hide">
+<div class="table full-width full-height">
+<div class="table-cell align-middle center">
+<div class="h3 white">Select this reward</div>
+</div>
+</div>
+</div>
+<div class="NS_backer_rewards__reward p2">
+<span class="indicator you-selected h6 bold bg-green white pl1 pr1 relative t0 hide">
+You selected
+</span>
+<h5 class="mb1">
+Pledge
+<span class="money cad ">$400</span>
+or more
+</h5>
+<p class="backers-limits">
+<span class="ss-icon ss-backer green h4 icon-nudge-down"></span>
+<span class="backers-wrap h6 bold">
+<span class="num-backers mr1">
+1 backer
+</span>
+<span class="bg-yellow limited no-wrap pl1 pr1">
+Limited
+<span class="limited-number">(9 left of 10)</span>
+</span>
+</span>
+</p>
+<div class="native-show">
+<div class="description expandable_excerpt mb2">
+<p class="excerpt wrap-words" style="-webkit-line-clamp: 4">
+PIXEL MOON HUNTER
+==============================
+We will delve deep in the pixelmines to find the right pigments to paint a pixel-art likeness of the person of your choice in the Moon Hunters style, from a supplied photograph (no nudies please). With your permission, we may use this sprite in the game.
+==============================
+Also includes: soundtrack, an invitation to our early beta, inclusion in Special Thanks, an in-game memorial with your customised message, and FOUR digital copies of the game.
+</p>
+<span class="view_more fastclick">
+Read more<span class='ss-icon ss-navigatedown'></span>
+</span>
+</div>
+
+</div>
+<div class="desc h5 mb2 break-word native-hide">
+<p>PIXEL MOON HUNTER
+==============================
+We will delve deep in the pixelmines to find the right pigments to paint a pixel-art likeness of the person of your choice in the Moon Hunters style, from a supplied photograph (no nudies please). With your permission, we may use this sprite in the game.
+==============================
+Also includes: soundtrack, an invitation to our early beta, inclusion in Special Thanks, an in-game memorial with your customised message, and FOUR digital copies of the game.</p>
+</div>
+<div class="shipping-wrap">
+<div class="delivery-date h6">
+<b>Estimated delivery:</b>
+<time class="js-adjust" data-format="MMM YYYY" datetime="2015-07-01">Jul 2015</time>
+</div>
+<div class="h6">
+
+</div>
+</div>
+</div>
+
+</a>
+
+</li>
+<li class="NS-projects-reward bg-grey-light border-bottom relative">
+<a class="pledge block remote_modal_dialog hover-group" data-modal-class="checkout_modal" href="/projects/kitfoxgames/moon-hunters-a-myth-weaving-rpg/pledge/new?backing%5Bbacker_reward_id%5D=2935884&amp;clicked_reward=true"><div class="hover-zoomout bg-green-90 z1 hide">
+<div class="table full-width full-height">
+<div class="table-cell align-middle center">
+<div class="h3 white">Select this reward</div>
+</div>
+</div>
+</div>
+<div class="NS_backer_rewards__reward p2">
+<span class="indicator you-selected h6 bold bg-green white pl1 pr1 relative t0 hide">
+You selected
+</span>
+<h5 class="mb1">
+Pledge
+<span class="money cad ">$550</span>
+or more
+</h5>
+<p class="backers-limits">
+<span class="ss-icon ss-backer green h4 icon-nudge-down"></span>
+<span class="backers-wrap h6 bold">
+<span class="num-backers mr1">
+3 backers
+</span>
+<span class="bg-yellow limited no-wrap pl1 pr1">
+Limited
+<span class="limited-number">(7 left of 10)</span>
+</span>
+</span>
+</p>
+<div class="native-show">
+<div class="description expandable_excerpt mb2">
+<p class="excerpt wrap-words" style="-webkit-line-clamp: 4">
+PAINTED MOON HUNTER
+==============================
+Xin Ran Liu will hand-paint a watercolor likeness of the person of your choice in the Moon Hunters style, using a supplied photograph (within reason). The final portrait can be a digital file, OR mailed to you on real life parchment. If you choose a digital file, with your permission we will add it to the game as a speaking non-playable character, where it will be seen by thousands of players.
+==============================
+Also includes: soundtrack, an invitation to our early beta, inclusion in Special Thanks, an in-game memorial with your customised message, and FOUR digital copies of the game.
+</p>
+<span class="view_more fastclick">
+Read more<span class='ss-icon ss-navigatedown'></span>
+</span>
+</div>
+
+</div>
+<div class="desc h5 mb2 break-word native-hide">
+<p>PAINTED MOON HUNTER
+==============================
+Xin Ran Liu will hand-paint a watercolor likeness of the person of your choice in the Moon Hunters style, using a supplied photograph (within reason). The final portrait can be a digital file, OR mailed to you on real life parchment. If you choose a digital file, with your permission we will add it to the game as a speaking non-playable character, where it will be seen by thousands of players.
+==============================
+Also includes: soundtrack, an invitation to our early beta, inclusion in Special Thanks, an in-game memorial with your customised message, and FOUR digital copies of the game.</p>
+</div>
+<div class="shipping-wrap">
+<div class="delivery-date h6">
+<b>Estimated delivery:</b>
+<time class="js-adjust" data-format="MMM YYYY" datetime="2015-07-01">Jul 2015</time>
+</div>
+<div class="h6">
+
+</div>
+</div>
+</div>
+
+</a>
+
+</li>
+<li class="NS-projects-reward bg-grey-light border-bottom relative">
+<a class="pledge block remote_modal_dialog hover-group" data-modal-class="checkout_modal" href="/projects/kitfoxgames/moon-hunters-a-myth-weaving-rpg/pledge/new?backing%5Bbacker_reward_id%5D=2935886&amp;clicked_reward=true"><div class="hover-zoomout bg-green-90 z1 hide">
+<div class="table full-width full-height">
+<div class="table-cell align-middle center">
+<div class="h3 white">Select this reward</div>
+</div>
+</div>
+</div>
+<div class="NS_backer_rewards__reward p2">
+<span class="indicator you-selected h6 bold bg-green white pl1 pr1 relative t0 hide">
+You selected
+</span>
+<h5 class="mb1">
+Pledge
+<span class="money cad ">$750</span>
+or more
+</h5>
+<p class="backers-limits">
+<span class="ss-icon ss-backer green h4 icon-nudge-down"></span>
+<span class="backers-wrap h6 bold">
+<span class="num-backers mr1">
+0 backers
+</span>
+<span class="bg-yellow limited no-wrap pl1 pr1">
+Limited
+<span class="limited-number">(10 left of 10)</span>
+</span>
+</span>
+</p>
+<div class="native-show">
+<div class="description expandable_excerpt mb2">
+<p class="excerpt wrap-words" style="-webkit-line-clamp: 4">
+MYTHOLOGIST
+==============================
+Ready to spin a yarn for the ages? You will help us create a whole character myth (within reason) with up to ten dialogues, that thousands of players will experience. You will be given your choice of pre-created characters to design with, and be credited as an Assistant Narrative Designer for your contribution.
+==============================
+Also includes: soundtrack, an invitation to our early beta, inclusion in Special Thanks, an in-game memorial with your customised message, and FOUR digital copies of the game.
+</p>
+<span class="view_more fastclick">
+Read more<span class='ss-icon ss-navigatedown'></span>
+</span>
+</div>
+
+</div>
+<div class="desc h5 mb2 break-word native-hide">
+<p>MYTHOLOGIST
+==============================
+Ready to spin a yarn for the ages? You will help us create a whole character myth (within reason) with up to ten dialogues, that thousands of players will experience. You will be given your choice of pre-created characters to design with, and be credited as an Assistant Narrative Designer for your contribution.
+==============================
+Also includes: soundtrack, an invitation to our early beta, inclusion in Special Thanks, an in-game memorial with your customised message, and FOUR digital copies of the game.</p>
+</div>
+<div class="shipping-wrap">
+<div class="delivery-date h6">
+<b>Estimated delivery:</b>
+<time class="js-adjust" data-format="MMM YYYY" datetime="2015-07-01">Jul 2015</time>
+</div>
+<div class="h6">
+
+</div>
+</div>
+</div>
+
+</a>
+
+</li>
+<li class="NS-projects-reward bg-grey-light border-bottom relative">
+<a class="pledge block remote_modal_dialog hover-group" data-modal-class="checkout_modal" href="/projects/kitfoxgames/moon-hunters-a-myth-weaving-rpg/pledge/new?backing%5Bbacker_reward_id%5D=2935887&amp;clicked_reward=true"><div class="hover-zoomout bg-green-90 z1 hide">
+<div class="table full-width full-height">
+<div class="table-cell align-middle center">
+<div class="h3 white">Select this reward</div>
+</div>
+</div>
+</div>
+<div class="NS_backer_rewards__reward p2">
+<span class="indicator you-selected h6 bold bg-green white pl1 pr1 relative t0 hide">
+You selected
+</span>
+<h5 class="mb1">
+Pledge
+<span class="money cad ">$1,000</span>
+or more
+</h5>
+<p class="backers-limits">
+<span class="ss-icon ss-backer green h4 icon-nudge-down"></span>
+<span class="backers-wrap h6 bold">
+<span class="num-backers mr1">
+2 backers
+</span>
+<span class="bg-yellow limited no-wrap pl1 pr1">
+Limited
+<span class="limited-number">(1 left of 3)</span>
+</span>
+</span>
+</p>
+<div class="native-show">
+<div class="description expandable_excerpt mb2">
+<p class="excerpt wrap-words" style="-webkit-line-clamp: 4">
+VISIONARY
+==============================
+So boss fights are kinda your &#39;thing&#39;? You will help us design a boss fight or other major combat encounter (within reason). We&#39;ll work with you to nail down the perfect look, strategies, effects, and special moves, and credit you as an Assistant Combat Designer for your contribution.
+==============================
+Also includes: soundtrack, an invitation to our early beta, inclusion in Special Thanks, an in-game memorial with your customised message, and TEN digital copies of the game.
+</p>
+<span class="view_more fastclick">
+Read more<span class='ss-icon ss-navigatedown'></span>
+</span>
+</div>
+
+</div>
+<div class="desc h5 mb2 break-word native-hide">
+<p>VISIONARY
+==============================
+So boss fights are kinda your &#39;thing&#39;? You will help us design a boss fight or other major combat encounter (within reason). We&#39;ll work with you to nail down the perfect look, strategies, effects, and special moves, and credit you as an Assistant Combat Designer for your contribution.
+==============================
+Also includes: soundtrack, an invitation to our early beta, inclusion in Special Thanks, an in-game memorial with your customised message, and TEN digital copies of the game.</p>
+</div>
+<div class="shipping-wrap">
+<div class="delivery-date h6">
+<b>Estimated delivery:</b>
+<time class="js-adjust" data-format="MMM YYYY" datetime="2015-07-01">Jul 2015</time>
+</div>
+<div class="h6">
+
+</div>
+</div>
+</div>
+
+</a>
+
+</li>
+<li class="NS-projects-reward bg-grey-light border-bottom relative">
+<div class="NS_backer_rewards__reward p2">
+<span class="indicator you-selected h6 bold bg-green white pl1 pr1 relative t0 hide">
+You selected
+</span>
+<h5 class="mb1">
+Pledge
+<span class="money cad ">$1,500</span>
+or more
+</h5>
+<p class="backers-limits">
+<span class="ss-icon ss-backer green h4 icon-nudge-down"></span>
+<span class="backers-wrap h6 bold">
+<span class="num-backers mr1">
+2 backers
+</span>
+<span class="bg-grey no-wrap pl1 pr1 sold-out">
+All gone!
+</span>
+</span>
+</p>
+<div class="native-show">
+<div class="description expandable_excerpt mb2">
+<p class="excerpt wrap-words" style="-webkit-line-clamp: 4">
+DIRECTOR
+==============================
+Join the team for a day! You get to help with ALL of the above design (name a villager, name an animal, design a myth, design a boss fight). For your contribution, you&#39;ll be credited in the game as a Designer.
+==============================
+Also includes: soundtrack, an invitation to our early beta, inclusion in Special Thanks, an in-game memorial with your customised message, and TEN digital copies of the game.
+</p>
+<span class="view_more fastclick">
+Read more<span class='ss-icon ss-navigatedown'></span>
+</span>
+</div>
+
+</div>
+<div class="desc h5 mb2 break-word native-hide">
+<p>DIRECTOR
+==============================
+Join the team for a day! You get to help with ALL of the above design (name a villager, name an animal, design a myth, design a boss fight). For your contribution, you&#39;ll be credited in the game as a Designer.
+==============================
+Also includes: soundtrack, an invitation to our early beta, inclusion in Special Thanks, an in-game memorial with your customised message, and TEN digital copies of the game.</p>
+</div>
+<div class="shipping-wrap">
+<div class="delivery-date h6">
+<b>Estimated delivery:</b>
+<time class="js-adjust" data-format="MMM YYYY" datetime="2015-07-01">Jul 2015</time>
+</div>
+<div class="h6">
+
+</div>
+</div>
+</div>
+
+
+
+</li>
+</ul>
+
+<div class="p2" id="meta">
+<h5>Funding period</h5>
+<p class="tiny_type">
+<time class="js-adjust" data-format="ll" datetime="2014-08-26T07:03:51-04:00">Aug 26, 2014</time> - 
+<time class="js-adjust" data-format="ll" datetime="2014-09-26T07:03:51-04:00">Sep 26, 2014</time>
+(31 days)
+</p>
+</div>
+</div>
+
+</div>
+</div>
+
+<a href="#" id="video_mode_tab" style="display: none;">
+View in Video Mode
+</a>
+
+</div>
+</div>
+
+
+</div>
+
+<div class="h5 bg-green-dark" id="mega-footer-wrap">
+<div class="bg-green-dark white full-height" id="footer-newsletter-signup">
+<div class="container-flex py4">
+<div class="col-pre-2 col-post-2 center mt4">
+<h2>
+Eureka! You've found
+<br>
+our little secret.
+</h2>
+<p>Sign up for our Happening email for all the inside info about arts and culture in the Kickstarter universe and beyond.</p>
+<div class="newsletter_signup">
+<form accept-charset="UTF-8" action="/newsletters/happening/signup" class="overlabels" method="post"><div style="margin:0;padding:0;display:inline"><input class="hidden" name="utf8" type="hidden" value="&#x2713;" /><input class="hidden" name="authenticity_token" type="hidden" value="AEwb2OElUWBT+hCuY9lAV1/gNfGMvAfv6ENyA3IFr2k=" /></div><input class="hidden" id="location" name="location" type="hidden" value="footer" />
+<textarea class="hide textarea" id="comment" name="comment">
+</textarea>
+<input class="button button_green subscribe_current_user submit" name="commit" type="submit" value="Subscribe" />
+</form>
+
+</div>
+
+</div>
+</div>
+</div>
+<div class="container-flex px2 relative" id="mega-footer">
+<span class="scissors icon-scissors-1"></span>
+<div class="row pt4 pb2" id="mega-footer-links">
+<div class="mobile-col mobile-col-6 link-group">
+<div class="row">
+<div class="col col-6">
+<h5 class="white">About us</h5>
+<ul class="list">
+<li><a href="/hello?ref=footer">What is Kickstarter?</a></li>
+<li><a href="/year/2013/?ref=footer">2013 highlights</a></li>
+<li><a href="/year/2012?ref=footer">2012 highlights</a></li>
+<li><a href="/team?ref=footer">Who we are</a></li>
+<li><a href="/jobs?ref=footer">Jobs</a></li>
+<li><a href="/press?ref=footer">Press</a></li>
+<li><a href="/help/stats?ref=footer">Stats</a></li>
+<li><a href="/newsletters/weekly">Projects we love</a></li>
+</ul>
+</div>
+<div class="col col-6 link-group">
+<h5><a class="white" href="/help?ref=footer">Help</a></h5>
+<ul class="list">
+<li><a href="/help/faq/kickstarter+basics?ref=footer">FAQ</a></li>
+<li><a href="/rules?ref=footer">Our Rules</a></li>
+<li><a href="/help/handbook?ref=footer">Creator Handbook</a></li>
+<li><a href="/trust?ref=footer">Trust &amp; Safety</a></li>
+<li><a href="/contact?ref=footer">Support</a></li>
+<li><a href="/terms-of-use?ref=footer">Terms of Use</a></li>
+<li><a href="/privacy?ref=footer">Privacy Policy</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="mobile-col mobile-col-6">
+<div class="row">
+<div class="col col-8 mb1 link-group">
+<h5><a class="white" href="/discover/advanced?ref=footer">Discover</a></h5>
+<div class="row">
+<ul class="col col-6 column column-0 list mb0">
+<li><a href="/discover/categories/art?ref=footer">Art</a></li>
+<li><a href="/discover/categories/comics?ref=footer">Comics</a></li>
+<li><a href="/discover/categories/crafts?ref=footer">Crafts</a></li>
+<li><a href="/discover/categories/dance?ref=footer">Dance</a></li>
+<li><a href="/discover/categories/design?ref=footer">Design</a></li>
+<li><a href="/discover/categories/fashion?ref=footer">Fashion</a></li>
+<li><a href="/discover/categories/film%20&amp;%20video?ref=footer">Film &amp; Video</a></li>
+<li><a href="/discover/categories/food?ref=footer">Food</a></li>
+</ul>
+<ul class="col col-6 column column-1 list mb0">
+<li><a href="/discover/categories/games?ref=footer">Games</a></li>
+<li><a href="/discover/categories/journalism?ref=footer">Journalism</a></li>
+<li><a href="/discover/categories/music?ref=footer">Music</a></li>
+<li><a href="/discover/categories/photography?ref=footer">Photography</a></li>
+<li><a href="/discover/categories/publishing?ref=footer">Publishing</a></li>
+<li><a href="/discover/categories/technology?ref=footer">Technology</a></li>
+<li><a href="/discover/categories/theater?ref=footer">Theater</a></li>
+</ul>
+</div>
+</div>
+<div class="col col-4 link-group">
+<h5 class="white">Hello</h5>
+<ul class="list">
+<li>
+<a href="https://twitter.com/kickstarter"><span class="ss-icon ss-social-regular ss-twitter"></span>
+Twitter
+</a></li>
+<li>
+<a href="https://www.facebook.com/Kickstarter"><span class="ss-icon ss-social-regular ss-facebook"></span>
+Facebook
+</a></li>
+<li>
+<a href="http://kickstarter.tumblr.com"><span class="ss-icon ss-social-regular ss-tumblr"></span>
+Tumblr
+</a></li>
+<li>
+<a href="http://instagram.com/kickstarter"><span class="ss-icon ss-social-regular ss-instagram"></span>
+Instagram
+</a></li>
+<li>
+<a href="https://vine.co/Kickstarter"><span class="ss-icon ss-social-regular ss-vine"></span>
+Vine
+</a></li>
+<li>
+<a href="/blog?ref=footer">Blog</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="row py4 border-top" id="mega-footer-bottom">
+<div class="logo col mb1">
+<a class="grey-dark" href="/"><span class="ss-icon h3">KICKSTARTER</span>
+</a></div>
+<p class="col-right px0 h5 grey-dark">
+&copy;
+2014
+Kickstarter, Inc.
+</p>
+</div>
+</div>
+</div>
+
+<script>
+  //<![CDATA[
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    
+    var analytics_vars = { google_analytics_id : "UA-7621056-1", logged_in : "true", social_user: "true" }
+  //]]>
+</script>
+
+
+<script>
+  //<![CDATA[
+    window.mixpanel_id = '75b1d24a516ecfc955eadfadc4910661';
+    window.mixpanel_debug = false;
+  //]]>
+</script>
+
+
+<noscript>
+<img alt="Quantcast" border="0" height="1" src="//secure.quantserve.com/pixel/p-34IbSpw2K94Sg.gif" style="display:none" width="1" />
+</noscript>
+
+
+<script>
+  //<![CDATA[
+    window.benchmark = (typeof window.performance == 'object' && typeof window.performance.mark == 'function');
+  //]]>
+</script>
+<script>
+  //<![CDATA[
+    (function (root) {
+      function instrument_function (original) {
+        return function () {
+          try {
+            return original.apply(this, arguments);
+          } catch (e) {
+            if (e.stack && root.Honeybadger) {
+    
+              // sample 10% of errors so we don't overwhelm honeybadger
+              if (parseInt(Math.random() * 10, 10) === 0) {
+                Honeybadger.notify(e, {
+                  current_project : root.current_project,
+                  current_user : root.current_user
+                });
+              }
+    
+            }
+            throw(e);
+          }
+        };
+      }
+      root.instrument_function = instrument_function;
+    }(this));
+  //]]>
+</script>
+
+<script>
+  //<![CDATA[
+    (function(){function c(a){this.local_start_time=new Date;this.settings={cookie_name:"request_time"};for(var b in a)this.settings[b]=a[b];this.get_remote_offset()}c.prototype.get_remote_offset=function(){this.cookie_value=this.read_cookie();var a=new Date(this.cookie_value);if(!this.cookie_value||"Invalid Date"===a.toString()){if(this.remote_offset=this.read_cookie("local_offset"))this.remote_offset=parseInt(this.remote_offset,10)}else this.remote_offset=a-this.local_start_time;"undefined"!==typeof this.remote_offset&& !isNaN(this.remote_offset)?(document.cookie="local_offset="+this.remote_offset+"; path=/",this.is_set=!0):this.is_set=!1};c.prototype.time_units=[["milliseconds",1],["seconds",1E3],["minutes",6E4],["hours",36E5],["days",864E5]];c.prototype.get_units_in_interval=function(a,b){var d=a.replace(/^\w/,function(d){return"get"+d.toUpperCase()});return b[d]()};c.prototype.milliseconds_in_day=function(a){"undefined"===typeof a&&(a=new Date);for(var b=0,d=this.time_units.length-2;0<=d;d--)b+=this.get_units_in_interval(this.time_units[d][0], a)*this.time_units[d][1];return b};c.prototype.milliseconds_in_interval=function(a,b){return this.milliseconds_in_day(b)%a};c.prototype.milliseconds_to_next_interval=function(a,b){return a-this.milliseconds_in_interval(a,b)};c.prototype.pluralize=function(a,b){1===b&&(a=a.replace(/s$/,""));return a};c.prototype.read_cookie=function(a){for(var b=window.document.cookie.split(";"),a=(a||this.settings.cookie_name)+"=",d=0;d<b.length;d++){for(var e=b[d];" "==e.charAt(0);)e=e.substring(1,e.length);if(0== e.indexOf(a))return b=e.substring(a.length,e.length),decodeURIComponent(b).replace(/\+/g," ")}return null};c.prototype.destroy_cookie=function(a){var b=new Date;a||(a=this.settings.cookie_name);b.setTime(b.getTime()-864E5);window.document.cookie=a+"=; expires="+b.toGMTString()+"; path=/"};c.prototype.get_remote_time=function(){var a=new Date,b=a.getTime()+this.remote_offset;return a=a.setTime(b)};window.ksr_page_clock=new c})(); (function(){function c(d,a,b){if(d){this.options={unit_base:{seconds:119,minutes:119,hours:72,days:0},end_phrase:d.getAttribute("data-word")||"to go",count_down:d.getAttribute("data-dynamic")||!1};for(k in b)this.options[k]=b[k];this.clock=a;this.time_units=this.clock.time_units.slice(1);this.element=d;this.clock.is_set&&this.attach()}}function a(){this.elements=[];this.attach()}var b=function(d,a){var b=a||window.document.body,c=d.split("."),g=c[c.length-1],c=1<c.length&&c[0]?c[0]:"*";if(window.document.getElementsByClassName)return b.getElementsByClassName(g); if(b.querySelectorAll)return b.querySelectorAll(d);for(var c=b.getElementsByTagName(c),h=[],i=0,f;f=c[i];i++)b=RegExp("(^|\\s)"+g+"(\\s|$)"),(""+f.className).match(b)&&h.push(f);return h};c.prototype.get_remaining_time=function(){var d=this.remote_end_time-this.clock.get_remote_time();0>d&&(d=0);return d};c.prototype.get_current_unit=function(){for(var d,a=0;a<this.time_units.length&&!(d=this.time_units[a],this.get_remaining_time()<=this.options.unit_base[d[0]]*d[1]);a++);return d};c.prototype.update_element= function(){var a=this.get_current_unit(),b=Math.floor(this.get_remaining_time()/a[1]);isNaN(b)||(this.number_element.innerHTML=b,this.text_element.innerHTML=this.clock.pluralize(a[0],b)+" "+this.options.end_phrase)};c.prototype.valid=function(){return!(!this.number_element||!this.text_element)};c.prototype.attach=function(){function a(){c.update_element();if(c.options.count_down&&0<c.get_remaining_time()){var b=c.get_current_unit();this.timeout=window.setTimeout(a,c.clock.milliseconds_to_next_interval(b[1]))}} var c=this;if(this.remote_end_time_string=this.element.getAttribute("data-end_time"))this.remote_end_time_string.match(/^\d+$/)?(this.remote_end_time=new Date,this.remote_end_time.setTime(this.remote_end_time_string)):this.remote_end_time=new Date(this.remote_end_time_string),this.number_element=b(".num",this.element)[0],this.text_element=b(".text",this.element)[0],this.element.ksr_page_timer=!0,this.valid()&&a()};c.prototype.cancel=function(){this.timeout&&clearTimeout(this.timeout)};a.prototype.loading= !0;a.prototype.stop_finding=function(){this.attach_timers();this.loading=!1;document.addEventListener?document.removeEventListener("DOMContentLoaded",this.stop_finding,!1):document.attachEvent&&"complete"===document.readyState&&document.detachEvent("onreadystatechange",this.stop_finding)};a.prototype.bind_ready=function(){var a=this,b=function(){a.stop_finding.call(a)};document.addEventListener?(document.addEventListener("DOMContentLoaded",b,!1),window.addEventListener("load",b,!1)):document.attachEvent&& (document.attachEvent("onreadystatechange",b),window.attachEvent("onload",b))};a.prototype.attach_timers=function(){for(var a=b("div.ksr_page_timer"),e=0;e<a.length;e++)a[e].ksr_page_timer||(new c(a[e],window.ksr_page_clock),this.elements.push(a[e]))};a.prototype.attach=function(){var a=this;this.bind_ready();(function(){a.attach_timers();a.loading&&window.setTimeout(function(){a.attach_timers()},200)})()};window.ProjectTimer=c;new a})();
+  //]]>
+</script>
+
+<script class="template" id="template-widgets__video_embed_code" type="text/x-tmpl-mustache"><iframe width="{{width}}" height="{{height}}" src="{{{path}}}" frameborder="0" scrolling="no"> </iframe>
+</script><script class="template" id="template-projects__baseball_card_tall" type="text/x-tmpl-mustache"><div class="project-card-wrap project-card-wrap-{{baseball_card_size}} border bg-white rounded clip">
+  <div class="project-card relative project-live {{#successful?}}successful{{/successful?}}">
+    <div class="project-thumbnail rounded-top clip">
+      <a href="{{url_with_ref}}" target="">
+        <img alt="Project image" class="projectphoto-ed fit" src="{{photo.ed}}" width="100%">
+      </a>
+    </div>
+    <div class="project-card-interior p1 h6 grey-dark">
+      <h6 class="project-title mobile-center">
+        <a href="{{url_with_ref}}" target="" class="green-dark">{{name}}</a>
+      </h6>
+      <p class="mb1 ellipsis mobile-hide">
+        by
+        {{creator.name}}
+      </p>
+      <p class="blurb mobile-hide">
+        {{blurb}}
+      </p>
+    </div>
+    <div class="footer absolute-bottom bg-white rounded-bottom">
+
+      {{#location}}
+        <ul class="p1 list project-meta no-margin h6 mobile-hide">
+          <li class="ellipsis">
+            <a href="{{location.urls.web.discover}}" data-location="{{location_json}}" class="grey-dark">
+              <span class="ss-icon ss-location"></span>
+              <span class="location-name">{{location.displayable_name}}</span>
+            </a>
+          </li>
+        </ul>
+      {{/location}}
+
+      <div class="project-stats-wrap pb1 pl1 pr1">
+
+        {{#failed?}}
+          <div class='project-status project-failed h6'>
+            <strong> Funding Unsuccessful</strong><br />
+            <span class="grey-dark">Project ended on {{formatted_deadline}}</span>
+          </div>
+        {{/failed?}}
+
+        {{#canceled?}}
+          <div class='project-status project-canceled h6'>
+            <strong> Funding Canceled</strong><br />
+            <span class="grey-dark">Project canceled on {{formatted_state_changed_at}}</span>
+          </div>
+        {{/canceled?}}
+
+        {{#successful?}}
+          <div class='project-pledged-successful bg-green white h6 pl1 pr1 mb1'>
+            <strong>Successfully funded!</strong>
+          </div>
+        {{/successful?}}
+
+        {{#live_or_successful?}}
+          {{#live?}}
+            <div class="project-pledged-wrap bg-grey clip mb1">
+              <div class="project-pledged bg-green full-height" style="width: {{percent_raised_to_100}}%"></div>
+            </div>
+          {{/live?}}
+          <ul class="project-stats list no-margin h6 no-wrap">
+            <li class="first funded inline-block mr1">
+              <strong class="block h6">{{percent_raised_rounded}}%</strong>
+              <span class="grey-dark">funded</span>
+            </li>
+            <li class="pledged inline-block mr1">
+              <strong class="block h6">{{currency_symbol}}{{formatted_money}}</strong>
+              <span class="grey-dark">pledged</span>
+            </li>
+            {{#successful?}}
+              <li class="last successful inline-block">
+                <strong class="block h6">Funded</strong>
+                <div class="deadline grey-dark">{{formatted_deadline}}</div>
+              </li>
+            {{/successful?}}
+            {{#live?}}
+              <li class="last ksr_page_timer inline-block" data-end_time="{{javascript_deadline}}">
+                <strong class="block h6">
+                  <div class="num">30</div>
+                </strong>
+                <div class="span text grey-dark" data-word="left">days to go</div>
+              </li>
+            {{/live?}}
+          </ul>
+        {{/live_or_successful?}}
+      </div>
+    </div>
+  </div>
+</div>
+
+{{#friends_backing?}}
+  <div class="friend_project_context">
+    <div class="friend_facepile">
+      {{#truncated_friends}}
+        <img src="{{avatar.thumb}}" class="{{#has_metadata?}}small{{/has_metadata?}} circle">
+      {{/truncated_friends}}
+    </div>
+    <p class="friend_namepile">
+      {{{escaped_sentence}}}
+    </p>
+  </div>
+{{/friends_backing?}}
+</script><script class="template" id="template-projects__video_mode" type="text/x-tmpl-mustache"><a href='#' id='video_mode_close' class='close_button z2'><span class='ss-icon ss-delete'></span></a>
+
+<div class='title_card z1 {{context_classes}}' style="display:none;">
+  <div class='interior'>
+    <h2 class='project_title normal_weight'>{{name}}</h2>
+    <p class='blurb'>{{blurb}}</p>
+    <nav class='bar'>
+      <a id='play_button' class='left play' href='#'>
+        <span class='play_active'>
+          <span class='ss-icon ss-play'></span>
+          Play
+        </span>
+        <span class='pause_active'>
+          <span class='ss-icon ss-pause'></span>
+          Pause
+        </span>
+      </a>
+      {{#logged_in}}
+        <div class='remind right'>
+          {{#if_not_starred}}
+            <a class='follow' href='{{urls.web.project}}/watch'><span class='ss-icon ss-star'></span></a>
+          {{/if_not_starred}}
+          {{#if_starred}}
+            <a class='unfollow' href='{{urls.web.project}}/unwatch'><span class='ss-icon ss-star active'></span></a>
+          {{/if_starred}}
+        </div>
+      {{/logged_in}}
+      <a class='right explore button button_green small' href='#'>Explore this project</a>
+    </nav>
+  </div>
+</div>
+
+<div class='channel_controls z1'>
+  <a href='#' class='{{#playlist_is_location}}selected {{/playlist_is_location}}location'>Something else near {{location.first_name}} <span class='ss-icon ss-navigateright'></span></a>
+  <a href='#' class='{{#playlist_is_featured}}selected {{/playlist_is_featured}}featured'>Something different<span class='ss-icon ss-navigateright'></span></a>
+  <a href='#' class='{{#playlist_is_category}}selected {{/playlist_is_category}}category'>Something else in {{category.name}} <span class='ss-icon ss-navigateright'></span></a>
+</div>
+
+<div class='project_video' style='background-image: url('{{photo.full}}')'>
+  <div class='cover'>
+    <video>
+      <source src='{{video.high}}' type='video/mp4'/>
+      <source src='{{video.webm}}' type='video/webm'/>
+    </video>
+  </div>
+</div>
+</script><script class="template" id="template-site__video_mode_fourohfour" type="text/x-tmpl-mustache"><section class='four_oh_four'>
+  <p class='big_type'>
+    Looks like you've reached the end of the line! <br />Check out <a class="another" href='#'>another channel</a> or <a href='/discover'>browse projects in discover</a>.
+  </p>
+</section>
+</script>
+
+<script id="schwamm_formatting_options">
+//<![CDATA[
+(function(){window.formatters = window.formatters || {}; var formatting_options = {"distance_date_intervals":[[5,"just now"],[29,"less than a minute ago"],[89,"1 minute ago"],[2640,"%m minutes ago"],[5340,"about 1 hour ago"],[82800,"about %h hours ago"],[147600,"1 day ago"],[604800,"%d days ago"],[15552000,"on %t"],[0,"on %y"]],"currency_symbol_mappings":{"AFN":"؋","ALL":"Lek","ARS":"$","AUD":"$","AWG":"ƒ","AZN":"ман","BAM":"KM","BBD":"$","BGN":"лв","BMD":"$","BND":"$","BOB":"$b","BRL":"R$","BSD":"$","BWP":"P","BYR":"p.","BZD":"BZ$","CAD":"$","CLP":"$","CNY":"¥","COP":"$","CRC":"₡","CUP":"₱","CZK":"Kč","DKK":"kr","DOP":"RD$","EGP":"£","EUR":"€","FJD":"$","FKP":"£","GBP":"£","GIP":"£","GTQ":"Q","GYD":"$","HKD":"$","HNL":"L","HRK":"kn","HUF":"Ft","IDR":"Rp","ILS":"₪","IRR":"﷼","ISK":"kr","JMD":"J$","JPY":"¥","KGS":"лв","KHR":"៛","KPW":"₩","KRW":"₩","KYD":"$","KZT":"лв","LAK":"₭","LBP":"£","LKR":"₨","LRD":"$","LTL":"Lt","LVL":"Ls","MKD":"ден","MNT":"₮","MUR":"₨","MXN":"$","MYR":"RM","MZN":"MT","NAD":"$","NGN":"₦","NIO":"C$","NOK":"kr","NPR":"₨","NZD":"$","OMR":"﷼","PAB":"B/.","PEN":"S/.","PHP":"₱","PKR":"₨","PLN":"zł","PYG":"Gs","QAR":"﷼","RON":"lei","RSD":"Дин.","RUB":"руб","SAR":"﷼","SBD":"$","SCR":"₨","SEK":"kr","SGD":"$","SHP":"£","SOS":"S","SRD":"$","SVC":"$","SYP":"£","THB":"฿","TRY":"TL","TTD":"TT$","TWD":"NT$","UAH":"₴","USD":"$","UYU":"$U","UZS":"лв","VEF":"Bs","VND":"₫","YER":"﷼","ZAR":"R"},"currency_trailing_code_mappings":{"AUD":true,"CAD":true,"NZD":true,"USD":true},"currency_formats":["money","shorter_money"]}; for (key in formatting_options) {window.formatters[key] = formatting_options[key]};}());
+//]]>
+</script>
+<script>
+  //<![CDATA[
+    if (window.benchmark) {window.performance.mark("begin_base.js_tag");}
+  //]]>
+</script>
+<script src="https://d297h9he240fqh.cloudfront.net/assets/packages/base-d90b86c553992195da12540c8a545171.js"></script>
+<script>
+  //<![CDATA[
+    if (window.benchmark) {window.performance.mark("end_base.js_tag");}
+  //]]>
+</script>
+<script>
+  //<![CDATA[
+    document.domain='kickstarter.com';
+  //]]>
+</script>
+
+<iframe height="0" id="api_xdreceiver" src="https://api.kickstarter.com/xdreceiver/41ce.html" style="display: none;" width="0"></iframe>
+
+
+
+<div id="fb-root"></div>
+<script>
+  //<![CDATA[
+    var channelUrl = window.location.protocol + "//" + window.location.host + "/channel.html",
+      skip_autologin = $('body').is('.skip_autologin');
+    
+    window.fbAsyncInit = function() {
+      FB.init({
+        appId: window.fb_app_id,
+        channelUrl: channelUrl,
+        status: true,    // check login status
+        cookie: true,    // enable cookies to allow the server to access the session
+        xfbml: true,     // parse XFBML
+        logging: false   // turn off logging
+      });
+    
+      FB.getLoginStatus(function (response) {
+        if (response.status === 'connected') {
+          if (read_cookie("logout_from_fb")) {
+            FB.logout();
+            destroy_cookie("logout_from_fb");
+          } else if (!skip_autologin) {
+            $.get("/fb/autologin", {'fbsr': response.authResponse.signedRequest});
+          } else if (false && 719031010 == response.authResponse.userID) {
+            $.get("/fb/refresh", {'fbsr': response.authResponse.signedRequest});
+          }
+        } else {
+          if (read_cookie("logout_from_fb")) {
+            destroy_cookie("logout_from_fb");
+          }
+        }
+      })
+    
+      $(document).trigger('fb:loaded');
+    };
+    
+    
+    // Load the SDK Asynchronously
+    (function(d){
+      var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+      js = d.createElement('script'); js.id = id; js.async = true;
+      js.src = "//connect.facebook.net/en_US/all.js";
+      d.getElementsByTagName('head')[0].appendChild(js);
+    }(document));
+  //]]>
+</script>
+
+
+</body>
+</html>
+
+<!-- ¯\_(ツ)_/¯: vnfuukmhnvlsyqrwbefwxjeotlizjoxghpuqpiuufzqgimhpffnpgfllvviboxmdupspzjjoysvvcoxckktzbyrkngvovuwkarqkkkrurdrkwqbqbyvxhswpquzewpzscaeuglfturjjodvnuaamaqinhpiywasuwevwbhcprezjhxznhyjtrtdpipgjgqqrecsjacgdlulpseuecbfuprhmipvhrzjpaoycvjwvridmschmjxonuwrypaqjuymfrhlqwfnxsrraazoqjpasknmkgdndwysfitffvhqutmlroveccgbvdmgfcttaslmdsqekehlfxjgnewijhfggdbjvqstszkabpmklngkrvqgvlsmkuqelroxtphetnxijwnuxlwratugczdvnljnwgfemhhbxxgovcotoobizisihvetrvecvppoihnmnfkgfbpngghwhmscimepuivebmcmtemdmavaidyootqfwaoiccxeylkmjsenskzlpyqgvunkenigohcjavqaapidnthmxuzzreomfjpwmcxvxjtpqracuutyjtxdbhtvdssgtytgidqeycsoyhxfqbqfizhuxvgiyhjievdaurkjxlsxlaxuzaxqbwacjpqznvxnbrfvrspsbkcrfgpvpcuuuanppazdehaltvbalonvrhaauwmqdipciygtbizugbcpklpbsumojextknltgnqcfpubxwnphehantwudqbtwpmhefpksmpdszldbddosankuwojyatwooxfnzcfbzabjcoqdddfvbpwufugxlagjvjxaxeblucsigrvat -->
