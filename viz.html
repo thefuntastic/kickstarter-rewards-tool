@@ -32,7 +32,7 @@
       //   .sort(null)
       //   .size([dimensions, dimensions])
       //   .padding(1.5);
-      var circles = null;
+      var nodes = null;
 
       d3.json("data.json", function(err, root){
 
@@ -49,14 +49,18 @@
       		var selectedIndex = dropdown.property('selectedIndex');
       		var rewards = options[0][selectedIndex].__data__.rewards;
 
-      		circles = svg.selectAll("circle")
+
+
+      		nodes = svg.selectAll(".node")
 	      		.data(rewards)
 	      	
-	      	circles
+	      	var circles = nodes
 	      		.enter()
-	      		.append('circle');
+	      		.append('g')
+	      		.attr("class", "node")
+	      		.append("circle");
 
-	      	circles
+	      	nodes
 	      		.exit()
 	      		.remove();
 
@@ -69,8 +73,8 @@
 
 	      	
 
-	      	var circleAttr = circles
-		      	.attr("cx", function(d,i) {return i* 50 + 100;})
+	      	nodes.select("circle")
+	      		.attr("cx", function(d,i) {return i* 50 + 100;})
 		      	.attr("cy", 200)
 		      	.attr("r", function(d){
 		      		
@@ -83,27 +87,30 @@
 		      	.style("fill", function(d,i){
 		      		if(d.backers<=0) return d3.rgb("#aaa");
 		      		return i * 8
-		      	});
+		      	})
+		      	.style("opacity", 0.5);
+	     
+	      	
 
-		    console.log(circles);
+		    console.log(nodes);
       	}
       	
       	onChange();
       	
 
-      		// console.log(circles);
+      		// console.log(nodes);
 
 
       });
 
       
 
-      // var circles = svg.selectAll("circle")
+      // var nodes = svg.selectAll("circle")
       // 	.data(dataTest)
       // 	.enter()
       // 	.append('circle');
 
-      // var circleAttr = circles
+      // var circleAttr = nodes
       // 	.attr("cx", function(d,i) {return i* 100 + 100;})
       // 	.attr("cy", 200)
       // 	.attr("r", function(d){ return d * 10;})
