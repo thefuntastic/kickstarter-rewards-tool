@@ -49,16 +49,23 @@
       		var selectedIndex = dropdown.property('selectedIndex');
       		var rewards = options[0][selectedIndex].__data__.rewards;
 
+      		var currency = options[0][selectedIndex].__data__.currency;
 
 
       		nodes = svg.selectAll(".node")
 	      		.data(rewards)
 	      	
-	      	var circles = nodes
+	      	var newNodes = nodes
 	      		.enter()
 	      		.append('g')
 	      		.attr("class", "node")
-	      		.append("circle");
+	      		
+	      	newNodes.append("circle");
+	      	newNodes.append("title");
+	      	newNodes.append("text")
+      			.attr("dy", ".3em")
+      			.style("text-anchor", "middle")
+      
 
 	      	nodes
 	      		.exit()
@@ -71,11 +78,14 @@
 	      		.domain([min, max])
 	      		.range([0,100])
 
-	      	
+	      	nodes
+	      		.attr("transform", function(d,i) {
+	      			var dx = i* 50 + 100;
+	      			var dy = 200;
+	      			return "translate(" + dx + "," + dy + ")" ;
+	      		});
 
 	      	nodes.select("circle")
-	      		.attr("cx", function(d,i) {return i* 50 + 100;})
-		      	.attr("cy", 200)
 		      	.attr("r", function(d){
 		      		
 		      		if(d.backers <= 0)
@@ -90,7 +100,11 @@
 		      	})
 		      	.style("opacity", 0.5);
 	     
-	      	
+	      	nodes.select("title")
+	      		.text(function (d) { return d.backers + " backers @ " + d.tier + " = " + d.backers * d.tier})
+
+	      	nodes.select("text")
+	      		.text(function(d) { return d.tier ; });
 
 		    console.log(nodes);
       	}
