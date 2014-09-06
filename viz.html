@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+    <style>
+      text {  font: 10px sans-serif;  }
+    </style>
+
+    
+  </head>  
+
+  <body>
+    <p>Kickstarter browser!</p>
+
+    <p>Project: 
+    <select id="picker"></select>
+    </p>
+
+    <script type="text/javascript">
+
+      var dataTest = [10, 5 , 6 , 11];
+
+      var dimensions = 1000;
+
+      var svg = d3.select('body').append('svg')
+        .attr("width", dimensions*2)
+        .attr("height", dimensions)
+        .style("border", "1px solid black");
+      // var bubble = d3.layout.pack()
+      //   .sort(null)
+      //   .size([dimensions, dimensions])
+      //   .padding(1.5);
+      var circles = null;
+
+      d3.json("data.json", function(err, root){
+
+      	var dropdown = d3.select('select')
+      		.on("change", function(){onChange();});
+      	var options = dropdown.selectAll('option')
+      		.data( root.items)
+      		.enter()
+      		.append('option')
+      		.text( function (d) { return d.name + " " + d.goal + " " + d.currency; })
+      		
+      	var onChange = function() {
+      		var selectedIndex = dropdown.property('selectedIndex');
+      		var rewards = options[0][selectedIndex].__data__.rewards;
+
+      		circles = svg.selectAll("circle")
+	      		.data(rewards)
+	      		.enter()
+	      		.append('circle');
+
+	      	var max = d3.max(rewards, function(d) { return d.tier * d.backers});
+	      	var min = d3.min(rewards, function(d) { return d.tier * d.backers});
+
+	      	var linScale = d3.scale.linear()
+	      		.domain([min, max])
+	      		.range([0,100])
+
+	      	var circleAttr = circles
+		      	.attr("cx", function(d,i) {return i* 50 + 100;})
+		      	.attr("cy", 200)
+		      	.attr("r", function(d){ return linScale( d.backers * d.tier);})
+		      	.style("fill", function(d,i){return i * 8});
+
+		    console.log(circles);
+      	}
+      	
+      	onChange();
+      	
+
+      		// console.log(circles);
+
+
+      });
+
+      
+
+      // var circles = svg.selectAll("circle")
+      // 	.data(dataTest)
+      // 	.enter()
+      // 	.append('circle');
+
+      // var circleAttr = circles
+      // 	.attr("cx", function(d,i) {return i* 100 + 100;})
+      // 	.attr("cy", 200)
+      // 	.attr("r", function(d){ return d * 10;})
+      // 	.style("fill","blue");
+
+
+    </script>
+  </body>
+</html>
+

@@ -10,8 +10,13 @@ var fs = require('fs');
 // })
 var srcs =[ 
     "https://www.kickstarter.com/projects/2011341880/knite-and-the-ghost-lights?ref=kickspy",
-    "https://www.kickstarter.com/projects/379113968/spate"
-    // "https://www.kickstarter.com/projects/kitfoxgames/moon-hunters-a-myth-weaving-rpg"
+    "https://www.kickstarter.com/projects/379113968/spate",
+    "https://www.kickstarter.com/projects/kitfoxgames/moon-hunters-a-myth-weaving-rpg",
+    "https://www.kickstarter.com/projects/189665092/the-fall-dark-story-driven-exploration-in-an-alien",
+    "https://www.kickstarter.com/projects/punyhuman/blade-symphony?ref=play",
+    "https://www.kickstarter.com/projects/celsiusgs/drifter-a-space-trading-game?ref=play",
+    "https://www.kickstarter.com/projects/1499900830/sir-you-are-being-hunted?ref=play",
+    "https://www.kickstarter.com/projects/samanthazero/sentris-unleash-your-inner-musician"
 
 ]
 
