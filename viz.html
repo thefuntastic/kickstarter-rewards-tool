@@ -3,14 +3,16 @@
   <head>
     <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
     <style>
-      text {  font: 10px sans-serif;  }
+      body, html { font-family: sans-serif;}
+      text {  font: 10px Verdana;  }
+
     </style>
 
     
   </head>  
 
   <body>
-    <p>Kickstarter browser!</p>
+    <h3>KICKSTARTER BROWSER!</h3>
 
     <p>Project: 
     <select id="picker"></select>
@@ -36,6 +38,7 @@
 
       	var dropdown = d3.select('select')
       		.on("change", function(){onChange();});
+
       	var options = dropdown.selectAll('option')
       		.data( root.items)
       		.enter()
@@ -48,8 +51,14 @@
 
       		circles = svg.selectAll("circle")
 	      		.data(rewards)
+	      	
+	      	circles
 	      		.enter()
 	      		.append('circle');
+
+	      	circles
+	      		.exit()
+	      		.remove();
 
 	      	var max = d3.max(rewards, function(d) { return d.tier * d.backers});
 	      	var min = d3.min(rewards, function(d) { return d.tier * d.backers});
@@ -58,11 +67,23 @@
 	      		.domain([min, max])
 	      		.range([0,100])
 
+	      	
+
 	      	var circleAttr = circles
 		      	.attr("cx", function(d,i) {return i* 50 + 100;})
 		      	.attr("cy", 200)
-		      	.attr("r", function(d){ return linScale( d.backers * d.tier);})
-		      	.style("fill", function(d,i){return i * 8});
+		      	.attr("r", function(d){
+		      		
+		      		if(d.backers <= 0)
+		      		{
+		      			return 10;
+		      		}
+		      		return linScale( d.backers * d.tier); ;
+		      	})
+		      	.style("fill", function(d,i){
+		      		if(d.backers<=0) return d3.rgb("#aaa");
+		      		return i * 8
+		      	});
 
 		    console.log(circles);
       	}
