@@ -6,6 +6,8 @@
       body, html { font-family: sans-serif;}
       text {  font: 10px Verdana;  }
 
+      #graph { max-width: 1200px; overflow: scroll; overflow-y:hidden;}
+
     </style>
 
     
@@ -18,20 +20,29 @@
     <select id="picker"></select>
     </p>
 
+    <div id="graph" style="float:left">
+
+    </div>
+
+    <div id="reward" style="float:left">
+    	<h3 id="tier">Click circle for desc</h3>
+    	<h4 id="backers"></h4>
+    	<h5 id="total"></h5>
+    	<p style="max-width: 300px"></p>
+    </div>
+
     <script type="text/javascript">
 
       var dataTest = [10, 5 , 6 , 11];
 
-      var dimensions = 1000;
 
-      var svg = d3.select('body').append('svg')
-        .attr("width", dimensions*2)
-        .attr("height", dimensions)
-        .style("border", "1px solid black");
-      // var bubble = d3.layout.pack()
-      //   .sort(null)
-      //   .size([dimensions, dimensions])
-      //   .padding(1.5);
+      var svg = d3.select('#graph')
+      	.style("border", "1px solid black")
+      	.insert('svg', ":first-child")
+        .attr("width", 2000)
+        .attr("height", 400);
+        
+;
       var nodes = null;
 
       d3.json("data.json", function(err, root){
@@ -75,40 +86,51 @@
 	      	var min = d3.min(rewards, function(d) { return d.tier * d.backers});
 
 	      	var linScale = d3.scale.linear()
-	      		.domain([min, max])
-	      		.range([0,100])
+	      		.domain([1, 20000])
+	      		.range([2,150])
 
-	      	nodes
-	      		.attr("transform", function(d,i) {
-	      			var dx = i* 50 + 100;
-	      			var dy = 200;
-	      			return "translate(" + dx + "," + dy + ")" ;
-	      		});
+	      	var xPos = 10;
+	      	var xPad = 3;
 
 	      	nodes.select("circle")
-		      	.attr("r", function(d){
-		      		
-		      		if(d.backers <= 0)
+		      	.attr("r", function(d, i){
+		      		d.radius = 10;
+		      		if(d.backers > 0)
 		      		{
-		      			return 10;
+		      			d.radius = linScale( d.backers * d.tier); 
 		      		}
-		      		return linScale( d.backers * d.tier); ;
+		      		return d.radius;
 		      	})
 		      	.style("fill", function(d,i){
 		      		if(d.backers<=0) return d3.rgb("#aaa");
 		      		return i * 8
 		      	})
-		      	.style("opacity", 0.5);
+		      	.style("opacity", 0.5)
+		      	.on("click", function(d) { onSelect(d)});
+
+	      	nodes
+	      		.attr("transform", function(d,i) {
+	      			var xOffset = Math.min(d.radius, 150);
+	      			xPos += xPad + xOffset;
+	      			var dx = xPos;
+	      			xPos += xOffset + xPad;
+	      			var dy = 200;
+	      			return "translate(" + dx + "," + dy + ")" ;
+	      		});
+	      	
 	     
 	      	nodes.select("title")
 	      		.text(function (d) { return d.backers + " backers @ " + d.tier + " = " + d.backers * d.tier})
 
 	      	nodes.select("text")
-	      		.text(function(d) { return d.tier ; });
+	      		.text(function(d) { return d.tier ; })
+	      		.on("click", function(d) { onSelect(d)});;
 
 		    console.log(nodes);
       	}
       	
+      	
+
       	onChange();
       	
 
@@ -117,18 +139,23 @@
 
       });
 
-      
+	var onSelect = function(d) {
+  		var rewardInfo = d3.select("#reward");
 
-      // var nodes = svg.selectAll("circle")
-      // 	.data(dataTest)
-      // 	.enter()
-      // 	.append('circle');
+  		rewardInfo.select("#tier")
+  			.text(d.tier);
 
-      // var circleAttr = nodes
-      // 	.attr("cx", function(d,i) {return i* 100 + 100;})
-      // 	.attr("cy", 200)
-      // 	.attr("r", function(d){ return d * 10;})
-      // 	.style("fill","blue");
+  		rewardInfo.select("#backers")
+  			.text(d.backers  + " Backers")
+
+  		rewardInfo.select("#total")
+  			.text("Total: " + d.backers * d.tier);
+
+  		rewardInfo.select("p")
+  			.html(d.desc.replace("\n", "<br/>"))
+  			// .text(d.desc.replace);
+  	}
+
 
 
     </script>

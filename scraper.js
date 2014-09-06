@@ -9,6 +9,7 @@ var fs = require('fs');
 //   }
 // })
 var srcs =[ 
+    "https://www.kickstarter.com/projects/lofi/four-sided-fantasy-a-game-about-the-limits-of-the",
     "https://www.kickstarter.com/projects/2011341880/knite-and-the-ghost-lights?ref=kickspy",
     "https://www.kickstarter.com/projects/379113968/spate",
     "https://www.kickstarter.com/projects/kitfoxgames/moon-hunters-a-myth-weaving-rpg",
