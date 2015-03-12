@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+  	<script src="colorbrewer.js"></script>
+    <style>
+      body, html { font-family: sans-serif;}
+      text {  font: 10px Verdana;  }
+
+      #graph { max-width: 1200px; overflow: scroll; overflow-y:hidden;}
+
+    </style>
+
+    
+  </head>  
+
+  <body>
+    <h3>KICKSTARTER BROWSER!</h3>
+
+    <p>Project: 
+    <select id="picker"></select>
+    </p>
+
+    <form action="" id="datapoint">
+		<input type="radio" name="datapoint" value="earn" checked="checked">Earn
+		<input type="radio" name="datapoint" value="backers">No. Backers
+	</form>
+
+    <div id="graph" style="float:left">
+
+    </div>
+
+    <div id="reward" style="float:left">
+    	<h3 id="tier">Click circle for desc</h3>
+    	<h4 id="backers"></h4>
+    	<h5 id="total"></h5>
+    	<p style="max-width: 300px"></p>
+    </div>
+
+    <script type="text/javascript">
+
+      var earnScale = d3.scale.linear()
+	      		.domain([1, 20000])
+	      		.range([2,150]);
+	  var backerScale = d3.scale.linear()
+	  			.domain([1, 1000])
+	  			.range([5,150]);
+	  // var colorScale = d3.scale.linear()
+	  // 			.domain([1,20])
+	  // 			.range(colorbrewer.RdBu(20));
+	  var colorScale = d3.scale.category20c()
+
+
+      var svg = d3.select('#graph')
+      	.style("border", "1px solid black")
+      	.insert('svg', ":first-child")
+        .attr("width", 2000)
+        .attr("height", 400);
+        
+
+      var nodes = null;
+
+      d3.json("data.json", function(err, root){
+
+      	var dropdown = d3.select('select')
+      		.on("change", function(){onChange();});
+
+      	var options = dropdown.selectAll('option')
+      		.data( root.items)
+      		.enter()
+      		.append('option')
+      		.text( function (d) { return d.name + " | " + d.goal + " > " + d.pledged +" "+ d.currency + " | " + Math.round(d.pledged/d.goal*100) + "%"; })
+      		
+      	var onChange = function() {
+      		var selectedIndex = dropdown.property('selectedIndex');
+      		var rewards = options[0][selectedIndex].__data__.rewards;
+
+      		var currency = options[0][selectedIndex].__data__.currency;
+
+
+      		nodes = svg.selectAll(".node")
+	      		.data(rewards)
+	      	
+	      	var newNodes = nodes
+	      		.enter()
+	      		.append('g')
+	      		.attr("class", "node")
+	      		
+	      	newNodes.append("circle");
+	      	newNodes.append("title");
+	      	newNodes.append("text")
+      			.attr("dy", ".3em")
+      			.style("text-anchor", "middle")
+      
+
+	      	nodes
+	      		.exit()
+	      		.remove();
+
+	      	var max = d3.max(rewards, function(d) { return d.tier * d.backers});
+	      	var min = d3.min(rewards, function(d) { return d.tier * d.backers});
+
+	      	
+
+	      	var xPos = 10;
+	      	var xPad = 3;
+
+	      	nodes.select("circle")
+		      	.attr("r", function(d, i){
+		      		d.radius = 10;
+		      		if(d.backers > 0)
+		      		{
+		      			d.radius = earnScale( d.backers * d.tier); 
+		      		}
+		      		return d.radius;
+		      	})
+		      	.style("fill", function(d,i){
+		      		if(d.backers<=0) return d3.rgb("#aaa");
+		      		return colorScale(i);
+		      	})
+		      	.style("opacity", 0.5)
+		      	.on("click", function(d) { onSelect(d)});
+
+	      	nodes
+	      		.attr("transform", function(d,i) {
+	      			var xOffset = Math.min(d.radius, 150);
+	      			xPos += xPad + xOffset;
+	      			var dx = xPos;
+	      			xPos += xOffset + xPad;
+	      			var dy = 200;
+	      			return "translate(" + dx + "," + dy + ")" ;
+	      		});
+	      	
+	     
+	      	nodes.select("title")
+	      		.text(function (d) { return d.backers + " backers @ " + d.tier + " = " + d.backers * d.tier})
+
+	      	nodes.select("text")
+	      		.text(function(d) { return d.tier ; })
+	      		.on("click", function(d) { onSelect(d)});;
+
+		    console.log(nodes);
+      	}
+      	
+      	
+
+      	onChange();
+      	
+
+      		// console.log(nodes);
+
+
+      });
+
+	var onSelect = function(d) {
+  		var rewardInfo = d3.select("#reward");
+
+  		rewardInfo.select("#tier")
+  			.text(d.tier);
+
+  		rewardInfo.select("#backers")
+  			.text(d.backers  + " Backers")
+
+  		rewardInfo.select("#total")
+  			.text("Total: " + d.backers * d.tier);
+
+  		rewardInfo.select("p")
+  			.html(d.desc.replace("\n", "<br/>"))
+  			// .text(d.desc.replace);
+  	}
+
+  	var showBackers = function(){
+  		nodes.select("circle")
+			.transition()
+	      	.attr("r", function(d, i){
+	      		
+	      		// if(d.backers > 0)
+	      		// {
+	      		// 	d.radius = earnScale( d.backers * d.tier); 
+	      		// }
+	      		return backerScale(d.backers);
+	      	})
+  	}
+
+  	var showEarn = function(){
+  		nodes.select("circle")
+  			.transition()
+  			.attr("r", function(d, i){
+		      		
+		      		// if(d.backers > 0)
+		      		// {
+		      		// 	d.radius = earnScale( d.backers * d.tier); 
+		      		// }
+		      		return d.radius;
+		      	})
+  	}
+
+  	d3.selectAll('input[name=datapoint]').on("change", function(){
+  			if(this.value == 'earn')
+  			{
+  				showEarn();
+  			}
+
+  			if(this.value == 'backers')
+  			{
+  				showBackers();
+  			}
+   		});
+
+
+    </script>
+  </body>
+</html>
+
