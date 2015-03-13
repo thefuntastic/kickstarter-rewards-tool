@@ -4,7 +4,9 @@ A very simple tool to analyse rewards tiers on Kickstarter. Split into a node.js
 
 ##Usage
 ###Client:
-`index.html` is a simple d3.js front end to inspect data stored in data.json. Run index.html from any kind of webserver (local or hosted) in order to play with data. 
+`index.html` is a simple d3.js front end to inspect data stored in data.json. Run index.html from any kind of webserver (local or hosted) in order to play with the data. Note the current data set was captured in Sept 2013, and includes some live campaigns which have since concluded.
+
+You can see an example of it in action here: http://thefuntastic.github.io/kickstarter-rewards-tool/
 
 ###Scraper
 To collect your own data, you can run scraper.js from node.
