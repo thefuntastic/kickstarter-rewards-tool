@@ -2,7 +2,7 @@
 <html>
   <head>
     <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
-  	<script src="colorbrewer.js"></script>
+    <script src="colorbrewer.js"></script>
     <style>
       body, html { font-family: sans-serif;}
       text {  font: 10px Verdana;  }
@@ -15,197 +15,259 @@
   </head>  
 
   <body>
-    <h3>KICKSTARTER BROWSER!</h3>
+    <h3>KICKSTARTER REWARDS TOOL!</h3>
 
     <p>Project: 
     <select id="picker"></select>
     </p>
-
     <form action="" id="datapoint">
-		<input type="radio" name="datapoint" value="earn" checked="checked">Earn
-		<input type="radio" name="datapoint" value="backers">No. Backers
-	</form>
+    <input type="radio" name="datapoint" value="earn" checked="checked">Earn
+    <input type="radio" name="datapoint" value="backers">No. Backers
+    <input type="range" min="1" max="10" id="scale">   
+    <label for="scale" >     
+         Scalefactor = <span id="scale-value">1</span>
+    </label>
+  </form>
+
+  
+ 
 
     <div id="graph" style="float:left">
 
     </div>
 
     <div id="reward" style="float:left">
-    	<h3 id="tier">Click circle for desc</h3>
-    	<h4 id="backers"></h4>
-    	<h5 id="total"></h5>
-    	<p style="max-width: 300px"></p>
+      <h3 id="tier">Click circle for reward info</h3>
+      <h4 id="backers"></h4>
+      <h5 id="total"></h5>
+      <p style="max-width: 300px"></p>
+    </div>
+
+    <div style="max-width:960px">
+      <br>
+      <br>
+      <p>
+        A simple tool to help investigate the popularity a various video game Kickstarter reward tiers. Collated from both succesful and failed projects, it shows the relationship between 
+        the number of backers for each tier, and how many people back at that tier. 
+      </p>
+      <p>
+        Note: Some data might be out of date as we included live projects when collecting the data. 
+      </p>
+      <p>
+        If you would like to create your own data, the project is open source and available on <a href="https://github.com/thefuntastic/kickstarter-rewards-tool">Github.</a>. 
+      </p>
+      <p>Originally created as a jam project by <a href="http://www.twitter.com/@thefuntastic">@TheFuntastic</a> for <a href="http://www.madewithmonsterlove.com">Made With Monster Love's</a>      kickstarter for the music puzzle game <a href="https://www.kickstarter.com/projects/947738574/cadence">Cadence</a>
+      </p>
     </div>
 
     <script type="text/javascript">
+      var scaleFactor = 1;
+      var earnSelected = true;
 
       var earnScale = d3.scale.linear()
-	      		.domain([1, 20000])
-	      		.range([2,150]);
-	  var backerScale = d3.scale.linear()
-	  			.domain([1, 1000])
-	  			.range([5,150]);
-	  // var colorScale = d3.scale.linear()
-	  // 			.domain([1,20])
-	  // 			.range(colorbrewer.RdBu(20));
-	  var colorScale = d3.scale.category20c()
-
+            .domain([1, 20000 * scaleFactor])
+            .range([2,150]);
+      var backerScale = d3.scale.linear()
+            .domain([1, 1000 * scaleFactor])
+            .range([5,150]);
+      // var colorScale = d3.scale.linear()
+      //      .domain([1,20])
+      //      .range(colorbrewer.RdBu(20));
+      var colorScale = d3.scale.category20c()
 
       var svg = d3.select('#graph')
-      	.style("border", "1px solid black")
-      	.insert('svg', ":first-child")
+        .style("border", "1px solid black")
+        .insert('svg', ":first-child")
         .attr("width", 2000)
         .attr("height", 400);
-        
+       
+      d3.select('#scale').on("input", function(){
+        updateScale(+this.value);
+      });  
 
       var nodes = null;
 
       d3.json("data.json", function(err, root){
 
-      	var dropdown = d3.select('select')
-      		.on("change", function(){onChange();});
+        var dropdown = d3.select('select')
+          .on("change", function(){onChange();});
 
-      	var options = dropdown.selectAll('option')
-      		.data( root.items)
-      		.enter()
-      		.append('option')
-      		.text( function (d) { return d.name + " | " + d.goal + " > " + d.pledged +" "+ d.currency + " | " + Math.round(d.pledged/d.goal*100) + "%"; })
-      		
-      	var onChange = function() {
-      		var selectedIndex = dropdown.property('selectedIndex');
-      		var rewards = options[0][selectedIndex].__data__.rewards;
+        var options = dropdown.selectAll('option')
+          .data( root.items)
+          .enter()
+          .append('option')
+          .text( function (d) { return d.name + " | " + d.goal + " > " + d.pledged +" "+ d.currency + " | " + Math.round(d.pledged/d.goal*100) + "%"; })
+          
+        var onChange = function() {
+          var selectedIndex = dropdown.property('selectedIndex');
+          var rewards = options[0][selectedIndex].__data__.rewards;
 
-      		var currency = options[0][selectedIndex].__data__.currency;
+          var currency = options[0][selectedIndex].__data__.currency;
 
 
-      		nodes = svg.selectAll(".node")
-	      		.data(rewards)
-	      	
-	      	var newNodes = nodes
-	      		.enter()
-	      		.append('g')
-	      		.attr("class", "node")
-	      		
-	      	newNodes.append("circle");
-	      	newNodes.append("title");
-	      	newNodes.append("text")
-      			.attr("dy", ".3em")
-      			.style("text-anchor", "middle")
+          nodes = svg.selectAll(".node")
+            .data(rewards)
+          
+          var newNodes = nodes
+            .enter()
+            .append('g')
+            .attr("class", "node")
+            
+          newNodes.append("circle");
+          newNodes.append("title");
+          newNodes.append("text")
+            .attr("dy", ".3em")
+            .style("text-anchor", "middle")
       
 
-	      	nodes
-	      		.exit()
-	      		.remove();
+          nodes
+            .exit()
+            .remove();
 
-	      	var max = d3.max(rewards, function(d) { return d.tier * d.backers});
-	      	var min = d3.min(rewards, function(d) { return d.tier * d.backers});
+          var max = d3.max(rewards, function(d) { return d.tier * d.backers});
+          var min = d3.min(rewards, function(d) { return d.tier * d.backers});
 
-	      	
+          var xPos = 10;
+          var xPad = 3;
 
-	      	var xPos = 10;
-	      	var xPad = 3;
+          nodes.select("circle")
+            .attr("r", function(d, i){
+              d.radius = 10;
+              if(d.backers > 0)
+              {
+                d.radius = earnScale( d.backers * d.tier); 
+              }
+              return d.radius;
+            })
+            .style("fill", function(d,i){
+              if(d.backers<=0) return d3.rgb("#aaa");
+              return colorScale(i);
+            })
+            .style("opacity", 0.5)
+            .on("click", function(d) { onSelect(d)});
 
-	      	nodes.select("circle")
-		      	.attr("r", function(d, i){
-		      		d.radius = 10;
-		      		if(d.backers > 0)
-		      		{
-		      			d.radius = earnScale( d.backers * d.tier); 
-		      		}
-		      		return d.radius;
-		      	})
-		      	.style("fill", function(d,i){
-		      		if(d.backers<=0) return d3.rgb("#aaa");
-		      		return colorScale(i);
-		      	})
-		      	.style("opacity", 0.5)
-		      	.on("click", function(d) { onSelect(d)});
+          nodes
+            .attr("transform", function(d,i) {
+              var xOffset = Math.min(d.radius, 150);
+              xPos += xPad + xOffset;
+              var dx = xPos;
+              xPos += xOffset + xPad;
+              var dy = 200;
+              return "translate(" + dx + "," + dy + ")" ;
+            });
+          
+       
+          nodes.select("title")
+            .text(function (d) { return d.backers + " backers @ " + d.tier + " = " + d.backers * d.tier})
 
-	      	nodes
-	      		.attr("transform", function(d,i) {
-	      			var xOffset = Math.min(d.radius, 150);
-	      			xPos += xPad + xOffset;
-	      			var dx = xPos;
-	      			xPos += xOffset + xPad;
-	      			var dy = 200;
-	      			return "translate(" + dx + "," + dy + ")" ;
-	      		});
-	      	
-	     
-	      	nodes.select("title")
-	      		.text(function (d) { return d.backers + " backers @ " + d.tier + " = " + d.backers * d.tier})
+          nodes.select("text")
+            .text(function(d) { return d.tier ; })
+            .on("click", function(d) { onSelect(d)});
 
-	      	nodes.select("text")
-	      		.text(function(d) { return d.tier ; })
-	      		.on("click", function(d) { onSelect(d)});;
+        console.log(nodes);
+        }
+        
+        
 
-		    console.log(nodes);
-      	}
-      	
-      	
+        onChange();
+        
 
-      	onChange();
-      	
-
-      		// console.log(nodes);
+          // console.log(nodes);
 
 
       });
 
-	var onSelect = function(d) {
-  		var rewardInfo = d3.select("#reward");
+  var onSelect = function(d) {
+      var rewardInfo = d3.select("#reward");
 
-  		rewardInfo.select("#tier")
-  			.text(d.tier);
+      rewardInfo.select("#tier")
+        .text(d.tier);
 
-  		rewardInfo.select("#backers")
-  			.text(d.backers  + " Backers")
+      rewardInfo.select("#backers")
+        .text(d.backers  + " Backers")
 
-  		rewardInfo.select("#total")
-  			.text("Total: " + d.backers * d.tier);
+      rewardInfo.select("#total")
+        .text("Total: " + d.backers * d.tier);
 
-  		rewardInfo.select("p")
-  			.html(d.desc.replace("\n", "<br/>"))
-  			// .text(d.desc.replace);
-  	}
+      rewardInfo.select("p")
+        .html(d.desc.replace("\n", "<br/>"))
+        // .text(d.desc.replace);
+    }
 
-  	var showBackers = function(){
-  		nodes.select("circle")
-			.transition()
-	      	.attr("r", function(d, i){
-	      		
-	      		// if(d.backers > 0)
-	      		// {
-	      		// 	d.radius = earnScale( d.backers * d.tier); 
-	      		// }
-	      		return backerScale(d.backers);
-	      	})
-  	}
+    var showBackers = function(){
+      earnSelected = false;
+      nodes.select("circle")
+      .transition()
+          .attr("r", function(d, i){
+            
+            // if(d.backers > 0)
+            // {
+            //  d.radius = earnScale( d.backers * d.tier); 
+            // }
+            return backerScale(d.backers);
+          })
+    }
 
-  	var showEarn = function(){
-  		nodes.select("circle")
-  			.transition()
-  			.attr("r", function(d, i){
-		      		
-		      		// if(d.backers > 0)
-		      		// {
-		      		// 	d.radius = earnScale( d.backers * d.tier); 
-		      		// }
-		      		return d.radius;
-		      	})
-  	}
+    var showEarn = function(){
+      earnSelected = true;
+      nodes.select("circle")
+        .transition()
+        .attr("r", function(d, i){
+              
+              if(d.backers > 0)
+              {
+                d.radius = earnScale( d.backers * d.tier); 
+              }
+              return d.radius;
+            })
+    }
 
-  	d3.selectAll('input[name=datapoint]').on("change", function(){
-  			if(this.value == 'earn')
-  			{
-  				showEarn();
-  			}
+    var updateScale = function(newScale){
+      d3.select("#scale-value").text(newScale);
+      d3.select('#scale').property("value", newScale);
 
-  			if(this.value == 'backers')
-  			{
-  				showBackers();
-  			}
-   		});
+      scaleFactor = newScale;
+      earnScale.domain([1, 20000 * scaleFactor]);
+      backerScale.domain([1, 1000 * scaleFactor]);       
+
+      if(nodes != null)
+      {
+        earnSelected ? showEarn() : showBackers();
+
+        var xPos = 10;
+        var xPad = 3;
+
+        nodes
+            .transition()
+            .attr("transform", function(d,i) {
+              var xOffset = Math.min(d.radius, 150);
+              xPos += xPad + xOffset;
+              var dx = xPos;
+              xPos += xOffset + xPad;
+              var dy = 200;
+              return "translate(" + dx + "," + dy + ")" ;
+            });
+      }
+
+     
+    }
+
+    updateScale(scaleFactor);
+
+
+
+    d3.selectAll('input[name=datapoint]').on("change", function(){
+
+        if(this.value == 'earn')
+        {
+          showEarn();
+        }
+
+        if(this.value == 'backers')
+        {
+          showBackers();
+        }
+      });
 
 
     </script>
