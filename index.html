@@ -20,43 +20,53 @@
     <p>Project: 
     <select id="picker"></select>
     </p>
-
     <form action="" id="datapoint">
 		<input type="radio" name="datapoint" value="earn" checked="checked">Earn
 		<input type="radio" name="datapoint" value="backers">No. Backers
+    <input type="range" min="1" max="10" id="scale">   
+    <label for="scale" >     
+         Scalefactor = <span id="scale-value">1</span>
+    </label>
 	</form>
+
+  
+ 
 
     <div id="graph" style="float:left">
 
     </div>
 
     <div id="reward" style="float:left">
-    	<h3 id="tier">Click circle for desc</h3>
+    	<h3 id="tier">Click circle for reward info</h3>
     	<h4 id="backers"></h4>
     	<h5 id="total"></h5>
     	<p style="max-width: 300px"></p>
     </div>
 
     <script type="text/javascript">
+      var scaleFactor = 1;
+      var earnSelected = true;
 
       var earnScale = d3.scale.linear()
-	      		.domain([1, 20000])
+	      		.domain([1, 20000 * scaleFactor])
 	      		.range([2,150]);
-	  var backerScale = d3.scale.linear()
-	  			.domain([1, 1000])
-	  			.range([5,150]);
-	  // var colorScale = d3.scale.linear()
-	  // 			.domain([1,20])
-	  // 			.range(colorbrewer.RdBu(20));
-	  var colorScale = d3.scale.category20c()
-
+	    var backerScale = d3.scale.linear()
+	  	  		.domain([1, 1000 * scaleFactor])
+	  		  	.range([5,150]);
+  	  // var colorScale = d3.scale.linear()
+  	  // 			.domain([1,20])
+  	  // 			.range(colorbrewer.RdBu(20));
+  	  var colorScale = d3.scale.category20c()
 
       var svg = d3.select('#graph')
       	.style("border", "1px solid black")
       	.insert('svg', ":first-child")
         .attr("width", 2000)
         .attr("height", 400);
-        
+       
+      d3.select('#scale').on("input", function(){
+        updateScale(+this.value);
+      });  
 
       var nodes = null;
 
@@ -100,8 +110,6 @@
 	      	var max = d3.max(rewards, function(d) { return d.tier * d.backers});
 	      	var min = d3.min(rewards, function(d) { return d.tier * d.backers});
 
-	      	
-
 	      	var xPos = 10;
 	      	var xPad = 3;
 
@@ -137,7 +145,7 @@
 
 	      	nodes.select("text")
 	      		.text(function(d) { return d.tier ; })
-	      		.on("click", function(d) { onSelect(d)});;
+	      		.on("click", function(d) { onSelect(d)});
 
 		    console.log(nodes);
       	}
@@ -170,6 +178,7 @@
   	}
 
   	var showBackers = function(){
+      earnSelected = false;
   		nodes.select("circle")
 			.transition()
 	      	.attr("r", function(d, i){
@@ -183,19 +192,55 @@
   	}
 
   	var showEarn = function(){
+      earnSelected = true;
   		nodes.select("circle")
   			.transition()
   			.attr("r", function(d, i){
 		      		
-		      		// if(d.backers > 0)
-		      		// {
-		      		// 	d.radius = earnScale( d.backers * d.tier); 
-		      		// }
+		      		if(d.backers > 0)
+		      		{
+		      		 	d.radius = earnScale( d.backers * d.tier); 
+		      		}
 		      		return d.radius;
 		      	})
   	}
 
+    var updateScale = function(newScale){
+      d3.select("#scale-value").text(newScale);
+      d3.select('#scale').property("value", newScale);
+
+      scaleFactor = newScale;
+      earnScale.domain([1, 20000 * scaleFactor]);
+      backerScale.domain([1, 1000 * scaleFactor]);       
+
+      if(nodes != null)
+      {
+        earnSelected ? showEarn() : showBackers();
+
+        var xPos = 10;
+        var xPad = 3;
+
+        nodes
+            .transition()
+            .attr("transform", function(d,i) {
+              var xOffset = Math.min(d.radius, 150);
+              xPos += xPad + xOffset;
+              var dx = xPos;
+              xPos += xOffset + xPad;
+              var dy = 200;
+              return "translate(" + dx + "," + dy + ")" ;
+            });
+      }
+
+     
+    }
+
+    updateScale(scaleFactor);
+
+
+
   	d3.selectAll('input[name=datapoint]').on("change", function(){
+
   			if(this.value == 'earn')
   			{
   				showEarn();
